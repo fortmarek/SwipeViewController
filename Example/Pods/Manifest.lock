@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  SwipeViewController: ebbed46982f2d716af6e180e5830ec6936b4325c
+  SwipeViewController: c3c55b7a43704736b1bbc99717189517933931a7
 
 COCOAPODS: 0.39.0
