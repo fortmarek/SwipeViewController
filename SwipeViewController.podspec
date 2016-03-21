@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/fortmarek/SwipeViewController"
   s.license          = 'MIT'
   s.author           = { "fortmarek" => "marekfort@me.com" }
-  s.source           = { :git => "https://github.com/fortmarek>/SwipeViewController.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/fortmarek/SwipeViewController.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
