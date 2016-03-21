@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0387FFA956F3CC7E98D43D014B337B9F /* Pods-SwipeViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2640F99F8BC8C655F976346E13E7896D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */; };
 		69D29F411060E7ED9D0715DE414E415F /* Pods-SwipeViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */; };
 		7041FB2646C81B817F28BC3DC134EB6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		A3C4F2F44135069E65BDAE4BDCC6376D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -15,10 +16,9 @@
 		A5ECD3164C677728F4E8DE2697FF1420 /* Pods-SwipeViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */; };
 		AC174C3141590F44DBA0B63ABD5BC4D4 /* Pods-SwipeViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAD2765DE015E7FFD1136D3010021CAC /* SwipeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB05E29DF0D057CA26C87FA6F2E01 /* SwipeViewController.bundle */; };
+		C9C21F5B03F73FC98C963595C51C6573 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */; };
 		D5A5638469415BFA2DBD59B8F3F39113 /* SwipeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E2DD78EE9F3213F52FF903B56B1523 /* SwipeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E84CB9EA5E3520C061F0860950D2B697 /* SwipeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5FEC8D4BEA6DB086499BCA8B23E5 /* SwipeViewController-dummy.m */; };
-		F86EF0791CA07FBC00C10F2E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EF0781CA07FBC00C10F2E /* SwipeViewController.swift */; };
-		F86EF07B1CA07FCB00C10F2E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86EF07A1CA07FCB00C10F2E /* InterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +49,14 @@
 		006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwipeViewController_Tests-dummy.m"; sourceTree = "<group>"; };
 		00D0F8A34F27FFFD5314CF1E7F88ACF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103DEF465DF684DF88ED82E08BD33895 /* Pods_SwipeViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3F6CCF6EB8E0D514B6B6118B612202A9 /* Pods-SwipeViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3FE15A335B47177C5EACDC59BA96FAF1 /* Pods-SwipeViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-resources.sh"; sourceTree = "<group>"; };
 		4846636BACE076CED5B92179E07FC8D4 /* Pods-SwipeViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwipeViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49891495E68484F33CEB1B7B3E94F62A /* SwipeViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwipeViewController.modulemap; sourceTree = "<group>"; };
+		4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		55E3FDBF29238F2DCB517B753A0BAFC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwipeViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		684B5ABF08E2A6E90DA368E1721453BD /* Pods-SwipeViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -77,8 +79,6 @@
 		DEB78A5EC1CBC9EE23436E3FC8D00C93 /* Pods_SwipeViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4712D18A30C415D61D83A41B8303F9 /* Pods-SwipeViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F413ED76545C8EAEFC8D7E8C221CDD45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F86EF0781CA07FBC00C10F2E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
-		F86EF07A1CA07FCB00C10F2E /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		FD7AB954776C623FDA3F4E50CF8C7F6F /* SwipeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,8 +187,8 @@
 		8B93130CD3A94CDCB75DFE43733C4935 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F86EF0781CA07FBC00C10F2E /* SwipeViewController.swift */,
-				F86EF07A1CA07FCB00C10F2E /* InterfaceController.swift */,
+				1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */,
+				4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -357,7 +357,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -411,9 +411,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F86EF07B1CA07FCB00C10F2E /* InterfaceController.swift in Sources */,
+				2640F99F8BC8C655F976346E13E7896D /* InterfaceController.swift in Sources */,
 				E84CB9EA5E3520C061F0860950D2B697 /* SwipeViewController-dummy.m in Sources */,
-				F86EF0791CA07FBC00C10F2E /* SwipeViewController.swift in Sources */,
+				C9C21F5B03F73FC98C963595C51C6573 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +460,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -519,7 +518,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
