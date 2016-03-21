@@ -13,6 +13,7 @@ import UIKit
 protocol SelectionBar {
     var selectionBarHeight: CGFloat { get }
     var selectionBarWidth: CGFloat { get }
+    var selectionBarColor: UIColor { get }
     var selectionBar: UIView { get set }
 }
 
@@ -43,6 +44,8 @@ protocol BarButtonItem {
 protocol Navigation {
     var navigationBarHeight: CGFloat { get }
     var viewWidth: CGFloat { get }
+    var navigationBarColor: UIColor { get }
+    var selectionBar: UIView { get set }
 }
 
 struct NavigationView {
@@ -52,6 +55,8 @@ struct NavigationView {
     var barButtonDelegate: BarButtonItem?
     var swipeButtonDelegate: SwipeButton?
     
+    var navigationView = UIView()
+    
     
     
     mutating func initNavigationView() -> (UIView) {
@@ -59,13 +64,12 @@ struct NavigationView {
         guard let delegate = delegate else {return UIView()}
         
         //Navigation View
-        let navigationView = UIView()
-        navigationView.backgroundColor = UIColor.purpleColor()
+        navigationView.backgroundColor = delegate.navigationBarColor
         navigationView.frame = CGRect(x: 0 , y: 0, width: delegate.viewWidth, height: delegate.navigationBarHeight)
         
         initBarButtonItem()
-        initButtons(navigationView)
-        initSelectionBar(navigationView)
+        initButtons()
+        initSelectionBar()
         
         return (navigationView)
     }
@@ -73,20 +77,21 @@ struct NavigationView {
     
     var selectionBarOriginX = CGFloat(0)
     
-    private func initSelectionBar(navigationView: UIView) {
+    private func initSelectionBar() {
         
         guard
-            var barDelegate = barDelegate,
+            var delegate = delegate,
+            let barDelegate = barDelegate,
             let buttonDelegate = swipeButtonDelegate
-        else {return}
+            else {return}
         let selectionBar = UIView()
         
         //SelectionBar
         let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset
         selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: barDelegate.selectionBarWidth, height: barDelegate.selectionBarHeight)
-        selectionBar.backgroundColor = UIColor.whiteColor()
+        selectionBar.backgroundColor = barDelegate.selectionBarColor
         navigationView.addSubview(selectionBar)
-        barDelegate.selectionBar = selectionBar
+        delegate.selectionBar = selectionBar
     }
     
     private func initBarButtonItem() {
@@ -107,7 +112,7 @@ struct NavigationView {
         
     }
     
-    private mutating func initButtons(navigationView: UIView) {
+    private mutating func initButtons() {
         guard
             let delegate = delegate,
             let barDelegate = barDelegate,
@@ -123,7 +128,7 @@ struct NavigationView {
         var tag = 0
         for page in buttonDelegate.pageArray {
             let button = UIButton()
-        
+            
             //Tag
             tag += 1
             button.tag = tag
@@ -140,7 +145,9 @@ struct NavigationView {
             
             
             titleLabel.sizeToFit()
-            button.sizeToFit()
+            
+            button.frame = titleLabel.frame
+            
             
             totalButtonWidth += button.frame.width
             
@@ -152,23 +159,24 @@ struct NavigationView {
         var width = 0 as CGFloat
         
         for button in buttons {
-            guard let titleLabel = button.titleLabel else {continue}
-            titleLabel.sizeToFit()
-            let kButtonHeight = titleLabel.frame.height
-            let kButtonWidth = titleLabel.frame.width
-
+            
+            let buttonHeight = button.frame.height
+            let buttonWidth = button.frame.width
+            
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
             let originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
             
             if button.tag == buttonDelegate.currentPageIndex {
-                selectionBarOriginX = originX - (barDelegate.selectionBarWidth - kButtonWidth) / 2
+                guard let titleLabel = button.titleLabel else {continue}
+                selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2
                 titleLabel.textColor = buttonDelegate.selectedButtonColor
             }
             
             
-            width += titleLabel.frame.width
+            width += button.frame.width
             
-            button.frame = CGRect(x: originX, y: originY, width: kButtonWidth, height: kButtonHeight)
+            button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
+            
             
             buttonDelegate.addFunction(button)
             navigationView.addSubview(button)
