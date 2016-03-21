@@ -18,10 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
-        
         let navigationController = ViewController(rootViewController: pageController)
-        
-        
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         

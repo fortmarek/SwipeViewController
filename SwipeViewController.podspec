@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.description      = "SwipeViewController is an easy and quick way to implement PageViewController with addition of buttons at the top of the view."
 
   s.homepage         = "https://github.com/fortmarek/SwipeViewController"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "fortmarek" => "marekfort@me.com" }
   s.source           = { :git => "https://github.com/fortmarek>/SwipeViewController.git", :tag => s.version.to_s }
