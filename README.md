@@ -38,6 +38,14 @@ Include the Pod/Classes/SwipeViewController.swift and the Pod/Classes/InterfaceC
 
 ## Usage
 
+First make your ViewController a subclass of SwipeViewController 
+
+```swift 
+import SwipeViewController
+
+class ViewController: SwipeViewController {}
+```
+
 ### Page Array
 You first need to set the array of view controllers that you want to display, in order to do that you need to use this function:
 ```swift 
