@@ -10,7 +10,7 @@
 SwipeViewController enables you to modify the navigation bar and implement 'Swipe Buttons' that can user switch pages with and also the user can easily see which page he is on.
 SwipeViewController is a modification of Objective-C project RKSwipeBetweenViewControllers. I have not only converted the syntax to Swift but added some more functionality and some other minor changes.
 
-![Preview](http://imgur.com/SDIkf4b)
+![demo](http://imgur.com/SDIkf4b.gif)
 
 ## Installation
 ### For both options
