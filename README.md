@@ -15,7 +15,7 @@ SwipeViewController is a modification of Objective-C project RKSwipeBetweenViewC
 ## Installation
 ### For both options
 
-Include in your AppDelegate file:
+Include in your AppDelegate function didFinishLaunchingWithOptions:
 ```swift 
 let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
 let navigationController = YourViewControllerName(rootViewController: pageController)
