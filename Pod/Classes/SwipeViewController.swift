@@ -149,11 +149,12 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         let xFromCenter = view.frame.size.width - scrollView.contentOffset.x
         var width = 0 as CGFloat
         
+        let border = viewWidth - 1
         
         guard currentPageIndex > 0 && currentPageIndex <= buttons.count else {return}
         
         //Ensuring currentPageIndex is not changed twice
-        if -374 ... 374 ~= xFromCenter {
+        if -border ... border ~= xFromCenter {
             indexNotIncremented = true
         }
         
@@ -163,14 +164,14 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         }
         
         //Going right
-        if xFromCenter <= -375 && indexNotIncremented {
+        if xFromCenter <= -viewWidth && indexNotIncremented {
             view.backgroundColor = pageArray[currentPageIndex].view.backgroundColor
             currentPageIndex += 1
             indexNotIncremented = false
         }
             
             //Going left
-        else if xFromCenter >= 375 && indexNotIncremented {
+        else if xFromCenter >= viewWidth && indexNotIncremented {
             view.backgroundColor = pageArray[currentPageIndex - 2].view.backgroundColor
             currentPageIndex -= 1
             indexNotIncremented = false
@@ -255,7 +256,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     }
     
     func addFunction(button: UIButton) {
-        button.addTarget(self, action: "switchTabs:", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(switchTabs), forControlEvents: .TouchUpInside)
     }
     
     func setBarButtonItem(side: Side, barButtonItem: UIBarButtonItem) {
@@ -282,8 +283,12 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     func changeButtonColor(xFromCenter: CGFloat) {
         //Change color of button before animation finished (i.e. colour changes even when the user is between buttons
         
+        let viewWidthHalf = viewWidth / 2
+        let border = viewWidth - 1
+        let halfBorder = viewWidthHalf - 1
+        
         //Going left, next button selected
-        if 180 ... 374 ~= xFromCenter && currentPageIndex > 1 {
+        if viewWidthHalf ... border ~= xFromCenter && currentPageIndex > 1 {
             guard
                 let title = buttons[currentPageIndex - 2].titleLabel,
                 let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
@@ -292,7 +297,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         }
             
             //Going right, current button selected
-        else if 0 ... 179 ~= xFromCenter && currentPageIndex > 1 {
+        else if 0 ... halfBorder ~= xFromCenter && currentPageIndex > 1 {
             guard
                 let title = buttons[currentPageIndex - 2].titleLabel,
                 let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
@@ -301,7 +306,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         }
             
             //Going left, current button selected
-        else if -179 ... 0 ~= xFromCenter && currentPageIndex < buttons.count {
+        else if -halfBorder ... 0 ~= xFromCenter && currentPageIndex < buttons.count {
             guard
                 let title = buttons[currentPageIndex].titleLabel,
                 let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
@@ -310,7 +315,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         }
             
             //Going right, next button selected
-        else if -374 ... -180 ~= xFromCenter && currentPageIndex < buttons.count {
+        else if -border ... -viewWidthHalf ~= xFromCenter && currentPageIndex < buttons.count {
             guard
                 let title = buttons[currentPageIndex].titleLabel,
                 let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
