@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SwipeViewController.svg?style=flat)](http://cocoapods.org/pods/SwipeViewController)
 [![License](https://img.shields.io/cocoapods/l/SwipeViewController.svg?style=flat)](http://cocoapods.org/pods/SwipeViewController)
 [![Platform](https://img.shields.io/cocoapods/p/SwipeViewController.svg?style=flat)](http://cocoapods.org/pods/SwipeViewController)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## What is SwipeViewController?
 
@@ -23,13 +24,21 @@ self.window?.rootViewController = navigationController
 self.window?.makeKeyAndVisible()
 ```
 
-### With CocoaPods
+### CocoaPods
 
 SwipeViewController is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod "SwipeViewController"
+```
+
+### Carthage
+
+If you use Carthage, add this to your Cartfile:
+
+```ruby
+github "fortmarek/SwipeViewController"
 ```
 
 ### Manually
