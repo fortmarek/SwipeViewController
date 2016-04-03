@@ -80,6 +80,11 @@ To set the titles of the buttons, you just need to change the title of each page
 ```swift 
 page_one.title = "Recent"
 ```
+To specify which view controller should be selected first:
+```swift 
+setFirstViewController(1)
+```
+It should also be said that the first view controller index starts at zero, just like arrays.
 
 ### NavigationBar
 

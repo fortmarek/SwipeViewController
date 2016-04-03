@@ -17,15 +17,15 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     //SelectionBar
     var selectionBarHeight = CGFloat(0)
     var selectionBarWidth = CGFloat(0)
-    var selectionBarColor = UIColor()
+    var selectionBarColor = UIColor.blackColor()
     
     //SwipeButtons
     var offset = CGFloat(40)
     var bottomOfset = CGFloat(0)
-    var buttonColor = UIColor.whiteColor()
-    var selectedButtonColor = UIColor.orangeColor()
+    var buttonColor = UIColor.blackColor()
+    var selectedButtonColor = UIColor.greenColor()
     var buttonFont = UIFont.systemFontOfSize(18)
-    var currentPageIndex = 2 //Besides keeping current page index it also determines what will be the first view
+    var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     
     //NavigationBar
     var navigationBarColor = UIColor.whiteColor()
@@ -39,13 +39,14 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var viewWidth = CGFloat()
     var x = 0 as CGFloat //Distance between elements
     var barButtonItemWidth = CGFloat(8) //Extra offset when there is barButtonItem (and some default, you can check the value by pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left
-    var navigationBarHeight = 0 as CGFloat
+    var navigationBarHeight = CGFloat(0)
     var selectionBar = UIView()
     var pageController = UIPageViewController()
     var totalButtonWidth = CGFloat(0)
     var finalPageIndex = -1
     var indexNotIncremented = true
     var pageScrollView = UIScrollView()
+    var animationFinished = true
     
     var selectionBarDelegate: SelectionBar?
     
@@ -97,6 +98,10 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         pageArray.append(viewController)
     }
     
+    public func setFirstViewController(viewControllerIndex: Int) {
+        currentPageIndex = viewControllerIndex + 1
+    }
+    
     public func setSelectionBar(width: CGFloat, height: CGFloat, color: UIColor) {
         selectionBarWidth = width
         selectionBarHeight = height
@@ -145,11 +150,11 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     
     public func scrollViewDidScroll(scrollView: UIScrollView) {
         
-        
         let xFromCenter = view.frame.size.width - scrollView.contentOffset.x
         var width = 0 as CGFloat
-        
+        //print(xFromCenter)
         let border = viewWidth - 1
+        
         
         guard currentPageIndex > 0 && currentPageIndex <= buttons.count else {return}
         
@@ -161,21 +166,23 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         //Resetting finalPageIndex for switching tabs
         if xFromCenter == 0 {
             finalPageIndex = -1
+            animationFinished = true
         }
         
         //Going right
-        if xFromCenter <= -viewWidth && indexNotIncremented {
+        if xFromCenter <= -viewWidth && indexNotIncremented && currentPageIndex < buttons.count {
             view.backgroundColor = pageArray[currentPageIndex].view.backgroundColor
             currentPageIndex += 1
             indexNotIncremented = false
         }
             
             //Going left
-        else if xFromCenter >= viewWidth && indexNotIncremented {
+        else if xFromCenter >= viewWidth && indexNotIncremented && currentPageIndex >= 2 {
             view.backgroundColor = pageArray[currentPageIndex - 2].view.backgroundColor
             currentPageIndex -= 1
             indexNotIncremented = false
         }
+        
         
         if buttonColor != selectedButtonColor {
             changeButtonColor(xFromCenter)
@@ -228,13 +235,14 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             
             //loop - if user goes from tab 1 to tab 3 we want to have tab 2 in animation
             for viewControllerIndex in currentViewControllerIndex...index {
-                
                 let destinationViewController = pageArray[viewControllerIndex]
-                pageController.setViewControllers([destinationViewController], direction: .Forward, animated: true, completion: nil)
+                pageController.setViewControllers([destinationViewController], direction: .Forward, animated: true, completion:nil)
+                
             }
         }
             //Index is on the left
         else {
+            
             for viewControllerIndex in (index...currentViewControllerIndex).reverse() {
                 let destinationViewController = pageArray[viewControllerIndex]
                 pageController.setViewControllers([destinationViewController], direction: .Reverse, animated: true, completion: nil)
@@ -249,8 +257,9 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         let index = sender.tag - 1
         
         //Can't animate twice to the same controller (otherwise weird stuff happens)
-        guard index != finalPageIndex else {return}
+        guard index != finalPageIndex && index != currentPageIndex - 1 && animationFinished else {return}
         
+        animationFinished = false
         finalPageIndex = index
         scrollToNextViewController(index)
     }
