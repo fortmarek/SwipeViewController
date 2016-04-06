@@ -26,7 +26,7 @@ class ViewController: SwipeViewController {
         
         
         setViewControllerArray([VC1, VC2, VC3])
-        setFirstViewController(1)
+        setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: UIColor.blackColor(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         

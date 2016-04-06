@@ -80,7 +80,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         syncScrollView()
         
         //Init of initial view controller
-        guard currentPageIndex > 1 else {return}
+        guard currentPageIndex >= 1 else {return}
         let initialViewController = pageArray[currentPageIndex - 1]
         pageController.setViewControllers([initialViewController], direction: .Forward, animated: true, completion: nil)
         
