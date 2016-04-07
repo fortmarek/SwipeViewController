@@ -265,7 +265,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     }
     
     func addFunction(button: UIButton) {
-        button.addTarget(self, action: #selector(switchTabs), forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: "switchTabs:", forControlEvents: .TouchUpInside)
     }
     
     func setBarButtonItem(side: Side, barButtonItem: UIBarButtonItem) {

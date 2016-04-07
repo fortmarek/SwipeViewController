@@ -30,7 +30,7 @@ class ViewController: SwipeViewController {
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: UIColor.blackColor(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(push))
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "push:")
         setNavigationWithItem(UIColor.whiteColor(), leftItem: barButtonItem, rightItem: nil)
         
         
@@ -41,7 +41,7 @@ class ViewController: SwipeViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func push() {
+    func push(sender: UIBarButtonItem) {
         let VC4 = UIViewController()
         VC4.view.backgroundColor = UIColor.purpleColor()
         VC4.title = "Cool"
