@@ -1,11 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'SwipeViewController_Example', :exclusive => true do
+target 'SwipeViewController_Example' do
   pod 'SwipeViewController', :path => '../'
 end
 
-target 'SwipeViewController_Tests', :exclusive => true do
+target 'SwipeViewController_Tests' do
   pod 'SwipeViewController', :path => '../'
 
   
