@@ -76,7 +76,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         //Navigation View
         let navigationView = interfaceController.initNavigationView()
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
-        
+        print(navigationView.frame.width)
         syncScrollView()
         
         //Init of initial view controller
@@ -210,6 +210,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             else if xFromCenter > 0 && button.tag != 1 {
                 nextButton = buttons[button.tag - 2]
             }
+
             
             let expression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2
             let newRatio = view.frame.width / (expression - (x  - (selectionBarWidth - button.frame.width) / 2))

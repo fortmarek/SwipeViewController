@@ -148,7 +148,6 @@ struct NavigationView {
             
             button.frame = titleLabel.frame
             
-            
             totalButtonWidth += button.frame.width
             
             buttons.append(button)
@@ -176,8 +175,7 @@ struct NavigationView {
             width += button.frame.width
             
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
-            
-            
+
             buttonDelegate.addFunction(button: button)
             navigationView.addSubview(button)
         }
