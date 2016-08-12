@@ -196,8 +196,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             //Calculate position for selectionBar
             let originX = space / 2 + width
             width += button.frame.width + space
-            print(originX)
-            print(spaces)
+
             
             
             let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth
@@ -207,15 +206,23 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
                 else {continue}
             
             var nextButton = UIButton()
+            var nextSpace = CGFloat()
             
             if xFromCenter < 0 && button.tag < buttons.count {
                 nextButton = buttons[button.tag]
+                nextSpace = spaces[button.tag]
             }
             else if xFromCenter > 0 && button.tag != 1 {
                 nextButton = buttons[button.tag - 2]
+                nextSpace = spaces[button.tag - 2]
             }
+
             
-            let newRatio = (view.frame.width) / (2 * space + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2 - (space  - (selectionBarWidth - button.frame.width) / 2))
+            //let newRatio = view.frame.width / (2 * space + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2 - (space  - (selectionBarWidth - button.frame.width) / 2))
+            
+            let newRatio = view.frame.width / (button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2 + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
+            
+
             
             selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio), y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
             return

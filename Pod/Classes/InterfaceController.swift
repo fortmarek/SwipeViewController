@@ -168,7 +168,7 @@ struct NavigationView {
             
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
             let originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
-            
+
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
                 selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2
