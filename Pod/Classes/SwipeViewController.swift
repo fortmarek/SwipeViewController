@@ -26,6 +26,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var selectedButtonColor = UIColor.greenColor()
     var buttonFont = UIFont.systemFontOfSize(18)
     var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
+    var spaces = [CGFloat]()
     
     //NavigationBar
     var navigationBarColor = UIColor.whiteColor()
@@ -37,7 +38,6 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var pageArray = [UIViewController]()
     var buttons = [UIButton]()
     var viewWidth = CGFloat()
-    var x = 0 as CGFloat //Distance between elements
     var barButtonItemWidth = CGFloat(8) //Extra offset when there is barButtonItem (and some default, you can check the value by pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left
     var navigationBarHeight = CGFloat(0)
     var selectionBar = UIView()
@@ -191,9 +191,13 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         
         for button in buttons {
             
+            let space = spaces[button.tag - 1]
+            
             //Calculate position for selectionBar
-            let originX = x * CGFloat(button.tag) + width
-            width += button.frame.width
+            let originX = space / 2 + width
+            width += button.frame.width + space
+            print(originX)
+            print(spaces)
             
             
             let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth
@@ -211,7 +215,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
                 nextButton = buttons[button.tag - 2]
             }
             
-            let newRatio = (view.frame.width) / (2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2 - (x  - (selectionBarWidth - button.frame.width) / 2))
+            let newRatio = (view.frame.width) / (2 * space + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2 - (space  - (selectionBarWidth - button.frame.width) / 2))
             
             selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio), y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
             return

@@ -27,10 +27,10 @@ protocol SwipeButton {
     var selectedButtonColor: UIColor { get }
     var buttonColor: UIColor { get }
     var buttonFont: UIFont { get }
-    var x: CGFloat { get set }
     var buttons: Array<UIButton> { get set }
     var pageArray: Array<UIViewController> { get }
     var currentPageIndex: Int { get }
+    var spaces: Array<CGFloat> { get set }
     func addFunction(button: UIButton)
 }
 
@@ -154,17 +154,20 @@ struct NavigationView {
             buttons.append(button)
         }
         
-        //Space between buttons
-        buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
+        //Space reserved for one button (with label and spaces around it)
+        let space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         var width = 0 as CGFloat
         
         for button in buttons {
             
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
+            let buttonSpace = space - buttonWidth
+            
+            swipeButtonDelegate?.spaces.append(buttonSpace)
             
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
-            let originX = (buttonDelegate.x - buttonWidth) / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+            let originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
             
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
@@ -173,7 +176,7 @@ struct NavigationView {
             }
             
             
-            width += button.frame.width + buttonDelegate.x - buttonWidth
+            width += button.frame.width + space - buttonWidth
             
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
             
