@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwipeViewController"
-  s.version          = "0.1.3"
+  s.version          = "0.1.5"
   s.summary          = "Subclass of UIPageViewController and UINavigation for easy navigation"
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'SwipeViewController' => ['Pod/Assets/*.png']
-  }
+  # s.resource_bundles = {
+  #  'SwipeViewController' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

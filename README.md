@@ -103,6 +103,16 @@ setNavigationWithItem(color: UIColor.white(), leftItem: barButtonItem, rightItem
 
 ### SwipeButtons
 
+There are two different modes - either every button has the same space on each side not depending on the label size (good for odd numbers)
+```swift 
+equalSpaces = true
+```
+
+or the spaces on each differ depending on the label size (good for even numbers, the label is always centered). 
+```swift 
+equalSpaces = false
+```
+
 You can either customize buttons with this function:
 ```swift 
 setButtons(UIFont.systemFontOfSize(18), color: UIColor.blackColor())
