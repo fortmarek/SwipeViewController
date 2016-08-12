@@ -38,7 +38,7 @@ protocol BarButtonItem {
     var leftBarButtonItem: UIBarButtonItem? { get }
     var rightBarButtonItem: UIBarButtonItem? { get }
     var barButtonItemWidth: CGFloat { get set }
-    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem)
+    func setBarButtonItem(side: Side, barButtonItem: UIBarButtonItem)
 }
 
 protocol Navigation {
@@ -99,14 +99,14 @@ struct NavigationView {
         guard var barButtonDelegate = barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
+            barButtonDelegate.setBarButtonItem(side: .left, barButtonItem: leftBarButtonItem)
             if let buttonWidth = leftBarButtonItem.value(forKey: "view")?.frame.width {
                 barButtonDelegate.barButtonItemWidth += buttonWidth
             }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
+            barButtonDelegate.setBarButtonItem(side: .right, barButtonItem: rightBarButtonItem)
         }
         
         

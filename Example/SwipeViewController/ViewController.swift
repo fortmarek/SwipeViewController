@@ -25,13 +25,13 @@ class ViewController: SwipeViewController {
         VC3.title = "Trending"
         
         
-        setViewControllerArray([VC1, VC2, VC3])
-        setFirstViewController(0)
-        setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
-        setButtonsWithSelectedColor(UIFont.systemFont(ofSize: 18), color: UIColor.black(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
+        setViewControllerArray(viewControllers: [VC1, VC2, VC3])
+        setFirstViewController(viewControllerIndex: 0)
+        setSelectionBar(width: 80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
+        setButtonsWithSelectedColor(font: UIFont.systemFont(ofSize: 18), color: UIColor.black(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(push))
-        setNavigationWithItem(UIColor.white(), leftItem: barButtonItem, rightItem: nil)
+        setNavigationWithItem(color: UIColor.white(), leftItem: barButtonItem, rightItem: nil)
         
         
     }
