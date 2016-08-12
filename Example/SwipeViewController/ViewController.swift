@@ -15,23 +15,23 @@ class ViewController: SwipeViewController {
         super.viewDidLoad()
         
         let VC1 = UIViewController()
-        VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
+        VC1.view.backgroundColor = UIColor(red: 1.0, green: 0.24, blue: 0.45, alpha: 1.0)
         VC1.title = "Recent"
         let VC2 = UIViewController()
         VC2.view.backgroundColor = UIColor(red: 0.70, green: 0.23, blue: 0.92, alpha: 1.0)
-        VC2.title = "Random"
+        VC2.title = "Favourite"
         let VC3 = UIViewController()
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
-        VC3.title = "Recent"
+        VC3.title = "Trending"
         
         
         setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
-        setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: UIColor.blackColor(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
+        setButtonsWithSelectedColor(UIFont.systemFont(ofSize: 18), color: UIColor.black(), selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         
-        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(self.push(_:)))
-        setNavigationWithItem(UIColor.whiteColor(), leftItem: barButtonItem, rightItem: nil)
+        let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(push))
+        setNavigationWithItem(UIColor.white(), leftItem: barButtonItem, rightItem: nil)
         
         
     }
@@ -43,7 +43,7 @@ class ViewController: SwipeViewController {
     
     func push(sender: UIBarButtonItem) {
         let VC4 = UIViewController()
-        VC4.view.backgroundColor = UIColor.purpleColor()
+        VC4.view.backgroundColor = UIColor.purple()
         VC4.title = "Cool"
         self.pushViewController(VC4, animated: true)
     }

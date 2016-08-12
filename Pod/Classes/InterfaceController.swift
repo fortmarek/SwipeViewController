@@ -18,7 +18,7 @@ protocol SelectionBar {
 }
 
 enum Side {
-    case Left, Right
+    case left, right
 }
 
 protocol SwipeButton {
@@ -38,7 +38,7 @@ protocol BarButtonItem {
     var leftBarButtonItem: UIBarButtonItem? { get }
     var rightBarButtonItem: UIBarButtonItem? { get }
     var barButtonItemWidth: CGFloat { get set }
-    func setBarButtonItem(side: Side, barButtonItem: UIBarButtonItem)
+    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem)
 }
 
 protocol Navigation {
@@ -99,14 +99,14 @@ struct NavigationView {
         guard var barButtonDelegate = barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.Left, barButtonItem: leftBarButtonItem)
-            if let buttonWidth = leftBarButtonItem.valueForKey("view")?.frame.width {
+            barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
+            if let buttonWidth = leftBarButtonItem.value(forKey: "view")?.frame.width {
                 barButtonDelegate.barButtonItemWidth += buttonWidth
             }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.Right, barButtonItem: rightBarButtonItem)
+            barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
         }
         
         
@@ -136,8 +136,8 @@ struct NavigationView {
             //Title font and color
             guard let pageTitle = page.title else { return }
             let attributes = [NSFontAttributeName:buttonDelegate.buttonFont]
-            let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
-            button.setAttributedTitle(attributedTitle, forState: .Normal)
+            let attributedTitle = AttributedString(string: pageTitle, attributes: attributes)
+            button.setAttributedTitle(attributedTitle, for: UIControlState())
             
             
             guard let titleLabel = button.titleLabel else {continue}
@@ -178,7 +178,7 @@ struct NavigationView {
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
             
             
-            buttonDelegate.addFunction(button)
+            buttonDelegate.addFunction(button: button)
             navigationView.addSubview(button)
         }
         
