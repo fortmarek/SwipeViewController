@@ -32,6 +32,8 @@ protocol SwipeButton {
     var currentPageIndex: Int { get }
     var spaces: Array<CGFloat> { get set }
     func addFunction(button: UIButton)
+    var equalSpaces: Bool { get }
+    var x: CGFloat { get set }
 }
 
 protocol BarButtonItem {
@@ -154,20 +156,41 @@ struct NavigationView {
             buttons.append(button)
         }
         
-        //Space reserved for one button (with label and spaces around it)
-        let space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
-        var width = 0 as CGFloat
+        
+        var space = CGFloat(0)
+        var width = CGFloat(0)
+        
+        if buttonDelegate.equalSpaces {
+            //Space between buttons
+            buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+        }
+        
+        else {
+            //Space reserved for one button (with label and spaces around it)
+            space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
+        }
         
         for button in buttons {
             
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
-            let buttonSpace = space - buttonWidth
-            
-            swipeButtonDelegate?.spaces.append(buttonSpace)
             
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
-            let originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+            var originX = CGFloat(0)
+            
+            if buttonDelegate.equalSpaces {
+                originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                width += buttonWidth
+            }
+            
+            else {
+                let buttonSpace = space - buttonWidth
+                originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                width += buttonWidth + space - buttonWidth
+                swipeButtonDelegate?.spaces.append(buttonSpace)
+            }
+            
+            
 
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
@@ -175,12 +198,7 @@ struct NavigationView {
                 titleLabel.textColor = buttonDelegate.selectedButtonColor
             }
             
-            
-            width += button.frame.width + space - buttonWidth
-            
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
-            
-            
             buttonDelegate.addFunction(button)
             navigationView.addSubview(button)
         }

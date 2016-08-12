@@ -27,11 +27,13 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var buttonFont = UIFont.systemFontOfSize(18)
     var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     var spaces = [CGFloat]()
+    var x = CGFloat(0)
     
     //NavigationBar
     var navigationBarColor = UIColor.whiteColor()
     var leftBarButtonItem: UIBarButtonItem?
     var rightBarButtonItem: UIBarButtonItem?
+    public var equalSpaces = true
     
     
     //Other values (should not be changed)
@@ -191,14 +193,20 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         
         for button in buttons {
             
-            let space = spaces[button.tag - 1]
+            var originX = CGFloat(0)
+            var space = CGFloat(0)
             
-            //Calculate position for selectionBar
-            let originX = space / 2 + width
-            width += button.frame.width + space
+            if equalSpaces {
+                originX = x * CGFloat(button.tag) + width
+                width += button.frame.width
+            }
+            
+            else {
+                space = spaces[button.tag - 1]
+                originX = space / 2 + width
+                width += button.frame.width + space
+            }
 
-            
-            
             let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth
             
             //Get button with current index
@@ -210,20 +218,29 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             
             if xFromCenter < 0 && button.tag < buttons.count {
                 nextButton = buttons[button.tag]
-                nextSpace = spaces[button.tag]
+                if equalSpaces == false {
+                    nextSpace = spaces[button.tag]
+                }
             }
             else if xFromCenter > 0 && button.tag != 1 {
                 nextButton = buttons[button.tag - 2]
-                nextSpace = spaces[button.tag - 2]
+                if equalSpaces == false {
+                  nextSpace = spaces[button.tag - 2]
+                }
+            }
+            
+            var newRatio = CGFloat(0)
+            
+            if equalSpaces {
+                let expression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2
+                newRatio = view.frame.width / (expression - (x  - (selectionBarWidth - button.frame.width) / 2))
+            }
+            
+            else {
+                newRatio = view.frame.width / (button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2 + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
             }
 
-            
-            //let newRatio = view.frame.width / (2 * space + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2 - (space  - (selectionBarWidth - button.frame.width) / 2))
-            
-            let newRatio = view.frame.width / (button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2 + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
-            
 
-            
             selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio), y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
             return
             
