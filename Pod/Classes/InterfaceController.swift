@@ -155,7 +155,7 @@ struct NavigationView {
         }
         
         //Space between buttons
-        buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+        buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         var width = 0 as CGFloat
         
         for button in buttons {
@@ -164,7 +164,7 @@ struct NavigationView {
             let buttonWidth = button.frame.width
             
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
-            let originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+            let originX = (buttonDelegate.x - buttonWidth) / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
             
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
@@ -173,7 +173,7 @@ struct NavigationView {
             }
             
             
-            width += button.frame.width
+            width += button.frame.width + buttonDelegate.x - buttonWidth
             
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
             

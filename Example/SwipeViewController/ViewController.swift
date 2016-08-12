@@ -19,10 +19,10 @@ class ViewController: SwipeViewController {
         VC1.title = "Recent"
         let VC2 = UIViewController()
         VC2.view.backgroundColor = UIColor(red: 0.70, green: 0.23, blue: 0.92, alpha: 1.0)
-        VC2.title = "Random"
+        VC2.title = "Favourite"
         let VC3 = UIViewController()
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
-        VC3.title = "Recent"
+        VC3.title = "New"
         
         
         setViewControllerArray([VC1, VC2, VC3])
