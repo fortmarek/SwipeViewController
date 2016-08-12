@@ -18,7 +18,7 @@ SwipeViewController is a modification of Objective-C project RKSwipeBetweenViewC
 
 Include in your AppDelegate function didFinishLaunchingWithOptions:
 ```swift 
-let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
 let navigationController = YourViewControllerName(rootViewController: pageController)
 self.window?.rootViewController = navigationController
 self.window?.makeKeyAndVisible()
@@ -65,7 +65,7 @@ let page_one = stb.instantiateViewControllerWithIdentifier(“page1”) as UIVie
 let page_two = stb.instantiateViewControllerWithIdentifier(“page2”) as UIViewController
 let page_three = stb.instantiateViewControllerWithIdentifier(“page3”) as UIViewController
 
-setViewControllerArray([page_one, page_two, page_three])
+setViewControllerArray(viewControllers: [page_one, page_two, page_three])
 ```
 Or you can add pages by one and not as a whole array: 
 
@@ -73,7 +73,7 @@ Or you can add pages by one and not as a whole array:
 let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
 let page_one = stb.instantiateViewControllerWithIdentifier(“page1”) as UIViewController
 
-addViewController(page_one)
+addViewController(viewController: page_one)
 ```
 
 To set the titles of the buttons, you just need to change the title of each page:
@@ -82,7 +82,7 @@ page_one.title = "Recent"
 ```
 To specify which view controller should be selected first:
 ```swift 
-setFirstViewController(1)
+setFirstViewController(viewControllerIndex: 1)
 ```
 It should also be said that the first view controller index starts at zero, just like arrays.
 
@@ -91,14 +91,14 @@ It should also be said that the first view controller index starts at zero, just
 To change color of the NavigationBar:
 
 ```swift 
-setNavigationColor(UIColor.blueColor())
+setNavigationColor(UIColor.blue())
 ```
 
 You can also include barButtonItems, simply create UIBarButtonItem as you would normally do and then use it like this:
 
 ```swift 
 let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
-setNavigationWithItem(UIColor.whiteColor(), leftItem: barButtonItem, rightItem: nil)
+setNavigationWithItem(color: UIColor.white(), leftItem: barButtonItem, rightItem: nil)
 ```
 
 ### SwipeButtons
@@ -110,13 +110,13 @@ setButtons(UIFont.systemFontOfSize(18), color: UIColor.blackColor())
 Or if you want to change the color of the buttons depending on which page the user is on:
 
 ```swift 
-setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: UIColor.blackColor(), selectedColor: UIColor.whiteColor())
+setButtonsWithSelectedColor(font: UIFont.systemFontOfSize(18), color: UIColor.black(), selectedColor: UIColor.white())
 ```
 
 To change the offsets on the side and on the bottom:
 
 ```swift 
-setButtonsOffset(40, bottomOffset: 5)
+setButtonsOffset(offset: 40, bottomOffset: 5)
 ```
 
 ### SelectionBar
@@ -124,7 +124,7 @@ setButtonsOffset(40, bottomOffset: 5)
 To customize selection bar, use this function:
 
 ```swift 
-setSelectionBar(80, height: 3, color: UIColor.blackColor())
+setSelectionBar(width: 80, height: 3, color: UIColor.black())
 ```
 
 ### Additional customization

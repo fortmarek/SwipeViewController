@@ -212,9 +212,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             }
             
             let expression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2
-            let anotherExpression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width)
-            
-            let newRatio = (view.frame.width) / (expression - (x  - (selectionBarWidth - button.frame.width) / 2))
+            let newRatio = view.frame.width / (expression - (x  - (selectionBarWidth - button.frame.width) / 2))
             
             selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio), y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
             return
