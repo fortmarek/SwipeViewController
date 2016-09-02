@@ -135,21 +135,12 @@ struct NavigationView {
             tag += 1
             button.tag = tag
             
-            //Title font and color
-            guard let pageTitle = page.title else { return }
-            let attributes = [NSFontAttributeName:buttonDelegate.buttonFont]
-            let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
-            button.setAttributedTitle(attributedTitle, forState: .Normal)
+            setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
             
             
-            guard let titleLabel = button.titleLabel else {continue}
-            titleLabel.textColor = buttonDelegate.buttonColor
+            guard let titleFrame = button.titleLabel?.frame else {continue}
             
-            
-            titleLabel.sizeToFit()
-            
-            button.frame = titleLabel.frame
-            
+            button.frame = titleFrame
             
             totalButtonWidth += button.frame.width
             
@@ -205,6 +196,20 @@ struct NavigationView {
         
         buttonDelegate.buttons = buttons
         
+    }
+    
+    private func setTitleLabel(page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
+        //Title font and color
+        guard let pageTitle = page.title else { return }
+        let attributes = [NSFontAttributeName:font]
+        let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
+        button.setAttributedTitle(attributedTitle, forState: .Normal)
+        
+        
+        guard let titleLabel = button.titleLabel else {return}
+        titleLabel.textColor = color
+        
+        titleLabel.sizeToFit()
     }
 }
 
