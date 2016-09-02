@@ -33,7 +33,7 @@ class ViewController: SwipeViewController {
         
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(self.push(_:)))
         setNavigationWithItem(UIColor.whiteColor(), leftItem: barButtonItem, rightItem: nil)
-        
+        navigationBarHidden = true
         
     }
     

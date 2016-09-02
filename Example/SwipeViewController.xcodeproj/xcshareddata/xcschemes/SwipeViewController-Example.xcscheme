@@ -52,6 +52,16 @@
                ReferencedContainer = "container:SwipeViewController.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F8A439121D7A0520006A4BB4"
+               BuildableName = "SwipeViewController_ExampleTests.xctest"
+               BlueprintName = "SwipeViewController_ExampleTests"
+               ReferencedContainer = "container:SwipeViewController.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

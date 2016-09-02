@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21305455EAE0AC8E53FAAB44 /* Pods_SwipeViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E660EA50628E405FF2A8952 /* Pods_SwipeViewController_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		96D76DD0F6C0C4200D1079BC /* Pods_SwipeViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EA4212E09F3CB8920EA003 /* Pods_SwipeViewController_Example.framework */; };
+		F8A439161D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A439151D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift */; };
+		F8A439201D7A05A0006A4BB4 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+		F8A439181D7A0520006A4BB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SwipeViewController;
+			remoteInfo = SwipeViewController_Example;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,13 +40,15 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* SwipeViewController_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewController_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		AAF4C92ADDAE61F7990F9FE7 /* Pods-SwipeViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0EA4212E09F3CB8920EA003 /* Pods_SwipeViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B370701696200D7D478E3529 /* SwipeViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwipeViewController.podspec; path = ../SwipeViewController.podspec; sourceTree = "<group>"; };
 		BAE5F3BBF8F31A50DE6C0E0C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F8A439131D7A0520006A4BB4 /* SwipeViewController_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewController_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8A439151D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController_ExampleTests.swift; sourceTree = "<group>"; };
+		F8A439171D7A0520006A4BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE21AFB9204008FA782 /* Frameworks */ = {
+		F8A439101D7A0520006A4BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21305455EAE0AC8E53FAAB44 /* Pods_SwipeViewController_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +76,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SwipeViewController */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				F8A439141D7A0520006A4BB4 /* SwipeViewController_ExampleTests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				CF54E814D666B51EEF6E2669 /* Pods */,
 				F499277D37FCAD30CB8C6FE2 /* Frameworks */,
@@ -85,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* SwipeViewController_Example.app */,
-				607FACE51AFB9204008FA782 /* SwipeViewController_Tests.xctest */,
+				F8A439131D7A0520006A4BB4 /* SwipeViewController_ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +161,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F8A439141D7A0520006A4BB4 /* SwipeViewController_ExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8A439151D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift */,
+				F8A439171D7A0520006A4BB4 /* Info.plist */,
+			);
+			path = SwipeViewController_ExampleTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,25 +193,22 @@
 			productReference = 607FACD01AFB9204008FA782 /* SwipeViewController_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* SwipeViewController_Tests */ = {
+		F8A439121D7A0520006A4BB4 /* SwipeViewController_ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwipeViewController_Tests" */;
+			buildConfigurationList = F8A4391A1D7A0520006A4BB4 /* Build configuration list for PBXNativeTarget "SwipeViewController_ExampleTests" */;
 			buildPhases = (
-				9F2A6BC471631F8896D1323C /* 📦 Check Pods Manifest.lock */,
-				607FACE11AFB9204008FA782 /* Sources */,
-				607FACE21AFB9204008FA782 /* Frameworks */,
-				607FACE31AFB9204008FA782 /* Resources */,
-				465006E120E02002FE6200F8 /* 📦 Embed Pods Frameworks */,
-				E5B45527147FF7AF30390678 /* 📦 Copy Pods Resources */,
+				F8A4390F1D7A0520006A4BB4 /* Sources */,
+				F8A439101D7A0520006A4BB4 /* Frameworks */,
+				F8A439111D7A0520006A4BB4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
+				F8A439191D7A0520006A4BB4 /* PBXTargetDependency */,
 			);
-			name = SwipeViewController_Tests;
-			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* SwipeViewController_Tests.xctest */;
+			name = SwipeViewController_ExampleTests;
+			productName = SwipeViewController_ExampleTests;
+			productReference = F8A439131D7A0520006A4BB4 /* SwipeViewController_ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -209,15 +217,15 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
-					607FACE41AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
+					F8A439121D7A0520006A4BB4 = {
+						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -236,7 +244,7 @@
 			projectRoot = "";
 			targets = (
 				607FACCF1AFB9204008FA782 /* SwipeViewController_Example */,
-				607FACE41AFB9204008FA782 /* SwipeViewController_Tests */,
+				F8A439121D7A0520006A4BB4 /* SwipeViewController_ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +260,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE31AFB9204008FA782 /* Resources */ = {
+		F8A439111D7A0520006A4BB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,21 +270,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		465006E120E02002FE6200F8 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		581E5A125CD884B653A1C903 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,21 +285,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F2A6BC471631F8896D1323C /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		B3267A202DFF0A129EAC4B0E /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,21 +298,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E5B45527147FF7AF30390678 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEE136F9DFE89657CC242D22 /* 📦 Copy Pods Resources */ = {
@@ -364,21 +327,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		607FACE11AFB9204008FA782 /* Sources */ = {
+		F8A4390F1D7A0520006A4BB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				F8A439161D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift in Sources */,
+				F8A439201D7A05A0006A4BB4 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+		F8A439191D7A0520006A4BB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 607FACCF1AFB9204008FA782 /* SwipeViewController_Example */;
-			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+			targetProxy = F8A439181D7A0520006A4BB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,33 +476,30 @@
 			};
 			name = Release;
 		};
-		607FACF31AFB9204008FA782 /* Debug */ = {
+		F8A4391B1D7A0520006A4BB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAF4C92ADDAE61F7990F9FE7 /* Pods-SwipeViewController_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Tests/Info.plist;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = SwipeViewController_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "marekfort.SwipeViewController-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeViewController_Example.app/SwipeViewController_Example";
 			};
 			name = Debug;
 		};
-		607FACF41AFB9204008FA782 /* Release */ = {
+		F8A4391C1D7A0520006A4BB4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 304F5B5CA89001688C108E05 /* Pods-SwipeViewController_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = "";
-				INFOPLIST_FILE = Tests/Info.plist;
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = SwipeViewController_ExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "marekfort.SwipeViewController-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeViewController_Example.app/SwipeViewController_Example";
 			};
@@ -565,14 +526,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwipeViewController_Tests" */ = {
+		F8A4391A1D7A0520006A4BB4 /* Build configuration list for PBXNativeTarget "SwipeViewController_ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				607FACF31AFB9204008FA782 /* Debug */,
-				607FACF41AFB9204008FA782 /* Release */,
+				F8A4391B1D7A0520006A4BB4 /* Debug */,
+				F8A4391C1D7A0520006A4BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

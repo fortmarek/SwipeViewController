@@ -139,6 +139,16 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     }
     
     
+    // Fix for navigationBarHidden
+    override public func viewDidLayoutSubviews() {
+        
+        if self.view.frame.size.height == UIScreen.mainScreen().bounds.height {
+            for childVC in childViewControllers {
+                childVC.view.frame = CGRectMake(0, navigationBar.frame.size.height, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height - navigationBar.frame.size.height);
+            }
+        }
+    }
+    
     
     
     func syncScrollView() {
