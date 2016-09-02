@@ -28,6 +28,8 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     var spaces = [CGFloat]()
     var x = CGFloat(0)
+    var titleImages = [String]()
+    var titleFrames = [CGSize]()
     
     //NavigationBar
     var navigationBarColor = UIColor.whiteColor()
@@ -128,6 +130,11 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         self.bottomOfset = bottomOffset
     }
     
+    public func setButtonsWithImages(titleImages: Array<String>, titleFrames: Array<CGSize>) {
+        self.titleImages = titleImages
+        self.titleFrames = titleFrames
+    }
+    
     public func setNavigationColor(color: UIColor) {
         navigationBarColor = color
     }
@@ -137,6 +144,8 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         leftBarButtonItem = leftItem
         rightBarButtonItem = rightItem
     }
+    
+    
     
     
     // Fix for navigationBarHidden

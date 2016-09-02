@@ -129,6 +129,12 @@ To change the offsets on the side and on the bottom:
 setButtonsOffset(40, bottomOffset: 5)
 ```
 
+Instead of titles as labels you can use images. Please, also note that the arrays should correspond to the order and count of the array you set in function setViewControllerArray:
+
+```swift
+setButtonsWithImages(["Hearts", "Idea", "Message"], titleFrames: [heartsFrame, ideaFrame, messageFrame])
+```
+
 ### SelectionBar
 
 To customize selection bar, use this function:

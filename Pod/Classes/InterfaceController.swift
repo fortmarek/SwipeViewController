@@ -33,6 +33,8 @@ protocol SwipeButton {
     var spaces: Array<CGFloat> { get set }
     func addFunction(button: UIButton)
     var equalSpaces: Bool { get }
+    var titleImages: Array<String> { get }
+    var titleFrames: Array<CGSize> { get }
     var x: CGFloat { get set }
 }
 
@@ -131,16 +133,18 @@ struct NavigationView {
         for page in buttonDelegate.pageArray {
             let button = UIButton()
             
+            if buttonDelegate.titleImages.isEmpty {
+                setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
+            }
+            
+            else {
+                setImageButtons(button, imageName: buttonDelegate.titleImages[tag], color: buttonDelegate.buttonColor, titleFrame: buttonDelegate.titleFrames[tag])
+            }
+
+            
             //Tag
             tag += 1
             button.tag = tag
-            
-            setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
-            
-            
-            guard let titleFrame = button.titleLabel?.frame else {continue}
-            
-            button.frame = titleFrame
             
             totalButtonWidth += button.frame.width
             
@@ -166,7 +170,7 @@ struct NavigationView {
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
             
-            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
+            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight
             var originX = CGFloat(0)
             
             if buttonDelegate.equalSpaces {
@@ -210,6 +214,14 @@ struct NavigationView {
         titleLabel.textColor = color
         
         titleLabel.sizeToFit()
+        
+        button.frame = titleLabel.frame
+    }
+    
+    private func setImageButtons(button: UIButton, imageName: String, color: UIColor, titleFrame: CGSize) {
+        button.setImage(UIImage(named: imageName), forState: .Normal)
+        button.frame.size = titleFrame
+        button.tintColor = color
     }
 }
 
