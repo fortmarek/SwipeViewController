@@ -133,7 +133,7 @@ Instead of titles as labels you can use images. First init the button using Swip
 
 ```swift
 let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
-setButtonsWithImages([buttonOne, buttonOne, buttonOne])
+setButtonsWithImages([buttonOne, buttonTwo, buttonThree])
 ```
 
 ### SelectionBar
