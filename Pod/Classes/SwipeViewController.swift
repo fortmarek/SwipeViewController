@@ -387,8 +387,8 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             
             //Going right, next button selected
         else if -border ... -viewWidthHalf ~= xFromCenter && currentPageIndex < buttons.count {
-            let button = buttons[currentPageIndex - 1]
-            let previousButton = buttons[currentPageIndex]
+            let button = buttons[currentPageIndex]
+            let previousButton = buttons[currentPageIndex - 1]
             
             button.titleLabel?.textColor = selectedButtonColor
             previousButton.titleLabel?.textColor = buttonColor
@@ -396,7 +396,9 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
             button.selected = true
             previousButton.selected = false
             
+            
         }
+        
     }
     
 }
