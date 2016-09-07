@@ -129,10 +129,11 @@ To change the offsets on the side and on the bottom:
 setButtonsOffset(40, bottomOffset: 5)
 ```
 
-Instead of titles as labels you can use images. Please, also note that the arrays should correspond to the order and count of the array you set in function setViewControllerArray:
+Instead of titles as labels you can use images. First init the button using SwipeButtonWithImage struct:
 
 ```swift
-setButtonsWithImages(["Hearts", "Idea", "Message"], titleFrames: [heartsFrame, ideaFrame, messageFrame])
+let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
+setButtonsWithImages([buttonOne, buttonOne, buttonOne])
 ```
 
 ### SelectionBar
