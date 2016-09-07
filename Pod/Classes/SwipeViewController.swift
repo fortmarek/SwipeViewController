@@ -28,8 +28,7 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     var spaces = [CGFloat]()
     var x = CGFloat(0)
-    var titleImages = [String]()
-    var titleFrames = [CGSize]()
+    var titleImages = [SwipeButtonWithImage]()
     
     //NavigationBar
     var navigationBarColor = UIColor.whiteColor()
@@ -88,6 +87,9 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         let initialViewController = pageArray[currentPageIndex - 1]
         pageController.setViewControllers([initialViewController], direction: .Forward, animated: true, completion: nil)
         
+        //Select button of initial view controller - change to selected image
+        buttons[currentPageIndex - 1].selected = true
+        
     }
     
     
@@ -130,9 +132,8 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         self.bottomOfset = bottomOffset
     }
     
-    public func setButtonsWithImages(titleImages: Array<String>, titleFrames: Array<CGSize>) {
+    public func setButtonsWithImages(titleImages: Array<SwipeButtonWithImage>) {
         self.titleImages = titleImages
-        self.titleFrames = titleFrames
     }
     
     public func setNavigationColor(color: UIColor) {
@@ -144,6 +145,8 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         leftBarButtonItem = leftItem
         rightBarButtonItem = rightItem
     }
+    
+    
     
     
     
@@ -345,42 +348,56 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
         
         //Going left, next button selected
         if viewWidthHalf ... border ~= xFromCenter && currentPageIndex > 1 {
-            guard
-                let title = buttons[currentPageIndex - 2].titleLabel,
-                let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
-            title.textColor = selectedButtonColor
-            previousTitle.textColor = buttonColor
+            
+            let button = buttons[currentPageIndex - 2]
+            let previousButton = buttons[currentPageIndex - 1]
+            
+            button.titleLabel?.textColor = selectedButtonColor
+            previousButton.titleLabel?.textColor = buttonColor
+            
+            button.selected = true
+            previousButton.selected = false
         }
             
             //Going right, current button selected
         else if 0 ... halfBorder ~= xFromCenter && currentPageIndex > 1 {
-            guard
-                let title = buttons[currentPageIndex - 2].titleLabel,
-                let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
-            title.textColor = buttonColor
-            previousTitle.textColor = selectedButtonColor
+            
+            let button = buttons[currentPageIndex - 1]
+            let previousButton = buttons[currentPageIndex - 2]
+            
+            button.titleLabel?.textColor = selectedButtonColor
+            previousButton.titleLabel?.textColor = buttonColor
+            
+            button.selected = true
+            previousButton.selected = false
         }
             
             //Going left, current button selected
         else if -halfBorder ... 0 ~= xFromCenter && currentPageIndex < buttons.count {
-            guard
-                let title = buttons[currentPageIndex].titleLabel,
-                let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
-            title.textColor = buttonColor
-            previousTitle.textColor = selectedButtonColor
+            
+            let previousButton = buttons[currentPageIndex]
+            let button = buttons[currentPageIndex - 1]
+            
+            button.titleLabel?.textColor = selectedButtonColor
+            previousButton.titleLabel?.textColor = buttonColor
+            
+            button.selected = true
+            previousButton.selected = false
         }
             
             //Going right, next button selected
         else if -border ... -viewWidthHalf ~= xFromCenter && currentPageIndex < buttons.count {
-            guard
-                let title = buttons[currentPageIndex].titleLabel,
-                let previousTitle = buttons[currentPageIndex - 1].titleLabel else {return}
-            title.textColor = selectedButtonColor
-            previousTitle.textColor = buttonColor
+            let button = buttons[currentPageIndex - 1]
+            let previousButton = buttons[currentPageIndex]
+            
+            button.titleLabel?.textColor = selectedButtonColor
+            previousButton.titleLabel?.textColor = buttonColor
+            
+            button.selected = true
+            previousButton.selected = false
             
         }
     }
-    
     
 }
 
@@ -416,6 +433,16 @@ extension SwipeViewController: UIPageViewControllerDataSource {
 }
 
 
-
+public struct SwipeButtonWithImage {
+    var size: CGSize?
+    var image: UIImage?
+    var selectedImage: UIImage?
+    
+    public init(image: UIImage?, selectedImage: UIImage?, size: CGSize?) {
+        self.image = image
+        self.selectedImage = selectedImage
+        self.size = size
+    }
+}
 
 

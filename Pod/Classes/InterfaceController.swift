@@ -33,8 +33,7 @@ protocol SwipeButton {
     var spaces: Array<CGFloat> { get set }
     func addFunction(button: UIButton)
     var equalSpaces: Bool { get }
-    var titleImages: Array<String> { get }
-    var titleFrames: Array<CGSize> { get }
+    var titleImages: Array<SwipeButtonWithImage> { get }
     var x: CGFloat { get set }
 }
 
@@ -138,7 +137,22 @@ struct NavigationView {
             }
             
             else {
-                setImageButtons(button, imageName: buttonDelegate.titleImages[tag], color: buttonDelegate.buttonColor, titleFrame: buttonDelegate.titleFrames[tag])
+                //UI of button with image
+                
+                //Getting buttnWithImage struct from array
+                let buttonWithImage = buttonDelegate.titleImages[tag]
+                //Normal image
+                button.setImage(buttonWithImage.image, forState: .Normal)
+                //Selected image 
+                button.setImage(buttonWithImage.selectedImage, forState: .Selected)
+                //Button tint color
+                button.tintColor = buttonDelegate.buttonColor
+                
+                //Button size
+                if let size = buttonWithImage.size {
+                    button.frame.size = size
+                }
+                
             }
 
             
