@@ -102,7 +102,7 @@ struct NavigationView {
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
             barButtonDelegate.setBarButtonItem(side: .left, barButtonItem: leftBarButtonItem)
-            if let buttonWidth = leftBarButtonItem.value(forKey: "view")?.frame.width {
+            if let buttonWidth = (leftBarButtonItem.value(forKey: "view") as? UIButton)?.frame.width {
                 barButtonDelegate.barButtonItemWidth += buttonWidth
             }
         }
@@ -138,7 +138,7 @@ struct NavigationView {
             //Title font and color
             guard let pageTitle = page.title else { return }
             let attributes = [NSFontAttributeName:buttonDelegate.buttonFont]
-            let attributedTitle = AttributedString(string: pageTitle, attributes: attributes)
+            let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
             button.setAttributedTitle(attributedTitle, for: UIControlState())
             
             

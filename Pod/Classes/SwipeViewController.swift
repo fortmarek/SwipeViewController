@@ -9,7 +9,7 @@
 import UIKit
 
 
-public class SwipeViewController: UINavigationController, UIPageViewControllerDelegate, UIScrollViewDelegate, Navigation, BarButtonItem, SwipeButton, SelectionBar {
+open class SwipeViewController: UINavigationController, UIPageViewControllerDelegate, UIScrollViewDelegate, Navigation, BarButtonItem, SwipeButton, SelectionBar {
     
     //Values to change, either here or in your subclass of PageViewController
     
@@ -17,19 +17,19 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     //SelectionBar
     var selectionBarHeight = CGFloat(0)
     var selectionBarWidth = CGFloat(0)
-    var selectionBarColor = UIColor.black()
+    var selectionBarColor = UIColor.black
     
     //SwipeButtons
     var offset = CGFloat(40)
     var bottomOfset = CGFloat(0)
-    var buttonColor = UIColor.black()
-    var selectedButtonColor = UIColor.green()
+    var buttonColor = UIColor.black
+    var selectedButtonColor = UIColor.green
     var buttonFont = UIFont.systemFont(ofSize: 18)
     var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     public var equalSpaces = true
     
     //NavigationBar
-    var navigationBarColor = UIColor.white()
+    var navigationBarColor = UIColor.white
     var leftBarButtonItem: UIBarButtonItem?
     var rightBarButtonItem: UIBarButtonItem?
     
@@ -54,12 +54,12 @@ public class SwipeViewController: UINavigationController, UIPageViewControllerDe
     
     
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         
         navigationBar.barTintColor = navigationBarColor
         navigationBar.isTranslucent = false
