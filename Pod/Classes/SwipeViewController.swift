@@ -259,7 +259,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             }
             
             else {
-                newRatio = view.frame.width / (button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2 + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
+                let expression = button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2
+                newRatio = view.frame.width / (expression + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
+
             }
 
 
