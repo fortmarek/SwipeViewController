@@ -18,7 +18,7 @@ protocol SelectionBar {
 }
 
 enum Side {
-    case Left, Right
+    case left, right
 }
 
 protocol SwipeButton {
@@ -31,7 +31,7 @@ protocol SwipeButton {
     var pageArray: Array<UIViewController> { get }
     var currentPageIndex: Int { get }
     var spaces: Array<CGFloat> { get set }
-    func addFunction(button: UIButton)
+    func addFunction(_ button: UIButton)
     var equalSpaces: Bool { get }
     var titleImages: Array<SwipeButtonWithImage> { get }
     var x: CGFloat { get set }
@@ -41,7 +41,7 @@ protocol BarButtonItem {
     var leftBarButtonItem: UIBarButtonItem? { get }
     var rightBarButtonItem: UIBarButtonItem? { get }
     var barButtonItemWidth: CGFloat { get set }
-    func setBarButtonItem(side: Side, barButtonItem: UIBarButtonItem)
+    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem)
 }
 
 protocol Navigation {
@@ -80,7 +80,7 @@ struct NavigationView {
     
     var selectionBarOriginX = CGFloat(0)
     
-    private func initSelectionBar() {
+    fileprivate func initSelectionBar() {
         
         guard
             var delegate = delegate,
@@ -97,25 +97,25 @@ struct NavigationView {
         delegate.selectionBar = selectionBar
     }
     
-    private func initBarButtonItem() {
+    fileprivate func initBarButtonItem() {
         
         guard var barButtonDelegate = barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.Left, barButtonItem: leftBarButtonItem)
-            if let buttonWidth = leftBarButtonItem.valueForKey("view")?.frame.width {
-                barButtonDelegate.barButtonItemWidth += buttonWidth
+            barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
+            if let button = leftBarButtonItem.value(forKey: "view") as? UIView {
+                barButtonDelegate.barButtonItemWidth += button.frame.width
             }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
-            barButtonDelegate.setBarButtonItem(.Right, barButtonItem: rightBarButtonItem)
+            barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
         }
         
         
     }
     
-    private mutating func initButtons() {
+    fileprivate mutating func initButtons() {
         guard
             let delegate = delegate,
             let barDelegate = barDelegate,
@@ -142,9 +142,9 @@ struct NavigationView {
                 //Getting buttnWithImage struct from array
                 let buttonWithImage = buttonDelegate.titleImages[tag]
                 //Normal image
-                button.setImage(buttonWithImage.image, forState: .Normal)
+                button.setImage(buttonWithImage.image, for: UIControlState())
                 //Selected image 
-                button.setImage(buttonWithImage.selectedImage, forState: .Selected)
+                button.setImage(buttonWithImage.selectedImage, for: .selected)
                 //Button tint color
                 button.tintColor = buttonDelegate.buttonColor
                 
@@ -216,12 +216,12 @@ struct NavigationView {
         
     }
     
-    private func setTitleLabel(page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
+    fileprivate func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
         //Title font and color
         guard let pageTitle = page.title else { return }
         let attributes = [NSFontAttributeName:font]
         let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
-        button.setAttributedTitle(attributedTitle, forState: .Normal)
+        button.setAttributedTitle(attributedTitle, for: UIControlState())
         
         
         guard let titleLabel = button.titleLabel else {return}
@@ -232,8 +232,8 @@ struct NavigationView {
         button.frame = titleLabel.frame
     }
     
-    private func setImageButtons(button: UIButton, imageName: String, color: UIColor, titleFrame: CGSize) {
-        button.setImage(UIImage(named: imageName), forState: .Normal)
+    fileprivate func setImageButtons(_ button: UIButton, imageName: String, color: UIColor, titleFrame: CGSize) {
+        button.setImage(UIImage(named: imageName), for: UIControlState())
         button.frame.size = titleFrame
         button.tintColor = color
     }
