@@ -29,12 +29,20 @@ protocol SwipeButton {
     var buttonFont: UIFont { get }
     var buttons: Array<UIButton> { get set }
     var pageArray: Array<UIViewController> { get }
+    var spaces: Array<CGFloat> { get set }
     var currentPageIndex: Int { get }
+<<<<<<< HEAD
     var spaces: Array<CGFloat> { get set }
     func addFunction(_ button: UIButton)
     var equalSpaces: Bool { get }
     var titleImages: Array<SwipeButtonWithImage> { get }
     var x: CGFloat { get set }
+||||||| merged common ancestors
+    func addFunction(button: UIButton)
+=======
+    var equalSpaces: Bool { get }
+    func addFunction(button: UIButton)
+>>>>>>> swift3
 }
 
 protocol BarButtonItem {
@@ -102,14 +110,30 @@ struct NavigationView {
         guard var barButtonDelegate = barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
+<<<<<<< HEAD
             barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
             if let button = leftBarButtonItem.value(forKey: "view") as? UIView {
                 barButtonDelegate.barButtonItemWidth += button.frame.width
+||||||| merged common ancestors
+            barButtonDelegate.setBarButtonItem(.Left, barButtonItem: leftBarButtonItem)
+            if let buttonWidth = leftBarButtonItem.valueForKey("view")?.frame.width {
+                barButtonDelegate.barButtonItemWidth += buttonWidth
+=======
+            barButtonDelegate.setBarButtonItem(side: .left, barButtonItem: leftBarButtonItem)
+            if let buttonWidth = (leftBarButtonItem.value(forKey: "view") as? UIButton)?.frame.width {
+                barButtonDelegate.barButtonItemWidth += buttonWidth
+>>>>>>> swift3
             }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
+<<<<<<< HEAD
             barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
+||||||| merged common ancestors
+            barButtonDelegate.setBarButtonItem(.Right, barButtonItem: rightBarButtonItem)
+=======
+            barButtonDelegate.setBarButtonItem(side: .right, barButtonItem: rightBarButtonItem)
+>>>>>>> swift3
         }
         
         
@@ -154,16 +178,53 @@ struct NavigationView {
                 }
                 
             }
+
             
             //Tag
             tag += 1
             button.tag = tag
             
+<<<<<<< HEAD
+||||||| merged common ancestors
+            //Title font and color
+            guard let pageTitle = page.title else { return }
+            let attributes = [NSFontAttributeName:buttonDelegate.buttonFont]
+            let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
+            button.setAttributedTitle(attributedTitle, forState: .Normal)
+            
+            
+            guard let titleLabel = button.titleLabel else {continue}
+            titleLabel.textColor = buttonDelegate.buttonColor
+            
+            
+            titleLabel.sizeToFit()
+            
+            button.frame = titleLabel.frame
+            
+            
+=======
+            //Title font and color
+            guard let pageTitle = page.title else { return }
+            let attributes = [NSFontAttributeName:buttonDelegate.buttonFont]
+            let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
+            button.setAttributedTitle(attributedTitle, for: UIControlState())
+            
+            
+            guard let titleLabel = button.titleLabel else {continue}
+            titleLabel.textColor = buttonDelegate.buttonColor
+            
+            
+            titleLabel.sizeToFit()
+            
+            button.frame = titleLabel.frame
+            
+>>>>>>> swift3
             totalButtonWidth += button.frame.width
             
             buttons.append(button)
         }
         
+<<<<<<< HEAD
         
         var space = CGFloat(0)
         var width = CGFloat(0)
@@ -177,14 +238,55 @@ struct NavigationView {
             //Space reserved for one button (with label and spaces around it)
             space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         }
+||||||| merged common ancestors
+        //Space between buttons
+        buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+        var width = 0 as CGFloat
+=======
+        
+        var space = CGFloat(0)
+        var width = CGFloat(0)
+        
+        if buttonDelegate.equalSpaces {
+            //Space between buttons
+            buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+        }
+            
+        else {
+            //Space reserved for one button (with label and spaces around it)
+            space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
+        }
+>>>>>>> swift3
         
         for button in buttons {
             
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
             
+<<<<<<< HEAD
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight
             var originX = CGFloat(0)
+||||||| merged common ancestors
+            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
+            let originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+=======
+            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - 22
+            var originX = CGFloat(0)
+            
+            if buttonDelegate.equalSpaces {
+                originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                width += buttonWidth
+            }
+                
+            else {
+                let buttonSpace = space - buttonWidth
+                originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                width += buttonWidth + space - buttonWidth
+                swipeButtonDelegate?.spaces.append(buttonSpace)
+            }
+            
+            
+>>>>>>> swift3
             
             if buttonDelegate.equalSpaces {
                 originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
@@ -207,7 +309,15 @@ struct NavigationView {
             }
             
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
+<<<<<<< HEAD
             buttonDelegate.addFunction(button)
+||||||| merged common ancestors
+            
+            
+            buttonDelegate.addFunction(button)
+=======
+            buttonDelegate.addFunction(button: button)
+>>>>>>> swift3
             navigationView.addSubview(button)
         }
         

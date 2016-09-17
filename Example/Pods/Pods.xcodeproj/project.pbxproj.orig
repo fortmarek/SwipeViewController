@@ -1,0 +1,3650 @@
+<<<<<<< HEAD
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		103719B3812CA36D15510FEB8E37C2A7 /* SwipeViewController-iOS8.2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6110A111CFADAC9D3F0A1C4BF6713DD3 /* SwipeViewController-iOS8.2-dummy.m */; };
+		1945C7FD46851354CE5ADDCD7ABD28EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		1C54BCDFFEA018B4884586A9B4498D0A /* Pods-SwipeViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */; };
+		20EEA357BD6AB6530D38ED5A5E3A70A1 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB3D764ECDCE09429B7A13B192A650 /* SwipeViewController.swift */; };
+		3016EDAA2B67CBE5EEC9FD37D6BC930D /* SwipeViewController-iOS8.3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 452E20A223E51B3650F452700E5FF4AA /* SwipeViewController-iOS8.3-dummy.m */; };
+		35F9CE9E6F4181D4801972528758DDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		3753BE86938BADA8C5E5C02649F7EDFA /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB3D764ECDCE09429B7A13B192A650 /* SwipeViewController.swift */; };
+		4E26F11AA17A2AC53CC061A453F0280F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		5C5A922F0A172A35653B017BBB9B124E /* SwipeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */; };
+		7A26B9A0654BA843E57074740344BECA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		7EABD1DB1DFE7A6BBDEE0816FA816856 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6084D8565CD552464FF032242BC7CB /* InterfaceController.swift */; };
+		899CC313FD4BA22394184269C0BB357C /* SwipeViewController-iOS8.2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A08D6E3ADD34D0919EEF5F513CE6E90B /* SwipeViewController-iOS8.2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89AA470D739F2C32A973FDA2FE7E3D4A /* Pods-SwipeViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C9FA17F19773B2232F16788F5024B24 /* SwipeViewController-iOS8.3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D3E5AB814473063F3FCFCA6026A439B /* SwipeViewController-iOS8.3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF7310F8E56F8CB60DCC407CD966CD64 /* SwipeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */; };
+		C2061DDD0AC2EFFDE4ECAE9E5D7FD007 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6084D8565CD552464FF032242BC7CB /* InterfaceController.swift */; };
+		CDCD8679C109BA0FF4A52A6A8FBD2E8E /* Pods-SwipeViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */; };
+		D6999756BD067674DDA10F33DE4F5909 /* Pods-SwipeViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02B891A5856B1EA6D56284AF78664B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 856C818BBAB21BFBB3C00D15D918B616;
+			remoteInfo = "SwipeViewController-iOS8.3-SwipeViewController";
+		};
+		85FD32500F469EF52F9C4107AEA63D87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5A84C0ABA6EEFCF0BAA1F3DE3EFEAE3;
+			remoteInfo = "SwipeViewController-iOS8.2-SwipeViewController";
+		};
+		973F3E76F0CCE3B16131B946BB5EEA32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8384AADE2864D49036F5DA1CFC1069F;
+			remoteInfo = "SwipeViewController-iOS8.2";
+		};
+		BF51943410E97BEF26CD2FBA52467263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A0C26850BE67D393603337E87A65376;
+			remoteInfo = "SwipeViewController-iOS8.3";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwipeViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		00D0F8A34F27FFFD5314CF1E7F88ACF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118F8826ED98AE160C46A69C97620EF5 /* SwipeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2772C87A5A570B2D03227F83FFB2C81B /* SwipeViewController-iOS8.3-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwipeViewController-iOS8.3-prefix.pch"; path = "../SwipeViewController-iOS8.3/SwipeViewController-iOS8.3-prefix.pch"; sourceTree = "<group>"; };
+		2E2AEDB817E867C161FA59CB0851FC0B /* ResourceBundle-SwipeViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-SwipeViewController-Info.plist"; path = "../SwipeViewController-iOS8.3/ResourceBundle-SwipeViewController-Info.plist"; sourceTree = "<group>"; };
+		300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3F6CCF6EB8E0D514B6B6118B612202A9 /* Pods-SwipeViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3FE15A335B47177C5EACDC59BA96FAF1 /* Pods-SwipeViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-resources.sh"; sourceTree = "<group>"; };
+		452E20A223E51B3650F452700E5FF4AA /* SwipeViewController-iOS8.3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwipeViewController-iOS8.3-dummy.m"; path = "../SwipeViewController-iOS8.3/SwipeViewController-iOS8.3-dummy.m"; sourceTree = "<group>"; };
+		4846636BACE076CED5B92179E07FC8D4 /* Pods-SwipeViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwipeViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6110A111CFADAC9D3F0A1C4BF6713DD3 /* SwipeViewController-iOS8.2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeViewController-iOS8.2-dummy.m"; sourceTree = "<group>"; };
+		63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwipeViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		65EB3D764ECDCE09429B7A13B192A650 /* SwipeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		684B5ABF08E2A6E90DA368E1721453BD /* Pods-SwipeViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwipeViewController-iOS8.2.xcconfig"; sourceTree = "<group>"; };
+		6C4D098BC19291F4ACB947FB44F29535 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SwipeViewController-iOS8.3/Info.plist"; sourceTree = "<group>"; };
+		73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		75DA17CD576B7F8DB40D9326759E2357 /* Pods_SwipeViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7D3E5AB814473063F3FCFCA6026A439B /* SwipeViewController-iOS8.3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwipeViewController-iOS8.3-umbrella.h"; path = "../SwipeViewController-iOS8.3/SwipeViewController-iOS8.3-umbrella.h"; sourceTree = "<group>"; };
+		7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwipeViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		8756C0F7A86D48FECEAA6EA37FFA48AF /* Pods-SwipeViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8990DCE3DF018698B5FF8862FEF0D3DC /* SwipeViewController-iOS8.2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SwipeViewController-iOS8.2.modulemap"; sourceTree = "<group>"; };
+		8D0609201D1B0BA9AA956032824AA0CE /* SwipeViewController-iOS8.3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SwipeViewController-iOS8.3.modulemap"; path = "../SwipeViewController-iOS8.3/SwipeViewController-iOS8.3.modulemap"; sourceTree = "<group>"; };
+		918F8839E016D50F5B89F38866D31979 /* Pods-SwipeViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwipeViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B9EA7EDBB3A92C86EA0BDC2AFEFC852 /* Pods_SwipeViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CD467D8B56EB93C47804052C1178D09 /* Pods-SwipeViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Example-resources.sh"; sourceTree = "<group>"; };
+		A08D6E3ADD34D0919EEF5F513CE6E90B /* SwipeViewController-iOS8.2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeViewController-iOS8.2-umbrella.h"; sourceTree = "<group>"; };
+		A42C4A03596FE339F373BDD734E66BC4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE22FB33386FDC4F2FFA6F09573E40BE /* Pods-SwipeViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwipeViewController_Example.modulemap"; sourceTree = "<group>"; };
+		B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwipeViewController_Example-umbrella.h"; sourceTree = "<group>"; };
+		C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D3695C8482408AB4F245C69A2A467E34 /* Pods-SwipeViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwipeViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwipeViewController-iOS8.3.xcconfig"; path = "../SwipeViewController-iOS8.3/SwipeViewController-iOS8.3.xcconfig"; sourceTree = "<group>"; };
+		DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE43E62C5C76AE7849303F6BBA049001 /* SwipeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4712D18A30C415D61D83A41B8303F9 /* Pods-SwipeViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F413ED76545C8EAEFC8D7E8C221CDD45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F75A75D0BCA9136587807B3D4D2327F3 /* ResourceBundle-SwipeViewController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-SwipeViewController-Info.plist"; sourceTree = "<group>"; };
+		F770AB2938C4EAA8458FEAFDAD9E5AFF /* SwipeViewController-iOS8.2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeViewController-iOS8.2-prefix.pch"; sourceTree = "<group>"; };
+		FB6084D8565CD552464FF032242BC7CB /* InterfaceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		015F3BECF9FC48FBA3965B92375979E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A26B9A0654BA843E57074740344BECA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DD389D7821340F31B7244302E298C97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E26F11AA17A2AC53CC061A453F0280F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		858D425BBF673A60D1C7887BB308FD6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1945C7FD46851354CE5ADDCD7ABD28EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E98E247D9F6796F8ADDC60BECA10B0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2F9882F6C8EE1F76DAD2C720676D9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5A2356888FD49AACD0CBEF871F7B0D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F9CE9E6F4181D4801972528758DDC4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAD9715986538B7C02D8914F740FCAE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9178433E303B6CEC67E3F365BE217 /* Pods-SwipeViewController_Example */,
+				65ED6272A6910A185974277720B03EE6 /* Pods-SwipeViewController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3301D3C8A8EBDD4276A53501D4FC51DF /* SwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2F023954454ADDC26FCBF4B7004A0 /* Pod */,
+				3B02542C1F8EDE98DCF0C5F047CAB838 /* Support Files */,
+			);
+			name = SwipeViewController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3B02542C1F8EDE98DCF0C5F047CAB838 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A42C4A03596FE339F373BDD734E66BC4 /* Info.plist */,
+				6C4D098BC19291F4ACB947FB44F29535 /* Info.plist */,
+				F75A75D0BCA9136587807B3D4D2327F3 /* ResourceBundle-SwipeViewController-Info.plist */,
+				2E2AEDB817E867C161FA59CB0851FC0B /* ResourceBundle-SwipeViewController-Info.plist */,
+				8990DCE3DF018698B5FF8862FEF0D3DC /* SwipeViewController-iOS8.2.modulemap */,
+				6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */,
+				6110A111CFADAC9D3F0A1C4BF6713DD3 /* SwipeViewController-iOS8.2-dummy.m */,
+				F770AB2938C4EAA8458FEAFDAD9E5AFF /* SwipeViewController-iOS8.2-prefix.pch */,
+				A08D6E3ADD34D0919EEF5F513CE6E90B /* SwipeViewController-iOS8.2-umbrella.h */,
+				8D0609201D1B0BA9AA956032824AA0CE /* SwipeViewController-iOS8.3.modulemap */,
+				DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */,
+				452E20A223E51B3650F452700E5FF4AA /* SwipeViewController-iOS8.3-dummy.m */,
+				2772C87A5A570B2D03227F83FFB2C81B /* SwipeViewController-iOS8.3-prefix.pch */,
+				7D3E5AB814473063F3FCFCA6026A439B /* SwipeViewController-iOS8.3-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwipeViewController-iOS8.2";
+			sourceTree = "<group>";
+		};
+		3BB9178433E303B6CEC67E3F365BE217 /* Pods-SwipeViewController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F413ED76545C8EAEFC8D7E8C221CDD45 /* Info.plist */,
+				AE22FB33386FDC4F2FFA6F09573E40BE /* Pods-SwipeViewController_Example.modulemap */,
+				4846636BACE076CED5B92179E07FC8D4 /* Pods-SwipeViewController_Example-acknowledgements.markdown */,
+				3F6CCF6EB8E0D514B6B6118B612202A9 /* Pods-SwipeViewController_Example-acknowledgements.plist */,
+				7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */,
+				8756C0F7A86D48FECEAA6EA37FFA48AF /* Pods-SwipeViewController_Example-frameworks.sh */,
+				9CD467D8B56EB93C47804052C1178D09 /* Pods-SwipeViewController_Example-resources.sh */,
+				B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */,
+				73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */,
+				300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */,
+			);
+			name = "Pods-SwipeViewController_Example";
+			path = "Target Support Files/Pods-SwipeViewController_Example";
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		65ED6272A6910A185974277720B03EE6 /* Pods-SwipeViewController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				00D0F8A34F27FFFD5314CF1E7F88ACF1 /* Info.plist */,
+				918F8839E016D50F5B89F38866D31979 /* Pods-SwipeViewController_Tests.modulemap */,
+				D3695C8482408AB4F245C69A2A467E34 /* Pods-SwipeViewController_Tests-acknowledgements.markdown */,
+				EF4712D18A30C415D61D83A41B8303F9 /* Pods-SwipeViewController_Tests-acknowledgements.plist */,
+				006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */,
+				684B5ABF08E2A6E90DA368E1721453BD /* Pods-SwipeViewController_Tests-frameworks.sh */,
+				3FE15A335B47177C5EACDC59BA96FAF1 /* Pods-SwipeViewController_Tests-resources.sh */,
+				63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */,
+				DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */,
+				768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */,
+			);
+			name = "Pods-SwipeViewController_Tests";
+			path = "Target Support Files/Pods-SwipeViewController_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				C1BFDC247BE41C9367C198DCA9FC24F9 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				97998D37A688A6ED573033B62B514B24 /* Products */,
+				1BAD9715986538B7C02D8914F740FCAE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		97998D37A688A6ED573033B62B514B24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B9EA7EDBB3A92C86EA0BDC2AFEFC852 /* Pods_SwipeViewController_Example.framework */,
+				75DA17CD576B7F8DB40D9326759E2357 /* Pods_SwipeViewController_Tests.framework */,
+				C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */,
+				DE43E62C5C76AE7849303F6BBA049001 /* SwipeViewController.framework */,
+				118F8826ED98AE160C46A69C97620EF5 /* SwipeViewController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1BFDC247BE41C9367C198DCA9FC24F9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3301D3C8A8EBDD4276A53501D4FC51DF /* SwipeViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		EDE4B5D086EE4B63CAB48F746F9FE8A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FB6084D8565CD552464FF032242BC7CB /* InterfaceController.swift */,
+				65EB3D764ECDCE09429B7A13B192A650 /* SwipeViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F1E2F023954454ADDC26FCBF4B7004A0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				EDE4B5D086EE4B63CAB48F746F9FE8A5 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		64998AD92CF8E3A51B314403A423AEDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89AA470D739F2C32A973FDA2FE7E3D4A /* Pods-SwipeViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F0695EF2FABD5834AAF790A8FA8DD81 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C9FA17F19773B2232F16788F5024B24 /* SwipeViewController-iOS8.3-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE345DA6C8AEB9A6A10D96C2BDD5AD6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899CC313FD4BA22394184269C0BB357C /* SwipeViewController-iOS8.2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E69CF6157483DA77060769C25D5010 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6999756BD067674DDA10F33DE4F5909 /* Pods-SwipeViewController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A0C26850BE67D393603337E87A65376 /* SwipeViewController-iOS8.3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B48F8E460A2413071863B1050618AEDE /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.3" */;
+			buildPhases = (
+				E5C11422FE892A979753BF840241DB1E /* Sources */,
+				015F3BECF9FC48FBA3965B92375979E0 /* Frameworks */,
+				256F323E441F07ACE8D22320C27E454C /* Resources */,
+				7F0695EF2FABD5834AAF790A8FA8DD81 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3B7757FD0963357ED01D5E707286941 /* PBXTargetDependency */,
+			);
+			name = "SwipeViewController-iOS8.3";
+			productName = "SwipeViewController-iOS8.3";
+			productReference = DE43E62C5C76AE7849303F6BBA049001 /* SwipeViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D7B2517453E6128AA344292071F34C6 /* Pods-SwipeViewController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D83A273D0E9FF5A5C6F3E6219DECF4E /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Tests" */;
+			buildPhases = (
+				D2BB6E6206D0DA92DC084CC9533FAB4F /* Sources */,
+				858D425BBF673A60D1C7887BB308FD6A /* Frameworks */,
+				D0E69CF6157483DA77060769C25D5010 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31D464590588FC330A897ABD592814B8 /* PBXTargetDependency */,
+			);
+			name = "Pods-SwipeViewController_Tests";
+			productName = "Pods-SwipeViewController_Tests";
+			productReference = 75DA17CD576B7F8DB40D9326759E2357 /* Pods_SwipeViewController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		66199DA1BEA09CC4D4F5F1DEF6B1FDD0 /* Pods-SwipeViewController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD5049590B30758889FFA155DDE737D /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Example" */;
+			buildPhases = (
+				BE8D301D54DF720677EA9CC767380C14 /* Sources */,
+				4DD389D7821340F31B7244302E298C97 /* Frameworks */,
+				64998AD92CF8E3A51B314403A423AEDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3DFBED0EC4116B111ED7BD49E8F66CA /* PBXTargetDependency */,
+			);
+			name = "Pods-SwipeViewController_Example";
+			productName = "Pods-SwipeViewController_Example";
+			productReference = 9B9EA7EDBB3A92C86EA0BDC2AFEFC852 /* Pods_SwipeViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		856C818BBAB21BFBB3C00D15D918B616 /* SwipeViewController-iOS8.3-SwipeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 734D31692772A478EE60336D26845DA1 /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.3-SwipeViewController" */;
+			buildPhases = (
+				9D2A517400547965F5C5FBBB5E6C09C2 /* Sources */,
+				8E98E247D9F6796F8ADDC60BECA10B0A /* Frameworks */,
+				87BF8CE3496587E975779ACA5426040E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwipeViewController-iOS8.3-SwipeViewController";
+			productName = "SwipeViewController-iOS8.3-SwipeViewController";
+			productReference = C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A8384AADE2864D49036F5DA1CFC1069F /* SwipeViewController-iOS8.2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5B85C684284091EAA8ABAF67B7ECA1E /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.2" */;
+			buildPhases = (
+				FC0F71386798E29B07912CF5ACAB7E0C /* Sources */,
+				C5A2356888FD49AACD0CBEF871F7B0D2 /* Frameworks */,
+				6569529BA658E53767D83C3A853B31C2 /* Resources */,
+				CE345DA6C8AEB9A6A10D96C2BDD5AD6B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B28631B1DEE926E3B3BCF32516B0F26F /* PBXTargetDependency */,
+			);
+			name = "SwipeViewController-iOS8.2";
+			productName = "SwipeViewController-iOS8.2";
+			productReference = 118F8826ED98AE160C46A69C97620EF5 /* SwipeViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C5A84C0ABA6EEFCF0BAA1F3DE3EFEAE3 /* SwipeViewController-iOS8.2-SwipeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D449CFA234AA960AF1A40555AB0A27B4 /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.2-SwipeViewController" */;
+			buildPhases = (
+				787558E5A7A3EBDBA3642F9D4C8AA290 /* Sources */,
+				BE2F9882F6C8EE1F76DAD2C720676D9E /* Frameworks */,
+				222EB4E171291D7228DC31E259933446 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwipeViewController-iOS8.2-SwipeViewController";
+			productName = "SwipeViewController-iOS8.2-SwipeViewController";
+			productReference = C03D804E5CF3D06EFA6FBB1527AC7329 /* SwipeViewController.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					66199DA1BEA09CC4D4F5F1DEF6B1FDD0 = {
+						LastSwiftMigration = 0800;
+					};
+					A8384AADE2864D49036F5DA1CFC1069F = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 97998D37A688A6ED573033B62B514B24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66199DA1BEA09CC4D4F5F1DEF6B1FDD0 /* Pods-SwipeViewController_Example */,
+				1D7B2517453E6128AA344292071F34C6 /* Pods-SwipeViewController_Tests */,
+				A8384AADE2864D49036F5DA1CFC1069F /* SwipeViewController-iOS8.2 */,
+				C5A84C0ABA6EEFCF0BAA1F3DE3EFEAE3 /* SwipeViewController-iOS8.2-SwipeViewController */,
+				0A0C26850BE67D393603337E87A65376 /* SwipeViewController-iOS8.3 */,
+				856C818BBAB21BFBB3C00D15D918B616 /* SwipeViewController-iOS8.3-SwipeViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		222EB4E171291D7228DC31E259933446 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		256F323E441F07ACE8D22320C27E454C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7310F8E56F8CB60DCC407CD966CD64 /* SwipeViewController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6569529BA658E53767D83C3A853B31C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5A922F0A172A35653B017BBB9B124E /* SwipeViewController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87BF8CE3496587E975779ACA5426040E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		787558E5A7A3EBDBA3642F9D4C8AA290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2A517400547965F5C5FBBB5E6C09C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE8D301D54DF720677EA9CC767380C14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDCD8679C109BA0FF4A52A6A8FBD2E8E /* Pods-SwipeViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2BB6E6206D0DA92DC084CC9533FAB4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C54BCDFFEA018B4884586A9B4498D0A /* Pods-SwipeViewController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C11422FE892A979753BF840241DB1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2061DDD0AC2EFFDE4ECAE9E5D7FD007 /* InterfaceController.swift in Sources */,
+				3016EDAA2B67CBE5EEC9FD37D6BC930D /* SwipeViewController-iOS8.3-dummy.m in Sources */,
+				20EEA357BD6AB6530D38ED5A5E3A70A1 /* SwipeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC0F71386798E29B07912CF5ACAB7E0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EABD1DB1DFE7A6BBDEE0816FA816856 /* InterfaceController.swift in Sources */,
+				103719B3812CA36D15510FEB8E37C2A7 /* SwipeViewController-iOS8.2-dummy.m in Sources */,
+				3753BE86938BADA8C5E5C02649F7EDFA /* SwipeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31D464590588FC330A897ABD592814B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwipeViewController-iOS8.3";
+			target = 0A0C26850BE67D393603337E87A65376 /* SwipeViewController-iOS8.3 */;
+			targetProxy = BF51943410E97BEF26CD2FBA52467263 /* PBXContainerItemProxy */;
+		};
+		A3B7757FD0963357ED01D5E707286941 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwipeViewController-iOS8.3-SwipeViewController";
+			target = 856C818BBAB21BFBB3C00D15D918B616 /* SwipeViewController-iOS8.3-SwipeViewController */;
+			targetProxy = 02B891A5856B1EA6D56284AF78664B70 /* PBXContainerItemProxy */;
+		};
+		B28631B1DEE926E3B3BCF32516B0F26F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwipeViewController-iOS8.2-SwipeViewController";
+			target = C5A84C0ABA6EEFCF0BAA1F3DE3EFEAE3 /* SwipeViewController-iOS8.2-SwipeViewController */;
+			targetProxy = 85FD32500F469EF52F9C4107AEA63D87 /* PBXContainerItemProxy */;
+		};
+		D3DFBED0EC4116B111ED7BD49E8F66CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwipeViewController-iOS8.2";
+			target = A8384AADE2864D49036F5DA1CFC1069F /* SwipeViewController-iOS8.2 */;
+			targetProxy = 973F3E76F0CCE3B16131B946BB5EEA32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01ED9C35731B9ABCA42A3462F4FC768E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwipeViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1E3A61C98ECA6A499518EDBF2105382C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwipeViewController-iOS8.3";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.3/ResourceBundle-SwipeViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		2588EA364419D831347938453F4F6DE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2A7911DCE2FBFB5450A81296E61A135A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController-iOS8.2/SwipeViewController-iOS8.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController-iOS8.2/SwipeViewController-iOS8.2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4643092BD91AC43F749D2BFF2B71218E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwipeViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C5314A8C34A525B66C3C81879557723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController-iOS8.3/SwipeViewController-iOS8.3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.3/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController-iOS8.3/SwipeViewController-iOS8.3.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64E6F0C44FCE8F729365516318BB0CC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController-iOS8.3/SwipeViewController-iOS8.3-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.3/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController-iOS8.3/SwipeViewController-iOS8.3.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		896A9828C980E82344F989CB75BB2BAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwipeViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		95AF859485F4B0E185F0ABFF81630E38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABC0C0C5D6DE1F696066FE992DEA6A8 /* SwipeViewController-iOS8.3.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwipeViewController-iOS8.3";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.3/ResourceBundle-SwipeViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B4A82D538B95098C3BBCCF9B2C59874D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwipeViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E01A18515F0A1602311A856E658AF566 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwipeViewController-iOS8.2";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.2/ResourceBundle-SwipeViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E93673CB101270933A16C7C428E3A4D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController-iOS8.2/SwipeViewController-iOS8.2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController-iOS8.2/SwipeViewController-iOS8.2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F10D1C24DD79E538DA7282D73DFDD96C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B7B99BC1DDB8DE5637C558BE2DA44AF /* SwipeViewController-iOS8.2.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/SwipeViewController-iOS8.2";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController-iOS8.2/ResourceBundle-SwipeViewController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2588EA364419D831347938453F4F6DE5 /* Debug */,
+				61AD4929AC3440F8BFA0595E8DCD90C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D83A273D0E9FF5A5C6F3E6219DECF4E /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4643092BD91AC43F749D2BFF2B71218E /* Debug */,
+				B4A82D538B95098C3BBCCF9B2C59874D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		734D31692772A478EE60336D26845DA1 /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.3-SwipeViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95AF859485F4B0E185F0ABFF81630E38 /* Debug */,
+				1E3A61C98ECA6A499518EDBF2105382C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD5049590B30758889FFA155DDE737D /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				896A9828C980E82344F989CB75BB2BAA /* Debug */,
+				01ED9C35731B9ABCA42A3462F4FC768E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B48F8E460A2413071863B1050618AEDE /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E6F0C44FCE8F729365516318BB0CC6 /* Debug */,
+				4C5314A8C34A525B66C3C81879557723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5B85C684284091EAA8ABAF67B7ECA1E /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A7911DCE2FBFB5450A81296E61A135A /* Debug */,
+				E93673CB101270933A16C7C428E3A4D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D449CFA234AA960AF1A40555AB0A27B4 /* Build configuration list for PBXNativeTarget "SwipeViewController-iOS8.2-SwipeViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01A18515F0A1602311A856E658AF566 /* Debug */,
+				F10D1C24DD79E538DA7282D73DFDD96C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
+||||||| merged common ancestors
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>006F7FAA098953788D41933AFF024FCC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>00D0F8A34F27FFFD5314CF1E7F88ACF1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>022F94AA65C1D9FE81A8E82AC2A4EB29</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A5ECD3164C677728F4E8DE2697FF1420</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0387FFA956F3CC7E98D43D014B337B9F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B40E8DCE75B70FCE868345B41DFC46EB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>05D4C2DAE193FD762FAEA75A256E8736</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E38BA8BBF4F22FD64FD64432F10F3DB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwipeViewController/SwipeViewController-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwipeViewController/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwipeViewController/SwipeViewController.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwipeViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0DA31CBD9F630E952346AAC617A23617</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>768FAE1578A0E919E7D8DE98AC17DB61</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_SwipeViewController_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0E7FA1EFA12A8C282A086D1335EDC1C0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>05D4C2DAE193FD762FAEA75A256E8736</string>
+				<string>1BDA18B5924458695FC14EC03EA32DD9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>0ED9204527B2AF2BDF15D50A58517E29</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4144DCD59656192F1869CB1A34A9BC39</string>
+				<string>647CA9F9EE5DD69AE3D5D816CDED9617</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>102965848F6A2068EB149152823336FD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0387FFA956F3CC7E98D43D014B337B9F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>103DEF465DF684DF88ED82E08BD33895</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_SwipeViewController_Example.framework</string>
+			<key>path</key>
+			<string>Pods_SwipeViewController_Example.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1BAD9715986538B7C02D8914F740FCAE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3BB9178433E303B6CEC67E3F365BE217</string>
+				<string>65ED6272A6910A185974277720B03EE6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BDA18B5924458695FC14EC03EA32DD9</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E38BA8BBF4F22FD64FD64432F10F3DB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwipeViewController/SwipeViewController-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwipeViewController/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwipeViewController/SwipeViewController.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwipeViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1E83DAC5731F03AABBB555E79C036589</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>InterfaceController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2096EF0A72C860F969C849424677EB0E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>73A1F5B5CE173A0742A770CE30BAB006</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_SwipeViewController_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2640F99F8BC8C655F976346E13E7896D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1E83DAC5731F03AABBB555E79C036589</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D85B224B99176563E27566DCB5B6C8C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2640F99F8BC8C655F976346E13E7896D</string>
+				<string>E84CB9EA5E3520C061F0860950D2B697</string>
+				<string>C9C21F5B03F73FC98C963595C51C6573</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A2A3FCA6599E8034578E80B9179C76CD</string>
+				<string>AB66C978656E240C917407B296597F92</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2E7F8B35D0F0387A109582DD961FE74E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SwipeViewController-SwipeViewController</string>
+			<key>target</key>
+			<string>ACCFAACF02163270B79EB16E808A6194</string>
+			<key>targetProxy</key>
+			<string>47B97EB8AD47B1B223F72D84158FE733</string>
+		</dict>
+		<key>300132C011AB75C88AC7B16DB0D3F594</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30B393FFD65062B0CC5C32BC52755CA8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A3C4F2F44135069E65BDAE4BDCC6376D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3716FE1F9E64109CAB66480FD132B54E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>103DEF465DF684DF88ED82E08BD33895</string>
+				<string>DEB78A5EC1CBC9EE23436E3FC8D00C93</string>
+				<string>CEFEB05E29DF0D057CA26C87FA6F2E01</string>
+				<string>FD7AB954776C623FDA3F4E50CF8C7F6F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3752AFF15AE789E6BC30096FAF1ADC73</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A5A70D9B58CE19106D54E445D98AF5A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>38434F10F6D1C2CC060F0B79C9A0622D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3BB9178433E303B6CEC67E3F365BE217</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F413ED76545C8EAEFC8D7E8C221CDD45</string>
+				<string>AE22FB33386FDC4F2FFA6F09573E40BE</string>
+				<string>4846636BACE076CED5B92179E07FC8D4</string>
+				<string>3F6CCF6EB8E0D514B6B6118B612202A9</string>
+				<string>7EAD5A0A4F637F988E6B95B8D3CD9794</string>
+				<string>8756C0F7A86D48FECEAA6EA37FFA48AF</string>
+				<string>9CD467D8B56EB93C47804052C1178D09</string>
+				<string>B40E8DCE75B70FCE868345B41DFC46EB</string>
+				<string>73A1F5B5CE173A0742A770CE30BAB006</string>
+				<string>300132C011AB75C88AC7B16DB0D3F594</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-SwipeViewController_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-SwipeViewController_Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E4E89230EF59BC255123B67864ACF77</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>3F6CCF6EB8E0D514B6B6118B612202A9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3FE15A335B47177C5EACDC59BA96FAF1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4144DCD59656192F1869CB1A34A9BC39</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E38BA8BBF4F22FD64FD64432F10F3DB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwipeViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>44E729993A96C4C4B5E5633F1E793757</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>69D29F411060E7ED9D0715DE414E415F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>47B97EB8AD47B1B223F72D84158FE733</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>ACCFAACF02163270B79EB16E808A6194</string>
+			<key>remoteInfo</key>
+			<string>SwipeViewController-SwipeViewController</string>
+		</dict>
+		<key>4846636BACE076CED5B92179E07FC8D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>49891495E68484F33CEB1B7B3E94F62A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SwipeViewController.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F0C3DCDCCCBF47084DE04FAEC531CB3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SwipeViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>55E3FDBF29238F2DCB517B753A0BAFC0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A65935B442B27A6A325A13D8BB6B2D3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SwipeViewController</string>
+			<key>target</key>
+			<string>EB10A785FFFD5EFDC450CF2F8CBAD4F0</string>
+			<key>targetProxy</key>
+			<string>9A50517283C1D4A40C5C3C69C77A461E</string>
+		</dict>
+		<key>5C5A106070FFD52FDE73E456FE1CACB5</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>9E0CFC9A49FBFD64D71698AECB860727</string>
+			<key>buildPhases</key>
+			<array>
+				<string>44E729993A96C4C4B5E5633F1E793757</string>
+				<string>BE603DBE0C15B59057CDE7A1306EFAB5</string>
+				<string>102965848F6A2068EB149152823336FD</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>5A65935B442B27A6A325A13D8BB6B2D3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-SwipeViewController_Example</string>
+			<key>productName</key>
+			<string>Pods-SwipeViewController_Example</string>
+			<key>productReference</key>
+			<string>103DEF465DF684DF88ED82E08BD33895</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>63893112C9F6BC06A136388C992793A2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>647CA9F9EE5DD69AE3D5D816CDED9617</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6E38BA8BBF4F22FD64FD64432F10F3DB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwipeViewController</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>659EF306DCF98E9CA6BE3C14A686E6D6</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DE2E633B7BD87C90BA770F249D55A232</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_SwipeViewController_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>65ED6272A6910A185974277720B03EE6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>00D0F8A34F27FFFD5314CF1E7F88ACF1</string>
+				<string>918F8839E016D50F5B89F38866D31979</string>
+				<string>D3695C8482408AB4F245C69A2A467E34</string>
+				<string>EF4712D18A30C415D61D83A41B8303F9</string>
+				<string>006F7FAA098953788D41933AFF024FCC</string>
+				<string>684B5ABF08E2A6E90DA368E1721453BD</string>
+				<string>3FE15A335B47177C5EACDC59BA96FAF1</string>
+				<string>63893112C9F6BC06A136388C992793A2</string>
+				<string>DE2E633B7BD87C90BA770F249D55A232</string>
+				<string>768FAE1578A0E919E7D8DE98AC17DB61</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-SwipeViewController_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-SwipeViewController_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>684B5ABF08E2A6E90DA368E1721453BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69D29F411060E7ED9D0715DE414E415F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7EAD5A0A4F637F988E6B95B8D3CD9794</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6E38BA8BBF4F22FD64FD64432F10F3DB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SwipeViewController.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7041FB2646C81B817F28BC3DC134EB6C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>70C399A5729A01B1113044F983952978</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EB10A785FFFD5EFDC450CF2F8CBAD4F0</string>
+			<key>remoteInfo</key>
+			<string>SwipeViewController</string>
+		</dict>
+		<key>73A1F5B5CE173A0742A770CE30BAB006</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>768FAE1578A0E919E7D8DE98AC17DB61</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>C1BFDC247BE41C9367C198DCA9FC24F9</string>
+				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>3716FE1F9E64109CAB66480FD132B54E</string>
+				<string>1BAD9715986538B7C02D8914F740FCAE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EAD5A0A4F637F988E6B95B8D3CD9794</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>86CF5510375543CD263698046785F280</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>8756C0F7A86D48FECEAA6EA37FFA48AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B93130CD3A94CDCB75DFE43733C4935</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E83DAC5731F03AABBB555E79C036589</string>
+				<string>4F0C3DCDCCCBF47084DE04FAEC531CB3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Classes</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E278C832F0AFD8DF29C318FEC2DD421</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DA032C24CED66EAB9D056F7E40320E31</string>
+			<key>buildPhases</key>
+			<array>
+				<string>022F94AA65C1D9FE81A8E82AC2A4EB29</string>
+				<string>3752AFF15AE789E6BC30096FAF1ADC73</string>
+				<string>D1F070B9ED0DC72D549C2717C0E2F7A8</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DCE886555D30C00C4F9FFCC021D55B8B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-SwipeViewController_Tests</string>
+			<key>productName</key>
+			<string>Pods-SwipeViewController_Tests</string>
+			<key>productReference</key>
+			<string>DEB78A5EC1CBC9EE23436E3FC8D00C93</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>918F8839E016D50F5B89F38866D31979</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9A50517283C1D4A40C5C3C69C77A461E</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EB10A785FFFD5EFDC450CF2F8CBAD4F0</string>
+			<key>remoteInfo</key>
+			<string>SwipeViewController</string>
+		</dict>
+		<key>9CB297C45763E2497D4DB829EF9E6E54</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>300132C011AB75C88AC7B16DB0D3F594</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_SwipeViewController_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9CD467D8B56EB93C47804052C1178D09</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9E0CFC9A49FBFD64D71698AECB860727</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2096EF0A72C860F969C849424677EB0E</string>
+				<string>9CB297C45763E2497D4DB829EF9E6E54</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>A2A3FCA6599E8034578E80B9179C76CD</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A3C4F2F44135069E65BDAE4BDCC6376D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A4751EE1E08A90487BD5A24DCAD7ECF5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>55E3FDBF29238F2DCB517B753A0BAFC0</string>
+				<string>49891495E68484F33CEB1B7B3E94F62A</string>
+				<string>6E38BA8BBF4F22FD64FD64432F10F3DB</string>
+				<string>CD4B5FEC8D4BEA6DB086499BCA8B23E5</string>
+				<string>D9779CC999458B2C259D5530B103F072</string>
+				<string>C8E2DD78EE9F3213F52FF903B56B1523</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/SwipeViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5A70D9B58CE19106D54E445D98AF5A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A5ECD3164C677728F4E8DE2697FF1420</key>
+		<dict>
+			<key>fileRef</key>
+			<string>006F7FAA098953788D41933AFF024FCC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB66C978656E240C917407B296597F92</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>RELEASE=1</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AC174C3141590F44DBA0B63ABD5BC4D4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>63893112C9F6BC06A136388C992793A2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>ACCFAACF02163270B79EB16E808A6194</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0ED9204527B2AF2BDF15D50A58517E29</string>
+			<key>buildPhases</key>
+			<array>
+				<string>86CF5510375543CD263698046785F280</string>
+				<string>38434F10F6D1C2CC060F0B79C9A0622D</string>
+				<string>D00EF853AFAE980894B44D361B57F369</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SwipeViewController-SwipeViewController</string>
+			<key>productName</key>
+			<string>SwipeViewController-SwipeViewController</string>
+			<key>productReference</key>
+			<string>CEFEB05E29DF0D057CA26C87FA6F2E01</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>AE22FB33386FDC4F2FFA6F09573E40BE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B40E8DCE75B70FCE868345B41DFC46EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BAD2765DE015E7FFD1136D3010021CAC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEFEB05E29DF0D057CA26C87FA6F2E01</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE603DBE0C15B59057CDE7A1306EFAB5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7041FB2646C81B817F28BC3DC134EB6C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3E4E89230EF59BC255123B67864ACF77</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0EF5580C899B7644F0EEDF9653A9056</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D5A5638469415BFA2DBD59B8F3F39113</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C1BFDC247BE41C9367C198DCA9FC24F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C50A5C58E7D3F3643F8AE0D3F8F85010</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C50A5C58E7D3F3643F8AE0D3F8F85010</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EB7D4450195ED82C7C86082779BE1E45</string>
+				<string>A4751EE1E08A90487BD5A24DCAD7ECF5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SwipeViewController</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C8E2DD78EE9F3213F52FF903B56B1523</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SwipeViewController-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C9C21F5B03F73FC98C963595C51C6573</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4F0C3DCDCCCBF47084DE04FAEC531CB3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CD4B5FEC8D4BEA6DB086499BCA8B23E5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SwipeViewController-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEFEB05E29DF0D057CA26C87FA6F2E01</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SwipeViewController.bundle</string>
+			<key>path</key>
+			<string>SwipeViewController.bundle</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>D00EF853AFAE980894B44D361B57F369</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D1F070B9ED0DC72D549C2717C0E2F7A8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AC174C3141590F44DBA0B63ABD5BC4D4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D3695C8482408AB4F245C69A2A467E34</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0700</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>3716FE1F9E64109CAB66480FD132B54E</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>5C5A106070FFD52FDE73E456FE1CACB5</string>
+				<string>8E278C832F0AFD8DF29C318FEC2DD421</string>
+				<string>EB10A785FFFD5EFDC450CF2F8CBAD4F0</string>
+				<string>ACCFAACF02163270B79EB16E808A6194</string>
+			</array>
+		</dict>
+		<key>D5A5638469415BFA2DBD59B8F3F39113</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C8E2DD78EE9F3213F52FF903B56B1523</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D9779CC999458B2C259D5530B103F072</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SwipeViewController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DA032C24CED66EAB9D056F7E40320E31</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>659EF306DCF98E9CA6BE3C14A686E6D6</string>
+				<string>0DA31CBD9F630E952346AAC617A23617</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DCE886555D30C00C4F9FFCC021D55B8B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SwipeViewController</string>
+			<key>target</key>
+			<string>EB10A785FFFD5EFDC450CF2F8CBAD4F0</string>
+			<key>targetProxy</key>
+			<string>70C399A5729A01B1113044F983952978</string>
+		</dict>
+		<key>DE2E633B7BD87C90BA770F249D55A232</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEB78A5EC1CBC9EE23436E3FC8D00C93</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_SwipeViewController_Tests.framework</string>
+			<key>path</key>
+			<string>Pods_SwipeViewController_Tests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>E84CB9EA5E3520C061F0860950D2B697</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CD4B5FEC8D4BEA6DB086499BCA8B23E5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EB10A785FFFD5EFDC450CF2F8CBAD4F0</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>0E7FA1EFA12A8C282A086D1335EDC1C0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>2D85B224B99176563E27566DCB5B6C8C</string>
+				<string>30B393FFD65062B0CC5C32BC52755CA8</string>
+				<string>FA044CFFF056A5970EE95E4BF2756839</string>
+				<string>C0EF5580C899B7644F0EEDF9653A9056</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>2E7F8B35D0F0387A109582DD961FE74E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SwipeViewController</string>
+			<key>productName</key>
+			<string>SwipeViewController</string>
+			<key>productReference</key>
+			<string>FD7AB954776C623FDA3F4E50CF8C7F6F</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>EB7D4450195ED82C7C86082779BE1E45</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8B93130CD3A94CDCB75DFE43733C4935</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pod</string>
+			<key>path</key>
+			<string>Pod</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF4712D18A30C415D61D83A41B8303F9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-SwipeViewController_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F413ED76545C8EAEFC8D7E8C221CDD45</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FA044CFFF056A5970EE95E4BF2756839</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BAD2765DE015E7FFD1136D3010021CAC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FD7AB954776C623FDA3F4E50CF8C7F6F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SwipeViewController.framework</string>
+			<key>path</key>
+			<string>SwipeViewController.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>
+=======
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0387FFA956F3CC7E98D43D014B337B9F /* Pods-SwipeViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2640F99F8BC8C655F976346E13E7896D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */; };
+		69D29F411060E7ED9D0715DE414E415F /* Pods-SwipeViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */; };
+		7041FB2646C81B817F28BC3DC134EB6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A3C4F2F44135069E65BDAE4BDCC6376D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A5A70D9B58CE19106D54E445D98AF5A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A5ECD3164C677728F4E8DE2697FF1420 /* Pods-SwipeViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */; };
+		AC174C3141590F44DBA0B63ABD5BC4D4 /* Pods-SwipeViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BAD2765DE015E7FFD1136D3010021CAC /* SwipeViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEFEB05E29DF0D057CA26C87FA6F2E01 /* SwipeViewController.bundle */; };
+		C9C21F5B03F73FC98C963595C51C6573 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */; };
+		D5A5638469415BFA2DBD59B8F3F39113 /* SwipeViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C8E2DD78EE9F3213F52FF903B56B1523 /* SwipeViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E84CB9EA5E3520C061F0860950D2B697 /* SwipeViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4B5FEC8D4BEA6DB086499BCA8B23E5 /* SwipeViewController-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47B97EB8AD47B1B223F72D84158FE733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACCFAACF02163270B79EB16E808A6194;
+			remoteInfo = "SwipeViewController-SwipeViewController";
+		};
+		70C399A5729A01B1113044F983952978 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB10A785FFFD5EFDC450CF2F8CBAD4F0;
+			remoteInfo = SwipeViewController;
+		};
+		9A50517283C1D4A40C5C3C69C77A461E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB10A785FFFD5EFDC450CF2F8CBAD4F0;
+			remoteInfo = SwipeViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwipeViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		00D0F8A34F27FFFD5314CF1E7F88ACF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103DEF465DF684DF88ED82E08BD33895 /* Pods_SwipeViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F6CCF6EB8E0D514B6B6118B612202A9 /* Pods-SwipeViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3FE15A335B47177C5EACDC59BA96FAF1 /* Pods-SwipeViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-resources.sh"; sourceTree = "<group>"; };
+		4846636BACE076CED5B92179E07FC8D4 /* Pods-SwipeViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwipeViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		49891495E68484F33CEB1B7B3E94F62A /* SwipeViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwipeViewController.modulemap; sourceTree = "<group>"; };
+		4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		55E3FDBF29238F2DCB517B753A0BAFC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwipeViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
+		684B5ABF08E2A6E90DA368E1721453BD /* Pods-SwipeViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwipeViewController.xcconfig; sourceTree = "<group>"; };
+		73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwipeViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		8756C0F7A86D48FECEAA6EA37FFA48AF /* Pods-SwipeViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		918F8839E016D50F5B89F38866D31979 /* Pods-SwipeViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwipeViewController_Tests.modulemap"; sourceTree = "<group>"; };
+		9CD467D8B56EB93C47804052C1178D09 /* Pods-SwipeViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwipeViewController_Example-resources.sh"; sourceTree = "<group>"; };
+		AE22FB33386FDC4F2FFA6F09573E40BE /* Pods-SwipeViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwipeViewController_Example.modulemap"; sourceTree = "<group>"; };
+		B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwipeViewController_Example-umbrella.h"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C8E2DD78EE9F3213F52FF903B56B1523 /* SwipeViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeViewController-umbrella.h"; sourceTree = "<group>"; };
+		CD4B5FEC8D4BEA6DB086499BCA8B23E5 /* SwipeViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwipeViewController-dummy.m"; sourceTree = "<group>"; };
+		CEFEB05E29DF0D057CA26C87FA6F2E01 /* SwipeViewController.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewController.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3695C8482408AB4F245C69A2A467E34 /* Pods-SwipeViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwipeViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D9779CC999458B2C259D5530B103F072 /* SwipeViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwipeViewController-prefix.pch"; sourceTree = "<group>"; };
+		DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwipeViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		DEB78A5EC1CBC9EE23436E3FC8D00C93 /* Pods_SwipeViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwipeViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4712D18A30C415D61D83A41B8303F9 /* Pods-SwipeViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwipeViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F413ED76545C8EAEFC8D7E8C221CDD45 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD7AB954776C623FDA3F4E50CF8C7F6F /* SwipeViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwipeViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30B393FFD65062B0CC5C32BC52755CA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C4F2F44135069E65BDAE4BDCC6376D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3752AFF15AE789E6BC30096FAF1ADC73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A70D9B58CE19106D54E445D98AF5A3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38434F10F6D1C2CC060F0B79C9A0622D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE603DBE0C15B59057CDE7A1306EFAB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7041FB2646C81B817F28BC3DC134EB6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BAD9715986538B7C02D8914F740FCAE /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3BB9178433E303B6CEC67E3F365BE217 /* Pods-SwipeViewController_Example */,
+				65ED6272A6910A185974277720B03EE6 /* Pods-SwipeViewController_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3716FE1F9E64109CAB66480FD132B54E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				103DEF465DF684DF88ED82E08BD33895 /* Pods_SwipeViewController_Example.framework */,
+				DEB78A5EC1CBC9EE23436E3FC8D00C93 /* Pods_SwipeViewController_Tests.framework */,
+				CEFEB05E29DF0D057CA26C87FA6F2E01 /* SwipeViewController.bundle */,
+				FD7AB954776C623FDA3F4E50CF8C7F6F /* SwipeViewController.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BB9178433E303B6CEC67E3F365BE217 /* Pods-SwipeViewController_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F413ED76545C8EAEFC8D7E8C221CDD45 /* Info.plist */,
+				AE22FB33386FDC4F2FFA6F09573E40BE /* Pods-SwipeViewController_Example.modulemap */,
+				4846636BACE076CED5B92179E07FC8D4 /* Pods-SwipeViewController_Example-acknowledgements.markdown */,
+				3F6CCF6EB8E0D514B6B6118B612202A9 /* Pods-SwipeViewController_Example-acknowledgements.plist */,
+				7EAD5A0A4F637F988E6B95B8D3CD9794 /* Pods-SwipeViewController_Example-dummy.m */,
+				8756C0F7A86D48FECEAA6EA37FFA48AF /* Pods-SwipeViewController_Example-frameworks.sh */,
+				9CD467D8B56EB93C47804052C1178D09 /* Pods-SwipeViewController_Example-resources.sh */,
+				B40E8DCE75B70FCE868345B41DFC46EB /* Pods-SwipeViewController_Example-umbrella.h */,
+				73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */,
+				300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */,
+			);
+			name = "Pods-SwipeViewController_Example";
+			path = "Target Support Files/Pods-SwipeViewController_Example";
+			sourceTree = "<group>";
+		};
+		65ED6272A6910A185974277720B03EE6 /* Pods-SwipeViewController_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				00D0F8A34F27FFFD5314CF1E7F88ACF1 /* Info.plist */,
+				918F8839E016D50F5B89F38866D31979 /* Pods-SwipeViewController_Tests.modulemap */,
+				D3695C8482408AB4F245C69A2A467E34 /* Pods-SwipeViewController_Tests-acknowledgements.markdown */,
+				EF4712D18A30C415D61D83A41B8303F9 /* Pods-SwipeViewController_Tests-acknowledgements.plist */,
+				006F7FAA098953788D41933AFF024FCC /* Pods-SwipeViewController_Tests-dummy.m */,
+				684B5ABF08E2A6E90DA368E1721453BD /* Pods-SwipeViewController_Tests-frameworks.sh */,
+				3FE15A335B47177C5EACDC59BA96FAF1 /* Pods-SwipeViewController_Tests-resources.sh */,
+				63893112C9F6BC06A136388C992793A2 /* Pods-SwipeViewController_Tests-umbrella.h */,
+				DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */,
+				768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */,
+			);
+			name = "Pods-SwipeViewController_Tests";
+			path = "Target Support Files/Pods-SwipeViewController_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				C1BFDC247BE41C9367C198DCA9FC24F9 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3716FE1F9E64109CAB66480FD132B54E /* Products */,
+				1BAD9715986538B7C02D8914F740FCAE /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8B93130CD3A94CDCB75DFE43733C4935 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1E83DAC5731F03AABBB555E79C036589 /* InterfaceController.swift */,
+				4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A4751EE1E08A90487BD5A24DCAD7ECF5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55E3FDBF29238F2DCB517B753A0BAFC0 /* Info.plist */,
+				49891495E68484F33CEB1B7B3E94F62A /* SwipeViewController.modulemap */,
+				6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */,
+				CD4B5FEC8D4BEA6DB086499BCA8B23E5 /* SwipeViewController-dummy.m */,
+				D9779CC999458B2C259D5530B103F072 /* SwipeViewController-prefix.pch */,
+				C8E2DD78EE9F3213F52FF903B56B1523 /* SwipeViewController-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwipeViewController";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C1BFDC247BE41C9367C198DCA9FC24F9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C50A5C58E7D3F3643F8AE0D3F8F85010 /* SwipeViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C50A5C58E7D3F3643F8AE0D3F8F85010 /* SwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EB7D4450195ED82C7C86082779BE1E45 /* Pod */,
+				A4751EE1E08A90487BD5A24DCAD7ECF5 /* Support Files */,
+			);
+			name = SwipeViewController;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		EB7D4450195ED82C7C86082779BE1E45 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8B93130CD3A94CDCB75DFE43733C4935 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		102965848F6A2068EB149152823336FD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0387FFA956F3CC7E98D43D014B337B9F /* Pods-SwipeViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0EF5580C899B7644F0EEDF9653A9056 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A5638469415BFA2DBD59B8F3F39113 /* SwipeViewController-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1F070B9ED0DC72D549C2717C0E2F7A8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC174C3141590F44DBA0B63ABD5BC4D4 /* Pods-SwipeViewController_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5C5A106070FFD52FDE73E456FE1CACB5 /* Pods-SwipeViewController_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E0CFC9A49FBFD64D71698AECB860727 /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Example" */;
+			buildPhases = (
+				44E729993A96C4C4B5E5633F1E793757 /* Sources */,
+				BE603DBE0C15B59057CDE7A1306EFAB5 /* Frameworks */,
+				102965848F6A2068EB149152823336FD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A65935B442B27A6A325A13D8BB6B2D3 /* PBXTargetDependency */,
+			);
+			name = "Pods-SwipeViewController_Example";
+			productName = "Pods-SwipeViewController_Example";
+			productReference = 103DEF465DF684DF88ED82E08BD33895 /* Pods_SwipeViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E278C832F0AFD8DF29C318FEC2DD421 /* Pods-SwipeViewController_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA032C24CED66EAB9D056F7E40320E31 /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Tests" */;
+			buildPhases = (
+				022F94AA65C1D9FE81A8E82AC2A4EB29 /* Sources */,
+				3752AFF15AE789E6BC30096FAF1ADC73 /* Frameworks */,
+				D1F070B9ED0DC72D549C2717C0E2F7A8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCE886555D30C00C4F9FFCC021D55B8B /* PBXTargetDependency */,
+			);
+			name = "Pods-SwipeViewController_Tests";
+			productName = "Pods-SwipeViewController_Tests";
+			productReference = DEB78A5EC1CBC9EE23436E3FC8D00C93 /* Pods_SwipeViewController_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		ACCFAACF02163270B79EB16E808A6194 /* SwipeViewController-SwipeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ED9204527B2AF2BDF15D50A58517E29 /* Build configuration list for PBXNativeTarget "SwipeViewController-SwipeViewController" */;
+			buildPhases = (
+				86CF5510375543CD263698046785F280 /* Sources */,
+				38434F10F6D1C2CC060F0B79C9A0622D /* Frameworks */,
+				D00EF853AFAE980894B44D361B57F369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwipeViewController-SwipeViewController";
+			productName = "SwipeViewController-SwipeViewController";
+			productReference = CEFEB05E29DF0D057CA26C87FA6F2E01 /* SwipeViewController.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EB10A785FFFD5EFDC450CF2F8CBAD4F0 /* SwipeViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E7FA1EFA12A8C282A086D1335EDC1C0 /* Build configuration list for PBXNativeTarget "SwipeViewController" */;
+			buildPhases = (
+				2D85B224B99176563E27566DCB5B6C8C /* Sources */,
+				30B393FFD65062B0CC5C32BC52755CA8 /* Frameworks */,
+				FA044CFFF056A5970EE95E4BF2756839 /* Resources */,
+				C0EF5580C899B7644F0EEDF9653A9056 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E7F8B35D0F0387A109582DD961FE74E /* PBXTargetDependency */,
+			);
+			name = SwipeViewController;
+			productName = SwipeViewController;
+			productReference = FD7AB954776C623FDA3F4E50CF8C7F6F /* SwipeViewController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					5C5A106070FFD52FDE73E456FE1CACB5 = {
+						DevelopmentTeam = QH95ER52SG;
+						DevelopmentTeamName = "Marek Fort";
+					};
+					8E278C832F0AFD8DF29C318FEC2DD421 = {
+						DevelopmentTeam = QH95ER52SG;
+						DevelopmentTeamName = "Marek Fort";
+					};
+					EB10A785FFFD5EFDC450CF2F8CBAD4F0 = {
+						DevelopmentTeam = QH95ER52SG;
+						DevelopmentTeamName = "Marek Fort";
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3716FE1F9E64109CAB66480FD132B54E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C5A106070FFD52FDE73E456FE1CACB5 /* Pods-SwipeViewController_Example */,
+				8E278C832F0AFD8DF29C318FEC2DD421 /* Pods-SwipeViewController_Tests */,
+				EB10A785FFFD5EFDC450CF2F8CBAD4F0 /* SwipeViewController */,
+				ACCFAACF02163270B79EB16E808A6194 /* SwipeViewController-SwipeViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D00EF853AFAE980894B44D361B57F369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA044CFFF056A5970EE95E4BF2756839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD2765DE015E7FFD1136D3010021CAC /* SwipeViewController.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		022F94AA65C1D9FE81A8E82AC2A4EB29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5ECD3164C677728F4E8DE2697FF1420 /* Pods-SwipeViewController_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D85B224B99176563E27566DCB5B6C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2640F99F8BC8C655F976346E13E7896D /* InterfaceController.swift in Sources */,
+				E84CB9EA5E3520C061F0860950D2B697 /* SwipeViewController-dummy.m in Sources */,
+				C9C21F5B03F73FC98C963595C51C6573 /* SwipeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44E729993A96C4C4B5E5633F1E793757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D29F411060E7ED9D0715DE414E415F /* Pods-SwipeViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86CF5510375543CD263698046785F280 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E7F8B35D0F0387A109582DD961FE74E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwipeViewController-SwipeViewController";
+			target = ACCFAACF02163270B79EB16E808A6194 /* SwipeViewController-SwipeViewController */;
+			targetProxy = 47B97EB8AD47B1B223F72D84158FE733 /* PBXContainerItemProxy */;
+		};
+		5A65935B442B27A6A325A13D8BB6B2D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwipeViewController;
+			target = EB10A785FFFD5EFDC450CF2F8CBAD4F0 /* SwipeViewController */;
+			targetProxy = 9A50517283C1D4A40C5C3C69C77A461E /* PBXContainerItemProxy */;
+		};
+		DCE886555D30C00C4F9FFCC021D55B8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwipeViewController;
+			target = EB10A785FFFD5EFDC450CF2F8CBAD4F0 /* SwipeViewController */;
+			targetProxy = 70C399A5729A01B1113044F983952978 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05D4C2DAE193FD762FAEA75A256E8736 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController/SwipeViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController/SwipeViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0DA31CBD9F630E952346AAC617A23617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768FAE1578A0E919E7D8DE98AC17DB61 /* Pods-SwipeViewController_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwipeViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1BDA18B5924458695FC14EC03EA32DD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwipeViewController/SwipeViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwipeViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwipeViewController/SwipeViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2096EF0A72C860F969C849424677EB0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73A1F5B5CE173A0742A770CE30BAB006 /* Pods-SwipeViewController_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwipeViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4144DCD59656192F1869CB1A34A9BC39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		647CA9F9EE5DD69AE3D5D816CDED9617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E38BA8BBF4F22FD64FD64432F10F3DB /* SwipeViewController.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = SwipeViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		659EF306DCF98E9CA6BE3C14A686E6D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2E633B7BD87C90BA770F249D55A232 /* Pods-SwipeViewController_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Tests/Pods-SwipeViewController_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwipeViewController_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9CB297C45763E2497D4DB829EF9E6E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300132C011AB75C88AC7B16DB0D3F594 /* Pods-SwipeViewController_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwipeViewController_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwipeViewController_Example/Pods-SwipeViewController_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_SwipeViewController_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A2A3FCA6599E8034578E80B9179C76CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AB66C978656E240C917407B296597F92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E7FA1EFA12A8C282A086D1335EDC1C0 /* Build configuration list for PBXNativeTarget "SwipeViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D4C2DAE193FD762FAEA75A256E8736 /* Debug */,
+				1BDA18B5924458695FC14EC03EA32DD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ED9204527B2AF2BDF15D50A58517E29 /* Build configuration list for PBXNativeTarget "SwipeViewController-SwipeViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4144DCD59656192F1869CB1A34A9BC39 /* Debug */,
+				647CA9F9EE5DD69AE3D5D816CDED9617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2A3FCA6599E8034578E80B9179C76CD /* Debug */,
+				AB66C978656E240C917407B296597F92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E0CFC9A49FBFD64D71698AECB860727 /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2096EF0A72C860F969C849424677EB0E /* Debug */,
+				9CB297C45763E2497D4DB829EF9E6E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA032C24CED66EAB9D056F7E40320E31 /* Build configuration list for PBXNativeTarget "Pods-SwipeViewController_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				659EF306DCF98E9CA6BE3C14A686E6D6 /* Debug */,
+				0DA31CBD9F630E952346AAC617A23617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
+>>>>>>> swift3

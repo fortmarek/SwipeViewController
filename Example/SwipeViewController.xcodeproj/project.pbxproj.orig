@@ -217,19 +217,45 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+<<<<<<< HEAD
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0800;
+||||||| merged common ancestors
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+=======
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0800;
+>>>>>>> swift3
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+<<<<<<< HEAD
 						DevelopmentTeam = QH95ER52SG;
 						LastSwiftMigration = 0800;
+||||||| merged common ancestors
+=======
+						DevelopmentTeam = QH95ER52SG;
+						DevelopmentTeamName = "Marek Fort";
+						LastSwiftMigration = 0800;
+>>>>>>> swift3
 					};
+<<<<<<< HEAD
 					F8A439121D7A0520006A4BB4 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = QH95ER52SG;
 						LastSwiftMigration = 0800;
+||||||| merged common ancestors
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+=======
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = QH95ER52SG;
+						DevelopmentTeamName = "Marek Fort";
+						LastSwiftMigration = 0800;
+>>>>>>> swift3
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -414,7 +440,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -454,7 +479,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -489,19 +513,45 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SWIFT_VERSION = 3.0;
+||||||| merged common ancestors
+=======
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+>>>>>>> swift3
 			};
 			name = Release;
 		};
 		F8A4391B1D7A0520006A4BB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+<<<<<<< HEAD
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QH95ER52SG;
 				INFOPLIST_FILE = SwipeViewController_ExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+||||||| merged common ancestors
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+=======
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+>>>>>>> swift3
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "marekfort.SwipeViewController-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,15 +563,33 @@
 		F8A4391C1D7A0520006A4BB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+<<<<<<< HEAD
 				CLANG_ANALYZER_NONNULL = YES;
 				DEVELOPMENT_TEAM = QH95ER52SG;
 				INFOPLIST_FILE = SwipeViewController_ExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+||||||| merged common ancestors
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+=======
+				FRAMEWORK_SEARCH_PATHS = "";
+				INFOPLIST_FILE = Tests/Info.plist;
+>>>>>>> swift3
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "marekfort.SwipeViewController-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				SWIFT_VERSION = 3.0;
+||||||| merged common ancestors
+=======
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+>>>>>>> swift3
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwipeViewController_Example.app/SwipeViewController_Example";
 			};
 			name = Release;
