@@ -57,7 +57,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -79,7 +78,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         //Navigation View
         let navigationView = interfaceController.initNavigationView()
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
-        
+        let imageView = UIImageView(image: UIImage(named: "YellowHearts"))
+        imageView.frame.size = CGSize(width: 80, height: 30)
+        imageView.center = CGPoint(x: viewWidth / 2 - 30, y: navigationBarHeight / 2)
+        navigationView.addSubview(imageView)
         syncScrollView()
         
         //Init of initial view controller
@@ -89,6 +91,13 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         //Select button of initial view controller - change to selected image
         buttons[currentPageIndex - 1].isSelected = true
+        
+        //        //Navigation View
+        //        let navigationView1 = interfaceController.initNavigationView()
+        //        let imageView = UIImageView(image: UIImage(named: "YellowHearts"))
+        //        imageView.frame.size = CGSize(width: 130, height: 30)
+        //        imageView.center = CGPoint(x: viewWidth / 2 - 50, y: navigationBarHeight / 2)
+        //        navigationView1.addSubview(imageView)
         
     }
     
@@ -146,7 +155,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         rightBarButtonItem = rightItem
     }
     
-
+    
     
     
     
@@ -210,14 +219,16 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 originX = x * CGFloat(button.tag) + width
                 width += button.frame.width
             }
-            
+                
             else {
                 space = spaces[button.tag - 1]
                 originX = space / 2 + width
                 width += button.frame.width + space
             }
-
+            
             let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth
+            
+            var selectionBarOriginXOffset: CGFloat = 0
             
             //Get button with current index
             guard button.tag == currentPageIndex
@@ -225,6 +236,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             
             var nextButton = UIButton()
             var nextSpace = CGFloat()
+            selectionBarOriginXOffset = button.tag == 1 ? 90 : -90
             
             if xFromCenter < 0 && button.tag < buttons.count {
                 nextButton = buttons[button.tag]
@@ -235,25 +247,28 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             else if xFromCenter > 0 && button.tag != 1 {
                 nextButton = buttons[button.tag - 2]
                 if equalSpaces == false {
-                  nextSpace = spaces[button.tag - 2]
+                    nextSpace = spaces[button.tag - 2]
                 }
+            }
+            
+            else {
+                selectionBarOriginXOffset = button.tag == 1 ? -90 : 90
             }
             
             var newRatio = CGFloat(0)
             
             if equalSpaces {
                 let expression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2
-                newRatio = view.frame.width / (expression - (x  - (selectionBarWidth - button.frame.width) / 2))
+                newRatio = view.frame.width / (selectionBarOriginXOffset + expression - (x  - (selectionBarWidth - button.frame.width) / 2))
             }
-            
+                
             else {
                 let expression = button.frame.width + space / 2 + (selectionBarWidth - button.frame.width) / 2
                 newRatio = view.frame.width / (expression + nextSpace / 2 - (selectionBarWidth - nextButton.frame.width) / 2)
-
+                
             }
-
-
-            selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio), y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
+            print(selectionBarOriginXOffset)
+            selectionBar.frame = CGRect(x: selectionBarOriginX - (xFromCenter/newRatio) + selectionBarOriginXOffset, y: selectionBar.frame.origin.y, width: selectionBarWidth, height: selectionBarHeight)
             return
             
         }

@@ -135,7 +135,7 @@ struct NavigationView {
             if buttonDelegate.titleImages.isEmpty {
                 setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
             }
-            
+                
             else {
                 //UI of button with image
                 
@@ -143,7 +143,7 @@ struct NavigationView {
                 let buttonWithImage = buttonDelegate.titleImages[tag]
                 //Normal image
                 button.setImage(buttonWithImage.image, for: UIControlState())
-                //Selected image 
+                //Selected image
                 button.setImage(buttonWithImage.selectedImage, for: .selected)
                 //Button tint color
                 button.tintColor = buttonDelegate.buttonColor
@@ -171,9 +171,9 @@ struct NavigationView {
         if buttonDelegate.equalSpaces {
             //Space between buttons
             buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
-        }
-        
-        else {
+            
+            
+        }else {
             //Space reserved for one button (with label and spaces around it)
             space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         }
@@ -187,10 +187,22 @@ struct NavigationView {
             var originX = CGFloat(0)
             
             if buttonDelegate.equalSpaces {
+                //                originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                //                width += buttonWidth
+                
                 originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
+                
+                if button.tag == 1 {
+                    originX -= buttonDelegate.offset
+                }
+                else {
+                    originX += buttonDelegate.offset
+                }
+                
                 width += buttonWidth
+                
             }
-            
+                
             else {
                 let buttonSpace = space - buttonWidth
                 originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
@@ -199,7 +211,7 @@ struct NavigationView {
             }
             
             
-
+            
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
                 selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2

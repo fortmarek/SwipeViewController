@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application:UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
-        
+        print("HELLO")
         let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        let navigationController = ViewController(rootViewController: pageController)
+        let navigationController = ViewController(hello: "KK", rootViewController: pageController)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
