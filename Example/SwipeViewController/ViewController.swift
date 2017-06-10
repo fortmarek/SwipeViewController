@@ -11,27 +11,6 @@ import SwipeViewController
 
 class ViewController: SwipeViewController {
     
-    override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
-    }
-    
-    
-    convenience init(hello: String, rootViewController: UIViewController) {
-        self.init(rootViewController: rootViewController)
-    }
-    
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,12 +25,11 @@ class ViewController: SwipeViewController {
         VC3.title = "Trending"
         
         
-        setViewControllerArray([VC1, VC2])
+        setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         setButtonsWithSelectedColor(UIFont.systemFont(ofSize: 18), color: UIColor.black, selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
-        equalSpaces = true
-        setButtonsOffset(90, bottomOffset: 0)
+        equalSpaces = false
         
         //Button with image example
         //let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
