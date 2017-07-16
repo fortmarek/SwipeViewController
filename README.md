@@ -30,7 +30,7 @@ SwipeViewController is available through [CocoaPods](http://cocoapods.org). To i
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SwipeViewController"
+pod 'SwipeViewController'
 ```
 
 ### Carthage
