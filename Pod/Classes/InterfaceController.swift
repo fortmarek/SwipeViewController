@@ -135,7 +135,7 @@ struct NavigationView {
             if buttonDelegate.titleImages.isEmpty {
                 setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
             }
-            
+                
             else {
                 //UI of button with image
                 
@@ -143,7 +143,7 @@ struct NavigationView {
                 let buttonWithImage = buttonDelegate.titleImages[tag]
                 //Normal image
                 button.setImage(buttonWithImage.image, for: UIControlState())
-                //Selected image 
+                //Selected image
                 button.setImage(buttonWithImage.selectedImage, for: .selected)
                 //Button tint color
                 button.tintColor = buttonDelegate.buttonColor
@@ -172,7 +172,7 @@ struct NavigationView {
             //Space between buttons
             buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
         }
-        
+            
         else {
             //Space reserved for one button (with label and spaces around it)
             space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
@@ -183,14 +183,14 @@ struct NavigationView {
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
             
-            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight
+            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight - 3
             var originX = CGFloat(0)
             
             if buttonDelegate.equalSpaces {
                 originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
                 width += buttonWidth
             }
-            
+                
             else {
                 let buttonSpace = space - buttonWidth
                 originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
@@ -199,7 +199,7 @@ struct NavigationView {
             }
             
             
-
+            
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
                 selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2
@@ -218,7 +218,7 @@ struct NavigationView {
     fileprivate func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
         //Title font and color
         guard let pageTitle = page.title else { return }
-        let attributes = [NSFontAttributeName:font]
+        let attributes: [NSAttributedStringKey:Any] = [.font:font]
         let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
         button.setAttributedTitle(attributedTitle, for: UIControlState())
         
