@@ -1,6 +1,6 @@
 {
   "name": "SwipeViewController",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "summary": "Subclass of UIPageViewController and UINavigation for easy navigation",
   "description": "SwipeViewController is an easy and quick way to implement PageViewController with addition of buttons at the top of the view.",
   "homepage": "https://github.com/fortmarek/SwipeViewController",
@@ -10,16 +10,14 @@
   },
   "source": {
     "git": "https://github.com/fortmarek/SwipeViewController.git",
-    "tag": "0.1.4"
+    "tag": "0.1.8"
+  },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "SwipeViewController": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "source_files": "Pod/Classes/**/*"
 }

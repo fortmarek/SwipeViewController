@@ -19,11 +19,10 @@ class ViewController: SwipeViewController {
         VC1.title = "Recent"
         let VC2 = UIViewController()
         VC2.view.backgroundColor = UIColor(red: 0.70, green: 0.23, blue: 0.92, alpha: 1.0)
-        VC2.title = "Favourite"
+        VC2.title = "All"
         let VC3 = UIViewController()
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
         VC3.title = "Trending"
-        
         
         setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
@@ -45,7 +44,7 @@ class ViewController: SwipeViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func push(sender: UIBarButtonItem) {
+    @objc func push(sender: UIBarButtonItem) {
         let VC4 = UIViewController()
         VC4.view.backgroundColor = UIColor.purple
         VC4.title = "Cool"

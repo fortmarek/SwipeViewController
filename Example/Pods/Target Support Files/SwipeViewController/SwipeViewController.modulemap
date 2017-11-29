@@ -1,5 +1,5 @@
 framework module SwipeViewController {
-  umbrella header "SwipeViewController-iOS8.2-umbrella.h"
+  umbrella header "SwipeViewController-umbrella.h"
 
   export *
   module * { export * }

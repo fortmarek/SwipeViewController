@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SwipeViewController_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SwipeViewController_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_SwipeViewController_ExampleTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SwipeViewController_ExampleTestsVersionString[];
 

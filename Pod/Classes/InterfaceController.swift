@@ -70,9 +70,9 @@ struct NavigationView {
         navigationView.backgroundColor = delegate.navigationBarColor
         navigationView.frame = CGRect(x: 0 , y: 0, width: delegate.viewWidth, height: delegate.navigationBarHeight)
         
-        initBarButtonItem()
         initButtons()
         initSelectionBar()
+        initBarButtonItem()
         
         return (navigationView)
     }
@@ -97,21 +97,17 @@ struct NavigationView {
         delegate.selectionBar = selectionBar
     }
     
-    fileprivate func initBarButtonItem() {
+    func initBarButtonItem() {
         
-        guard var barButtonDelegate = barButtonDelegate else {return}
+        guard let barButtonDelegate = self.barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
             barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
-            if let button = leftBarButtonItem.value(forKey: "view") as? UIView {
-                barButtonDelegate.barButtonItemWidth += button.frame.width
-            }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
             barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
         }
-        
         
     }
     
@@ -135,7 +131,7 @@ struct NavigationView {
             if buttonDelegate.titleImages.isEmpty {
                 setTitleLabel(page, font: buttonDelegate.buttonFont, color: buttonDelegate.buttonColor, button: button)
             }
-            
+                
             else {
                 //UI of button with image
                 
@@ -143,7 +139,7 @@ struct NavigationView {
                 let buttonWithImage = buttonDelegate.titleImages[tag]
                 //Normal image
                 button.setImage(buttonWithImage.image, for: UIControlState())
-                //Selected image 
+                //Selected image
                 button.setImage(buttonWithImage.selectedImage, for: .selected)
                 //Button tint color
                 button.tintColor = buttonDelegate.buttonColor
@@ -172,40 +168,40 @@ struct NavigationView {
             //Space between buttons
             buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
         }
-        
+
         else {
             //Space reserved for one button (with label and spaces around it)
             space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         }
-        
+
         for button in buttons {
-            
+
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
-            
-            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight
+
+            let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight - 3
             var originX = CGFloat(0)
-            
+
             if buttonDelegate.equalSpaces {
                 originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
                 width += buttonWidth
             }
-            
+
             else {
                 let buttonSpace = space - buttonWidth
                 originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
                 width += buttonWidth + space - buttonWidth
                 swipeButtonDelegate?.spaces.append(buttonSpace)
             }
-            
-            
+
+
 
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
                 selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2
                 titleLabel.textColor = buttonDelegate.selectedButtonColor
             }
-            
+
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
             buttonDelegate.addFunction(button)
             navigationView.addSubview(button)
@@ -218,7 +214,7 @@ struct NavigationView {
     fileprivate func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
         //Title font and color
         guard let pageTitle = page.title else { return }
-        let attributes = [NSFontAttributeName:font]
+        let attributes: [NSAttributedStringKey:Any] = [.font:font]
         let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
         button.setAttributedTitle(attributedTitle, for: UIControlState())
         
