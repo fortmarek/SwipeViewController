@@ -13,7 +13,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     //Values to change, either here or in your subclass of PageViewController
     
-    
     //SelectionBar
     var selectionBarHeight = CGFloat(0)
     var selectionBarWidth = CGFloat(0)
@@ -50,6 +49,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var indexNotIncremented = true
     var pageScrollView = UIScrollView()
     var animationFinished = true
+    var navView: NavigationView = NavigationView()
     
     var selectionBarDelegate: SelectionBar?
     
@@ -65,7 +65,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         setPageController()
         
-        
         //Interface init
         var interfaceController = NavigationView()
         interfaceController.delegate = self
@@ -73,6 +72,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         interfaceController.barButtonDelegate = self
         interfaceController.swipeButtonDelegate = self
         
+        navView = interfaceController
         
         let navigationView = interfaceController.initNavigationView()
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
@@ -144,8 +144,22 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         navigationBarColor = color
         leftBarButtonItem = leftItem
         rightBarButtonItem = rightItem
+        setBarButtonItem(.left, barButtonItem: leftItem!)
+        //navView.initBarButtonItem()
     }
     
+    
+    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
+        if side == .left {
+            pageController.navigationItem.leftBarButtonItem = barButtonItem
+        }
+        else {
+            pageController.navigationItem.rightBarButtonItem = barButtonItem
+        }
+        navView.swipeButtonDelegate?.buttons.forEach {$0.frame.origin.x -= 32}
+        //navView.selectionBarOriginX -= 32
+        navView.delegate?.selectionBar.frame.origin.x -= 32
+    }
     
     
     
@@ -217,7 +231,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 width += button.frame.width + space
             }
             
-            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth
+            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - 32
             
             //Get button with current index
             guard button.tag == currentPageIndex
@@ -305,14 +319,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         button.addTarget(self, action: #selector(self.switchTabs(_:)), for: .touchUpInside)
     }
     
-    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
-        if side == .left {
-            pageController.navigationItem.leftBarButtonItem = barButtonItem
-        }
-        else {
-            pageController.navigationItem.rightBarButtonItem = barButtonItem
-        }
-    }
+    
     
     func setPageController() {
         

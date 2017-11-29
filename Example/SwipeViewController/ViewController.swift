@@ -24,7 +24,6 @@ class ViewController: SwipeViewController {
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
         VC3.title = "Trending"
         
-        
         setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))

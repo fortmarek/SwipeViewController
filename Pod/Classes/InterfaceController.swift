@@ -70,9 +70,9 @@ struct NavigationView {
         navigationView.backgroundColor = delegate.navigationBarColor
         navigationView.frame = CGRect(x: 0 , y: 0, width: delegate.viewWidth, height: delegate.navigationBarHeight)
         
-        initBarButtonItem()
         initButtons()
         initSelectionBar()
+        initBarButtonItem()
         
         return (navigationView)
     }
@@ -90,6 +90,7 @@ struct NavigationView {
         let selectionBar = UIView()
         
         //SelectionBar
+        print(navigationView.frame.height)
         let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset
         selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: barDelegate.selectionBarWidth, height: barDelegate.selectionBarHeight)
         selectionBar.backgroundColor = barDelegate.selectionBarColor
@@ -97,21 +98,17 @@ struct NavigationView {
         delegate.selectionBar = selectionBar
     }
     
-    fileprivate func initBarButtonItem() {
+    func initBarButtonItem() {
         
         guard var barButtonDelegate = barButtonDelegate else {return}
         
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
             barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
-            if let button = leftBarButtonItem.value(forKey: "view") as? UIView {
-                barButtonDelegate.barButtonItemWidth += button.frame.width
-            }
         }
         
         if let rightBarButtonItem = barButtonDelegate.rightBarButtonItem {
             barButtonDelegate.setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
         }
-        
         
     }
     
@@ -172,40 +169,40 @@ struct NavigationView {
             //Space between buttons
             buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
         }
-            
+
         else {
             //Space reserved for one button (with label and spaces around it)
             space = (delegate.viewWidth - 2 * buttonDelegate.offset) / CGFloat(buttons.count)
         }
-        
+
         for button in buttons {
-            
+
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
-            
+
             let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset - buttonHeight - 3
             var originX = CGFloat(0)
-            
+
             if buttonDelegate.equalSpaces {
                 originX = buttonDelegate.x * CGFloat(button.tag) + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
                 width += buttonWidth
             }
-                
+
             else {
                 let buttonSpace = space - buttonWidth
                 originX = buttonSpace / 2 + width + buttonDelegate.offset - barButtonDelegate.barButtonItemWidth
                 width += buttonWidth + space - buttonWidth
                 swipeButtonDelegate?.spaces.append(buttonSpace)
             }
-            
-            
-            
+
+
+
             if button.tag == buttonDelegate.currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
                 selectionBarOriginX = originX - (barDelegate.selectionBarWidth - buttonWidth) / 2
                 titleLabel.textColor = buttonDelegate.selectedButtonColor
             }
-            
+
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
             buttonDelegate.addFunction(button)
             navigationView.addSubview(button)
