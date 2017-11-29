@@ -98,14 +98,17 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     open func setViewControllerArray(_ viewControllers: [UIViewController]) {
         pageArray = viewControllers
+        view.backgroundColor = pageArray[currentPageIndex - 1].view.backgroundColor
     }
     
     open func addViewController(_ viewController: UIViewController) {
         pageArray.append(viewController)
+        view.backgroundColor = pageArray[currentPageIndex - 1].view.backgroundColor
     }
     
     open func setFirstViewController(_ viewControllerIndex: Int) {
         currentPageIndex = viewControllerIndex + 1
+        view.backgroundColor = pageArray[viewControllerIndex].view.backgroundColor
     }
     
     open func setSelectionBar(_ width: CGFloat, height: CGFloat, color: UIColor) {
@@ -202,13 +205,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             indexNotIncremented = false
         }
             
-            //Going left
+        //Going left
         else if xFromCenter >= viewWidth && indexNotIncremented && currentPageIndex >= 2 {
             view.backgroundColor = pageArray[currentPageIndex - 2].view.backgroundColor
             currentPageIndex -= 1
             indexNotIncremented = false
         }
-        
         
         if buttonColor != selectedButtonColor {
             changeButtonColor(xFromCenter)

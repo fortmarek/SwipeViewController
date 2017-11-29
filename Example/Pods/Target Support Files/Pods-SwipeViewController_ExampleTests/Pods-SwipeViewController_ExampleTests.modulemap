@@ -1,0 +1,6 @@
+framework module Pods_SwipeViewController_ExampleTests {
+  umbrella header "Pods-SwipeViewController_ExampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
