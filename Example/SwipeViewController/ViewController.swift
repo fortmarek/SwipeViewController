@@ -44,7 +44,7 @@ class ViewController: SwipeViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func push(sender: UIBarButtonItem) {
+    @objc func push(sender: UIBarButtonItem) {
         let VC4 = UIViewController()
         VC4.view.backgroundColor = UIColor.purple
         VC4.title = "Cool"

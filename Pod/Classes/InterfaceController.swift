@@ -90,7 +90,6 @@ struct NavigationView {
         let selectionBar = UIView()
         
         //SelectionBar
-        print(navigationView.frame.height)
         let originY = navigationView.frame.height - barDelegate.selectionBarHeight - buttonDelegate.bottomOfset
         selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: barDelegate.selectionBarWidth, height: barDelegate.selectionBarHeight)
         selectionBar.backgroundColor = barDelegate.selectionBarColor

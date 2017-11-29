@@ -12,8 +12,11 @@
     "git": "https://github.com/fortmarek/SwipeViewController.git",
     "tag": "0.1.8"
   },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.0"
+  },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*"

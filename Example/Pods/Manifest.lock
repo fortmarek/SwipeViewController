@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwipeViewController: 0e396aa7d7756c30f8914ef59aea2a3d7d7798bc
+  SwipeViewController: 58a3e830dd39d12e95bc3aa26a156bfaf26b1499
 
 PODFILE CHECKSUM: 3aef43978f7e37408603f1cbc7a9339abecb7e43
 

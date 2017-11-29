@@ -50,6 +50,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var pageScrollView = UIScrollView()
     var animationFinished = true
     var navView: NavigationView = NavigationView()
+    var valueToSubtract: CGFloat = 0
     
     var selectionBarDelegate: SelectionBar?
     
@@ -59,6 +60,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     open func setSwipeViewController() {
+        
         
         navigationBar.barTintColor = navigationBarColor
         navigationBar.isTranslucent = false
@@ -86,6 +88,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         //Select button of initial view controller - change to selected image
         buttons[currentPageIndex - 1].isSelected = true
+        
+        
         
     }
     
@@ -147,23 +151,28 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         navigationBarColor = color
         leftBarButtonItem = leftItem
         rightBarButtonItem = rightItem
-        setBarButtonItem(.left, barButtonItem: leftItem!)
-        //navView.initBarButtonItem()
     }
     
     
     func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
         if side == .left {
             pageController.navigationItem.leftBarButtonItem = barButtonItem
+            getValueToSubtract()
+            navView.swipeButtonDelegate?.buttons.forEach {$0.frame.origin.x -= valueToSubtract}
+            navView.delegate?.selectionBar.frame.origin.x -= valueToSubtract
         }
         else {
             pageController.navigationItem.rightBarButtonItem = barButtonItem
         }
-        navView.swipeButtonDelegate?.buttons.forEach {$0.frame.origin.x -= 32}
-        //navView.selectionBarOriginX -= 32
-        navView.delegate?.selectionBar.frame.origin.x -= 32
+        
     }
     
+    private func getValueToSubtract() {
+        guard let firstButton = navView.swipeButtonDelegate?.buttons.first else {return}
+        let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
+        let valueToSubtract: CGFloat = (convertedXOrigin - offset) / 2
+        self.valueToSubtract = valueToSubtract
+    }
     
     
     
@@ -233,7 +242,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 width += button.frame.width + space
             }
             
-            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - 32
+            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - valueToSubtract
             
             //Get button with current index
             guard button.tag == currentPageIndex

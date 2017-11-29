@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "fortmarek" => "marekfort@me.com" }
   s.source           = { :git => "https://github.com/fortmarek/SwipeViewController.git", :tag => s.version.to_s }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '9.0'
