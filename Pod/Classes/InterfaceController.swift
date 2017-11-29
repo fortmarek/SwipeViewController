@@ -100,6 +100,8 @@ struct NavigationView {
     
     func initBarButtonItem() {
         
+        guard let barButtonDelegate = self.barButtonDelegate else {return}
+        
         if let leftBarButtonItem = barButtonDelegate.leftBarButtonItem {
             barButtonDelegate.setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
         }
