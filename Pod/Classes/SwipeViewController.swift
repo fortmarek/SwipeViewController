@@ -40,7 +40,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var pageArray = [UIViewController]()
     var buttons = [UIButton]()
     var viewWidth = CGFloat()
-    var barButtonItemWidth = CGFloat(8) //Extra offset when there is barButtonItem (and some default, you can check the value by pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left
+    var barButtonItemWidth: CGFloat = 0
     var navigationBarHeight = CGFloat(0)
     var selectionBar = UIView()
     var pageController = UIPageViewController()
@@ -56,11 +56,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        
+        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
     }
     
     open func setSwipeViewController() {
-        
         
         navigationBar.barTintColor = navigationBarColor
         navigationBar.isTranslucent = false
@@ -76,8 +75,13 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         navView = interfaceController
         
+        pageController.navigationController?.navigationBar.topItem?.titleView = UIView()
+        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
+        
         let navigationView = interfaceController.initNavigationView()
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
+        
+        
         
         syncScrollView()
         
@@ -88,8 +92,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         //Select button of initial view controller - change to selected image
         buttons[currentPageIndex - 1].isSelected = true
-        
-        
         
     }
     
@@ -170,7 +172,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     private func getValueToSubtract() {
         guard let firstButton = navView.swipeButtonDelegate?.buttons.first else {return}
         let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
-        let valueToSubtract: CGFloat = (convertedXOrigin - offset) / 2
+        let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
+        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - (navView.swipeButtonDelegate?.x ?? 0) / 2
         self.valueToSubtract = valueToSubtract
     }
     
