@@ -16,12 +16,10 @@ SwipeViewController is a modification of Objective-C project RKSwipeBetweenViewC
 ## Installation
 ### For both options
 
-Include in your AppDelegate function didFinishLaunchingWithOptions:
+You can init SwipeViewController simply like this:
 ```swift 
-let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
 let navigationController = YourViewControllerName(rootViewController: pageController)
-self.window?.rootViewController = navigationController
-self.window?.makeKeyAndVisible()
 ```
 
 ### CocoaPods
@@ -115,12 +113,12 @@ equalSpaces = false
 
 You can either customize buttons with this function:
 ```swift 
-setButtons(UIFont.systemFontOfSize(18), color: UIColor.blackColor())
+setButtons(UIFont.systemFontOfSize(18), color: .black)
 ```
 Or if you want to change the color of the buttons depending on which page the user is on:
 
 ```swift 
-setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: UIColor.blackColor(), selectedColor: UIColor.whiteColor())
+setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: .black, selectedColor: .white)
 ```
 
 To change the offsets on the side and on the bottom:
@@ -141,7 +139,7 @@ setButtonsWithImages([buttonOne, buttonTwo, buttonThree])
 To customize selection bar, use this function:
 
 ```swift 
-setSelectionBar(80, height: 3, color: UIColor.blackColor())
+setSelectionBar(80, height: 3, color: .black)
 ```
 
 ### Additional customization
