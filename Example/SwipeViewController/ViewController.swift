@@ -14,7 +14,7 @@ class ViewController: SwipeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let VC1 = UIViewController()
+        let VC1 = TestViewController()
         VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
         VC1.title = "Recent"
         let VC2 = UIViewController()

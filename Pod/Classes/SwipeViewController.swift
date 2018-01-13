@@ -60,7 +60,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     open func setSwipeViewController() {
-        
         navigationBar.barTintColor = navigationBarColor
         navigationBar.isTranslucent = false
         

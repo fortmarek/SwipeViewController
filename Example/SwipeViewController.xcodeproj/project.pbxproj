@@ -16,6 +16,7 @@
 		D5CC13CE545C2EFB18B35F46 /* Pods_SwipeViewController_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A12539E19915824DB70347 /* Pods_SwipeViewController_ExampleTests.framework */; };
 		F8A439161D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A439151D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift */; };
 		F8A439201D7A05A0006A4BB4 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		F8FE8623200A5D2F00A9EAA9 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE8622200A5D2F00A9EAA9 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F8A439131D7A0520006A4BB4 /* SwipeViewController_ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewController_ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A439151D7A0520006A4BB4 /* SwipeViewController_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController_ExampleTests.swift; sourceTree = "<group>"; };
 		F8A439171D7A0520006A4BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8FE8622200A5D2F00A9EAA9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F9BFA481C592F5BD5ED5B3DC /* Pods-SwipeViewController_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwipeViewController_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwipeViewController_ExampleTests/Pods-SwipeViewController_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F8FE8622200A5D2F00A9EAA9 /* TestViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				F8FE8623200A5D2F00A9EAA9 /* TestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
