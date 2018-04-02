@@ -60,8 +60,6 @@ struct NavigationView {
     
     var navigationView = UIView()
     
-    
-    
     mutating func initNavigationView() -> (UIView) {
         
         guard let delegate = delegate else {return UIView()}
@@ -166,7 +164,8 @@ struct NavigationView {
         
         if buttonDelegate.equalSpaces {
             //Space between buttons
-            buttonDelegate.x = (delegate.viewWidth - 2 * buttonDelegate.offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+            let offset: CGFloat = buttonDelegate.offset
+            buttonDelegate.x = (delegate.viewWidth - 2 * offset - totalButtonWidth) / CGFloat(buttons.count + 1)
         }
 
         else {
