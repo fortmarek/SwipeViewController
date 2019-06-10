@@ -8,97 +8,129 @@
 import Foundation
 import UIKit
 
-open class SwipeViewController2: UIViewController, UIPageViewControllerDelegate, UIScrollViewDelegate {
+open class SwipeViewController2: UINavigationController, UIPageViewControllerDelegate, UIScrollViewDelegate {
+
+    public var selectionBarHeight: CGFloat = 3
+    public var offset: CGFloat = 0
+    public var bottomOfset: CGFloat = 0
+    public var buttonColor: UIColor = .black
+    public var selectionBarColor = UIColor.black
+    public var selectedButtonColor: UIColor = .blue
+    public var backgroundColor: UIColor = .white
+    public var buttonFont = UIFont.systemFont(ofSize: 18)
+    // Besides keeping current page index it also determines what will be the first view
+    public var currentPageIndex = 0
+    public var spaces: [CGFloat] = []
+    public var x: CGFloat = 0
+
+    private(set) public var pageArray: [UIViewController] = []
+
+    //NavigationBar
+    public var equalSpaces = true
 
     private(set) weak var navigationView: UIView!
     private weak var selectionBar: UIView!
 
     private var selectionBarOriginX: CGFloat = 0
     private var selectionBarWidth: CGFloat = 0
-    var selectionBarHeight: CGFloat = 3
 
-    var offset: CGFloat = 0
-    var bottomOfset: CGFloat = 0
-    var buttonColor: UIColor = .black
-    var selectedButtonColor: UIColor = .blue
-    var backgroundColor: UIColor = .white
-    var buttonFont = UIFont.systemFont(ofSize: 18)
-    // Besides keeping current page index it also determines what will be the first view
-    var currentPageIndex = 0
-    var spaces: [CGFloat] = []
-    var x: CGFloat = 0
+    private var titleImages = [SwipeButtonWithImage]()
+    private var buttons: [UIButton] = []
+    private weak var pageController: UIPageViewController!
+    private var totalButtonWidth: CGFloat = 0
+    private var finalPageIndex = -1
+    private var indexNotIncremented = true
+    private var animationFinished = true
+    private var valueToSubtract: CGFloat = 0
 
-    //NavigationBar
-    var equalSpaces = true
-
-    //Other values (should not be changed)
-    var pageArray: [UIViewController] = []
-    var buttons: [UIButton] = []
-    var pageController = UIPageViewController()
-    var totalButtonWidth: CGFloat = 0
-    var finalPageIndex = -1
-    var indexNotIncremented = true
-    var animationFinished = true
-    var valueToSubtract: CGFloat = 0
-
-    init(viewControllers: [UIViewController]) {
+    open func setViewControllerArray(_ viewControllers: [UIViewController]) {
         pageArray = viewControllers
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override open func loadView() {
-        super.loadView()
-
         view.backgroundColor = pageArray[currentPageIndex].view.backgroundColor
 
-        let navigationView = UIView()
-        navigationView.backgroundColor = backgroundColor
-        view.addSubview(navigationView)
-        if #available(iOS 11.0, *) {
-            navigationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
-        } else {
-            navigationView.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor)
-        }
-        navigationView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        navigationView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        navigationView.heightAnchor.constraint(equalToConstant: 60)
-        self.navigationView = navigationView
-
-        let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+        guard let pageController = topViewController as? UIPageViewController else { return }
         pageController.delegate = self
         pageController.dataSource = self
-        addChild(pageController)
-        view.addSubview(pageController.view)
-        pageController.view.topAnchor.constraint(equalTo: navigationView.bottomAnchor)
-        pageController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        pageController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         self.pageController = pageController
 
-        view.layoutIfNeeded()
+        let navigationViewFrame = CGRect(x: 0, y: 0, width: view.frame.width, height: navigationBar.frame.height)
+        let navigationView = UIView(frame: navigationViewFrame)
+        pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
+        self.navigationView = navigationView
 
         let selectionBar = UIView()
         selectionBarWidth = view.frame.width / 2
         view.addSubview(selectionBar)
         self.selectionBar = selectionBar
 
-        initButtons()
-
         let originY = navigationView.frame.origin.y + navigationView.frame.height - selectionBarHeight - bottomOfset
         selectionBar.frame = CGRect(x: selectionBarOriginX, y: originY, width: selectionBarWidth, height: selectionBarHeight)
         selectionBar.backgroundColor = selectedButtonColor
 
-        //Init of initial view controller
-        guard currentPageIndex >= 1 else {return}
-        let initialViewController = pageArray[currentPageIndex - 1]
-        pageController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
+        initButtons()
 
         //Select button of initial view controller - change to selected image
-        buttons[currentPageIndex - 1].isSelected = true
+        buttons[currentPageIndex].isSelected = true
 
+        //Init of initial view controller
+        guard currentPageIndex >= 0 else {return}
+        let initialViewController = pageArray[currentPageIndex]
+        pageController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
+    }
+
+    open func addViewController(_ viewController: UIViewController) {
+        pageArray.append(viewController)
+        view.backgroundColor = pageArray[currentPageIndex - 1].view.backgroundColor
+    }
+
+    open func setFirstViewController(_ viewControllerIndex: Int) {
+        currentPageIndex = viewControllerIndex + 1
+        view.backgroundColor = pageArray[viewControllerIndex].view.backgroundColor
+    }
+
+    open func setSelectionBar(_ width: CGFloat, height: CGFloat, color: UIColor) {
+        selectionBarWidth = width
+        selectionBarHeight = height
+        selectionBarColor = color
+    }
+
+    open func setButtons(_ font: UIFont, color: UIColor) {
+        buttonFont = font
+        buttonColor = color
+        //When the colors are the same there is no change
+        selectedButtonColor = color
+    }
+
+    open func setButtonsWithSelectedColor(_ font: UIFont, color: UIColor, selectedColor: UIColor) {
+        buttonFont = font
+        buttonColor = color
+        selectedButtonColor = selectedColor
+    }
+
+    open func setButtonsOffset(_ offset: CGFloat, bottomOffset: CGFloat) {
+        self.offset = offset
+        self.bottomOfset = bottomOffset
+    }
+
+    open func setButtonsWithImages(_ titleImages: Array<SwipeButtonWithImage>) {
+        self.titleImages = titleImages
+    }
+
+    open func setNavigationWithItem(_ color: UIColor, leftItem: UIBarButtonItem?, rightItem: UIBarButtonItem?) {
+        navigationItem.leftBarButtonItem = leftItem
+        navigationItem.rightBarButtonItem = rightItem
+    }
+
+
+    open func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
+        if side == .left {
+            pageController.navigationItem.leftBarButtonItem = barButtonItem
+            getValueToSubtract()
+            buttons.forEach {$0.frame.origin.x -= valueToSubtract}
+            selectionBar.frame.origin.x -= valueToSubtract
+        }
+        else {
+            pageController.navigationItem.rightBarButtonItem = barButtonItem
+        }
     }
 
     private func getValueToSubtract() {

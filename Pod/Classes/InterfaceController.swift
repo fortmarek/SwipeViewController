@@ -17,7 +17,7 @@ protocol SelectionBar {
     var selectionBar: UIView { get set }
 }
 
-enum Side {
+public enum Side {
     case left, right
 }
 

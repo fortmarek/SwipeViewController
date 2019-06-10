@@ -154,7 +154,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     
-    func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
+    open func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
         if side == .left {
             pageController.navigationItem.leftBarButtonItem = barButtonItem
             getValueToSubtract()
@@ -164,7 +164,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         else {
             pageController.navigationItem.rightBarButtonItem = barButtonItem
         }
-        
     }
     
     private func getValueToSubtract() {

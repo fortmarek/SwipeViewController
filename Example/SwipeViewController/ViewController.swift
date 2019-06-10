@@ -13,7 +13,12 @@ class ViewController: SwipeViewController2 {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
         let VC1 = TestViewController()
         VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
         VC1.title = "Recent"
@@ -23,25 +28,19 @@ class ViewController: SwipeViewController2 {
         let VC3 = UIViewController()
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
         VC3.title = "Trending"
-        
+
         setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         setButtonsWithSelectedColor(UIFont.systemFont(ofSize: 18), color: UIColor.black, selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         equalSpaces = false
-        
+
         //Button with image example
         //let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
         //setButtonsWithImages([buttonOne, buttonOne, buttonOne])
-        
+
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(push))
         setNavigationWithItem(UIColor.white, leftItem: barButtonItem, rightItem: nil)
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @objc func push(sender: UIBarButtonItem) {
