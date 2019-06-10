@@ -68,6 +68,10 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
 
         initButtons()
 
+        if let scrollView = pageController.view.subviews.compactMap({ $0 as? UIScrollView }).first {
+            scrollView.delegate = self
+        }
+
         //Select button of initial view controller - change to selected image
         buttons[currentPageIndex].isSelected = true
 
@@ -258,9 +262,7 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
             if equalSpaces {
                 originX = x * CGFloat(button.tag) + width
                 width += button.frame.width
-            }
-
-            else {
+            } else {
                 space = spaces[button.tag - 1]
                 originX = space / 2 + width
                 width += button.frame.width + space
@@ -327,14 +329,11 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
             for viewControllerIndex in (index...currentViewControllerIndex).reversed() {
                 let destinationViewController = pageArray[viewControllerIndex]
                 pageController.setViewControllers([destinationViewController], direction: .reverse, animated: true, completion: nil)
-
             }
         }
-
     }
 
     @objc func switchTabs(_ sender: UIButton) {
-
         let index = sender.tag
 
         //Can't animate twice to the same controller (otherwise weird stuff happens)
@@ -352,7 +351,7 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
         let border = view.frame.width - 1
         let halfBorder = viewWidthHalf - 1
 
-        //Going left, next button selected
+        // Going left, next button selected
         if viewWidthHalf ... border ~= xFromCenter && currentPageIndex > 0 {
 
             let button = buttons[currentPageIndex - 1]
@@ -361,8 +360,7 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
             button.isSelected = true
             previousButton.isSelected = false
         }
-
-            //Going right, current button selected
+        // Going right, current button selected
         else if 0 ... halfBorder ~= xFromCenter && currentPageIndex > 0 {
 
             let button = buttons[currentPageIndex]
@@ -371,9 +369,8 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
             button.isSelected = true
             previousButton.isSelected = false
         }
-
-            //Going left, current button selected
-        else if -halfBorder ... 0 ~= xFromCenter && currentPageIndex < buttons.count {
+        // Going left, current button selected
+        else if -halfBorder ... 0 ~= xFromCenter && currentPageIndex > 0 {
 
             let previousButton = buttons[currentPageIndex - 1]
             let button = buttons[currentPageIndex]
@@ -384,7 +381,7 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
 
         // Going right, next button selected
         else if -border ... -viewWidthHalf ~= xFromCenter && currentPageIndex < buttons.count - 1 {
-            let button = buttons[currentPageIndex - 1]
+            let button = buttons[currentPageIndex + 1]
             let previousButton = buttons[currentPageIndex]
 
             button.isSelected = true

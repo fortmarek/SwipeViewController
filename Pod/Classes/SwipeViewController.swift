@@ -196,7 +196,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         guard currentPageIndex > 0 && currentPageIndex <= buttons.count else {return}
         
-        //Ensuring currentPageIndex is not changed twice
+        // Ensuring currentPageIndex is not changed twice
         if -border ... border ~= xFromCenter {
             indexNotIncremented = true
         }
