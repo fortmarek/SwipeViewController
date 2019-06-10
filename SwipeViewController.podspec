@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwipeViewController"
-  s.version          = "1.0"
+  s.version          = "1.1.1"
   s.summary          = "Subclass of UIPageViewController and UINavigation for easy navigation"
 
 # This description is used to generate tags and improve search results.

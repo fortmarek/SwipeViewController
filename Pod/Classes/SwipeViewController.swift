@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 open class SwipeViewController: UINavigationController, UIPageViewControllerDelegate, UIScrollViewDelegate, Navigation, BarButtonItem, SwipeButton, SelectionBar {
     
     //Values to change, either here or in your subclass of PageViewController
@@ -416,7 +415,7 @@ extension SwipeViewController: UIPageViewControllerDataSource {
                                    viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         //Get current view controller index
-        guard let viewControllerIndex = pageArray.index(of: viewController) else {return nil}
+        guard let viewControllerIndex = pageArray.firstIndex(of: viewController) else { return nil }
         
         let previousIndex = viewControllerIndex - 1
         
@@ -429,7 +428,7 @@ extension SwipeViewController: UIPageViewControllerDataSource {
     //Swiping right
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         //Get current view controller index
-        guard let viewControllerIndex = pageArray.index(of: viewController) else {return nil}
+        guard let viewControllerIndex = pageArray.firstIndex(of: viewController) else { return nil }
         
         let nextIndex = viewControllerIndex + 1
         

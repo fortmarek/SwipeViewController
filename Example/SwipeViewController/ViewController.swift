@@ -9,7 +9,7 @@
 import UIKit
 import SwipeViewController
 
-class ViewController: SwipeViewController {
+class ViewController: SwipeViewController2 {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +50,4 @@ class ViewController: SwipeViewController {
         VC4.title = "Cool"
         self.pushViewController(VC4, animated: true)
     }
-    
-    
 }

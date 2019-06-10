@@ -136,7 +136,7 @@ struct NavigationView {
                 //Getting buttnWithImage struct from array
                 let buttonWithImage = buttonDelegate.titleImages[tag]
                 //Normal image
-                button.setImage(buttonWithImage.image, for: UIControlState())
+                button.setImage(buttonWithImage.image, for: UIControl.State())
                 //Selected image
                 button.setImage(buttonWithImage.selectedImage, for: .selected)
                 //Button tint color
@@ -213,9 +213,9 @@ struct NavigationView {
     fileprivate func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
         //Title font and color
         guard let pageTitle = page.title else { return }
-        let attributes: [NSAttributedStringKey:Any] = [.font:font]
+        let attributes: [NSAttributedString.Key: Any] = [.font: font]
         let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
-        button.setAttributedTitle(attributedTitle, for: UIControlState())
+        button.setAttributedTitle(attributedTitle, for: UIControl.State())
         
         
         guard let titleLabel = button.titleLabel else {return}
@@ -227,7 +227,7 @@ struct NavigationView {
     }
     
     fileprivate func setImageButtons(_ button: UIButton, imageName: String, color: UIColor, titleFrame: CGSize) {
-        button.setImage(UIImage(named: imageName), for: UIControlState())
+        button.setImage(UIImage(named: imageName), for: UIControl.State())
         button.frame.size = titleFrame
         button.tintColor = color
     }
