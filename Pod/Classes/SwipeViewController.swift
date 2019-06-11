@@ -27,6 +27,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var spaces = [CGFloat]()
     var x = CGFloat(0)
     var titleImages = [SwipeButtonWithImage]()
+
+    private weak var navigationView: UIView!
     
     //NavigationBar
     var navigationBarColor = UIColor.white
@@ -48,8 +50,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var indexNotIncremented = true
     var pageScrollView = UIScrollView()
     var animationFinished = true
-    var navView: NavigationView = NavigationView()
     var valueToSubtract: CGFloat = 0
+
+    private var selectionBarOriginX: CGFloat = 0
     
     var selectionBarDelegate: SelectionBar?
     
@@ -63,23 +66,16 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         navigationBar.isTranslucent = false
         
         setPageController()
-        
-        //Interface init
-        var interfaceController = NavigationView()
-        interfaceController.delegate = self
-        interfaceController.barDelegate = self
-        interfaceController.barButtonDelegate = self
-        interfaceController.swipeButtonDelegate = self
-        
-        navView = interfaceController
-        
-        pageController.navigationController?.navigationBar.topItem?.titleView = UIView()
-        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
-        
-        let navigationView = interfaceController.initNavigationView()
+
+        let navigationView = UIView(frame: CGRect(x: 0 , y: 0, width: view.frame.width, height: navigationBar.frame.height))
+        navigationView.backgroundColor = navigationBarColor
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
-        
-        
+        self.navigationView = navigationView
+        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
+
+        initButtons()
+        initSelectionBar()
+        initBarButtonItem()
         
         syncScrollView()
         
@@ -96,7 +92,137 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     override open func viewWillAppear(_ animated: Bool) {
         setSwipeViewController()
     }
-    
+
+    func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
+        //Title font and color
+        guard let pageTitle = page.title else { return }
+        let attributes: [NSAttributedString.Key: Any] = [.font: font]
+        let attributedTitle = NSAttributedString(string: pageTitle, attributes: attributes)
+        button.setAttributedTitle(attributedTitle, for: UIControl.State())
+
+
+        guard let titleLabel = button.titleLabel else {return}
+        titleLabel.textColor = color
+
+        titleLabel.sizeToFit()
+
+        button.frame = titleLabel.frame
+    }
+
+    func initSelectionBar() {
+        let selectionBar = UIView()
+
+        //SelectionBar
+        let originY = navigationView.frame.height - selectionBarHeight - bottomOfset
+        selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: selectionBarWidth, height: selectionBarHeight)
+        selectionBar.backgroundColor = selectionBarColor
+        navigationView.addSubview(selectionBar)
+        self.selectionBar = selectionBar
+    }
+
+    func initBarButtonItem() {
+        if let leftBarButtonItem = leftBarButtonItem {
+            setBarButtonItem(.left, barButtonItem: leftBarButtonItem)
+        }
+
+        if let rightBarButtonItem = rightBarButtonItem {
+            setBarButtonItem(.right, barButtonItem: rightBarButtonItem)
+        }
+
+    }
+
+    func initButtons() {
+        var buttons = [UIButton]()
+        var totalButtonWidth = 0 as CGFloat
+
+        //Buttons
+
+        var tag = 0
+        for page in pageArray {
+            let button = UIButton()
+
+            if titleImages.isEmpty {
+                setTitleLabel(page, font: buttonFont, color: buttonColor, button: button)
+            }
+
+            else {
+                //UI of button with image
+
+                //Getting buttnWithImage struct from array
+                let buttonWithImage = titleImages[tag]
+                //Normal image
+                button.setImage(buttonWithImage.image, for: UIControl.State())
+                //Selected image
+                button.setImage(buttonWithImage.selectedImage, for: .selected)
+                //Button tint color
+                button.tintColor = buttonColor
+
+                //Button size
+                if let size = buttonWithImage.size {
+                    button.frame.size = size
+                }
+
+            }
+
+            //Tag
+            tag += 1
+            button.tag = tag
+
+            totalButtonWidth += button.frame.width
+
+            buttons.append(button)
+        }
+
+
+        var space = CGFloat(0)
+        var width = CGFloat(0)
+
+        if equalSpaces {
+            //Space between buttons
+            let offset: CGFloat = self.offset
+            x = (view.frame.width - 2 * offset - totalButtonWidth) / CGFloat(buttons.count + 1)
+        }
+
+        else {
+            //Space reserved for one button (with label and spaces around it)
+            space = (view.frame.width - 2 * offset) / CGFloat(buttons.count)
+        }
+
+        for button in buttons {
+
+            let buttonHeight = button.frame.height
+            let buttonWidth = button.frame.width
+
+            let originY = navigationView.frame.height - selectionBarHeight - bottomOfset - buttonHeight - 3
+            var originX = CGFloat(0)
+
+            if equalSpaces {
+                originX = x * CGFloat(button.tag) + width + offset - barButtonItemWidth
+                width += buttonWidth
+            }
+
+            else {
+                let buttonSpace = space - buttonWidth
+                originX = buttonSpace / 2 + width + offset - barButtonItemWidth
+                width += buttonWidth + space - buttonWidth
+                spaces.append(buttonSpace)
+            }
+
+
+
+            if button.tag == currentPageIndex {
+                guard let titleLabel = button.titleLabel else {continue}
+                selectionBarOriginX = originX - (selectionBarWidth - buttonWidth) / 2
+                titleLabel.textColor = selectedButtonColor
+            }
+
+            button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
+            addFunction(button)
+            navigationView.addSubview(button)
+        }
+
+        self.buttons = buttons
+    }
     
     //MARK: Public functions
     
@@ -158,8 +284,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         if side == .left {
             pageController.navigationItem.leftBarButtonItem = barButtonItem
             getValueToSubtract()
-            navView.swipeButtonDelegate?.buttons.forEach {$0.frame.origin.x -= valueToSubtract}
-            navView.delegate?.selectionBar.frame.origin.x -= valueToSubtract
+            buttons.forEach {$0.frame.origin.x -= valueToSubtract}
+            selectionBar.frame.origin.x -= valueToSubtract
         }
         else {
             pageController.navigationItem.rightBarButtonItem = barButtonItem
@@ -167,10 +293,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     private func getValueToSubtract() {
-        guard let firstButton = navView.swipeButtonDelegate?.buttons.first else {return}
+        guard let firstButton = buttons.first else {return}
         let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
         let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
-        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - (navView.swipeButtonDelegate?.x ?? 0) / 2
+        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
         self.valueToSubtract = valueToSubtract
     }
     
@@ -341,7 +467,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         pageController.dataSource = self
         
         viewWidth = view.frame.width
-        navigationBarHeight = navigationBar.frame.height
     }
     
     func changeButtonColor(_ xFromCenter: CGFloat) {

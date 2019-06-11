@@ -23,6 +23,8 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
     public var spaces: [CGFloat] = []
     public var x: CGFloat = 0
 
+    private(set) public var barButtonItemWidth: CGFloat = 0
+
     private(set) public var pageArray: [UIViewController] = []
 
     //NavigationBar
@@ -56,6 +58,8 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
         let navigationView = UIView(frame: navigationViewFrame)
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
         self.navigationView = navigationView
+
+        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
 
         let selectionBar = UIView()
         selectionBarWidth = view.frame.width / 2
@@ -140,7 +144,8 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
     private func getValueToSubtract() {
         guard let firstButton = buttons.first else {return}
         let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
-        let valueToSubtract: CGFloat = (convertedXOrigin - offset) / 2 - x / 2
+        let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
+        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
         self.valueToSubtract = valueToSubtract
     }
 
@@ -268,7 +273,7 @@ open class SwipeViewController2: UINavigationController, UIPageViewControllerDel
                 width += button.frame.width + space
             }
 
-            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - valueToSubtract
+            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - valueToSubtract
 
             //Get button with current index
             guard button.tag == currentPageIndex + 1 else { continue }
