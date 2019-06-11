@@ -32,7 +32,11 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     public var buttonFont = UIFont.systemFont(ofSize: 18)
     public var buttonColor: UIColor = .black
     public var selectedButtonColor: UIColor = .green
-    public var navigationBarColor: UIColor = .white
+    public var navigationBarColor: UIColor = .white {
+        didSet {
+            navigationBar.barTintColor = navigationBarColor
+        }
+    }
     public var leftBarButtonItem: UIBarButtonItem? {
         didSet {
             pageController.navigationItem.leftBarButtonItem = leftBarButtonItem
@@ -84,8 +88,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     open func setSwipeViewController() {
-        navigationBar.barTintColor = navigationBarColor
-        
         setPageController()
 
         let navigationView = UIView(frame: CGRect(x: 0 , y: 0, width: view.frame.width, height: navigationBar.frame.height))
