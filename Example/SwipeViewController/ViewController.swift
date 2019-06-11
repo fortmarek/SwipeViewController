@@ -13,18 +13,6 @@ class ViewController: SwipeViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let VC1 = TestViewController()
-        VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
-        VC1.title = "Recent"
-        let VC2 = UIViewController()
-        VC2.view.backgroundColor = UIColor(red: 0.70, green: 0.23, blue: 0.92, alpha: 1.0)
-        VC2.title = "All"
-        let VC3 = UIViewController()
-        VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
-        VC3.title = "Trending"
-
-        setViewControllerArray([VC1, VC2, VC3])
         setFirstViewController(0)
         setSelectionBar(80, height: 3, color: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))
         setButtonsWithSelectedColor(UIFont.systemFont(ofSize: 18), color: UIColor.black, selectedColor: UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0))

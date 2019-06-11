@@ -18,8 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
         let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        let navigationController = ViewController(rootViewController: pageController)
-        self.window?.rootViewController = navigationController
+        let swipeViewController = ViewController(rootViewController: pageController)
+
+        let VC1 = TestViewController()
+        VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
+        VC1.title = "Recent"
+        let VC2 = UIViewController()
+        VC2.view.backgroundColor = UIColor(red: 0.70, green: 0.23, blue: 0.92, alpha: 1.0)
+        VC2.title = "All"
+        let VC3 = UIViewController()
+        VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
+        VC3.title = "Trending"
+        swipeViewController.pages = [VC1, VC2, VC3]
+
+        self.window?.rootViewController = swipeViewController
         self.window?.makeKeyAndVisible()
         
         return true
