@@ -30,6 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
         VC3.title = "Trending"
         swipeViewController.pages = [VC1, VC2, VC3]
+        swipeViewController.startIndex = 0
+        swipeViewController.selectionBarWidth = 80
+        swipeViewController.selectionBarHeight = 3
+        swipeViewController.selectionBarColor = UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0)
+        swipeViewController.selectedButtonColor = UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0)
+        swipeViewController.equalSpaces = false
 
         self.window?.rootViewController = swipeViewController
         self.window?.makeKeyAndVisible()
