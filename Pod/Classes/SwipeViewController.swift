@@ -13,19 +13,19 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     //Values to change, either here or in your subclass of PageViewController
     
     //SelectionBar
-    var selectionBarHeight = CGFloat(0)
-    var selectionBarWidth = CGFloat(0)
+    var selectionBarHeight: CGFloat = 0
+    var selectionBarWidth: CGFloat = 0
     var selectionBarColor = UIColor.black
     
     //SwipeButtons
-    var offset = CGFloat(40)
-    var bottomOfset = CGFloat(0)
+    var offset: CGFloat = 40
+    var bottomOfset: CGFloat = 0
     var buttonColor = UIColor.black
     var selectedButtonColor = UIColor.green
     var buttonFont = UIFont.systemFont(ofSize: 18)
     open var currentPageIndex = 1 //Besides keeping current page index it also determines what will be the first view
     var spaces = [CGFloat]()
-    var x = CGFloat(0)
+    var x: CGFloat = 0
     var titleImages = [SwipeButtonWithImage]()
 
     private weak var navigationView: UIView!
@@ -40,12 +40,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     //Other values (should not be changed)
     var pageArray = [UIViewController]()
     var buttons = [UIButton]()
-    var viewWidth = CGFloat()
+    var viewWidth: CGFloat = 
     var barButtonItemWidth: CGFloat = 0
-    var navigationBarHeight = CGFloat(0)
+    var navigationBarHeight: CGFloat = 0
     var selectionBar = UIView()
     var pageController = UIPageViewController()
-    var totalButtonWidth = CGFloat(0)
+    var totalButtonWidth: CGFloat = 0
     var finalPageIndex = -1
     var indexNotIncremented = true
     var pageScrollView = UIScrollView()
@@ -174,8 +174,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
 
 
-        var space = CGFloat(0)
-        var width = CGFloat(0)
+        var space: CGFloat = 0
+        var width: CGFloat = 0
 
         if equalSpaces {
             //Space between buttons
@@ -194,7 +194,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             let buttonWidth = button.frame.width
 
             let originY = navigationView.frame.height - selectionBarHeight - bottomOfset - buttonHeight - 3
-            var originX = CGFloat(0)
+            var originX: CGFloat = 0
 
             if equalSpaces {
                 originX = x * CGFloat(button.tag) + width + offset - barButtonItemWidth
@@ -354,8 +354,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         for button in buttons {
             
-            var originX = CGFloat(0)
-            var space = CGFloat(0)
+            var originX: CGFloat = 0
+            var space: CGFloat = 0
             
             if equalSpaces {
                 originX = x * CGFloat(button.tag) + width
@@ -375,7 +375,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 else {continue}
             
             var nextButton = UIButton()
-            var nextSpace = CGFloat()
+            var nextSpace: CGFloat = 
             
             if xFromCenter < 0 && button.tag < buttons.count {
                 nextButton = buttons[button.tag]
@@ -390,7 +390,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 }
             }
             
-            var newRatio = CGFloat(0)
+            var newRatio: CGFloat = 0
             
             if equalSpaces {
                 let expression = 2 * x + button.frame.width - (selectionBarWidth - nextButton.frame.width) / 2
