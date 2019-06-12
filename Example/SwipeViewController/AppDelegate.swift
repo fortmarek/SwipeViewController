@@ -7,18 +7,16 @@
 //
 
 import UIKit
+import SwipeViewController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    
+
     func application(_ application:UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-
-        let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-        let swipeViewController = ViewController(rootViewController: pageController)
+        let swipeViewController = ViewController()
 
         let VC1 = TestViewController()
         VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)

@@ -40,9 +40,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     public var leftBarButtonItem: UIBarButtonItem? {
         didSet {
             pageController.navigationItem.leftBarButtonItem = leftBarButtonItem
-            getValueToSubtract()
-            buttons.forEach { $0.frame.origin.x -= valueToSubtract }
-            selectionBar.frame.origin.x -= valueToSubtract
         }
     }
     public var rightBarButtonItem: UIBarButtonItem? {
@@ -66,11 +63,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     // Other values (should not be changed)
     var buttons = [UIButton]()
-    var viewWidth: CGFloat = 0
     var barButtonItemWidth: CGFloat = 0
     var navigationBarHeight: CGFloat = 0
     var selectionBar = UIView()
-    var pageController = UIPageViewController()
+    private let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     var totalButtonWidth: CGFloat = 0
     var finalPageIndex = -1
     var indexNotIncremented = true
@@ -79,27 +75,41 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var valueToSubtract: CGFloat = 0
 
     private var selectionBarOriginX: CGFloat = 0
-    
-    override open func viewDidLoad() {
+
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+        setViewControllers([pageController], animated: false)
+        pageController.navigationController?.navigationItem.leftBarButtonItem = leftBarButtonItem
+//        super.init(rootViewController: pageController as UIViewController)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
+    }
+
+    open override func viewDidLoad() {
         super.viewDidLoad()
+        pageController.delegate = self
+        pageController.dataSource = self
+        if let scrollView = pageController.view.subviews.compactMap( { $0 as? UIScrollView }).first {
+            scrollView.delegate = self
+        }
+
         barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
 
         navigationBar.isTranslucent = false
     }
     
     open func setSwipeViewController() {
-        setPageController()
-
         let navigationView = UIView(frame: CGRect(x: 0 , y: 0, width: view.frame.width, height: navigationBar.frame.height))
         navigationView.backgroundColor = navigationBarColor
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
         self.navigationView = navigationView
-        barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
+        barButtonItemWidth = navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
 
         initButtons()
         initSelectionBar()
-        
-        syncScrollView()
         
         // Init of initial view controller
         guard currentPageIndex >= 1 else {return}
@@ -108,7 +118,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         
         // Select button of initial view controller - change to selected image
         buttons[currentPageIndex - 1].isSelected = true
-        
+
+        getValueToSubtract()
+        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
+        selectionBar.frame.origin.x -= valueToSubtract
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -249,14 +262,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         self.titleImages = titleImages
     }
     
-    open func setBarButtonItem(_ side: Side, barButtonItem: UIBarButtonItem) {
-        if side == .left {
-        }
-        else {
-            pageController.navigationItem.rightBarButtonItem = barButtonItem
-        }
-    }
-    
     private func getValueToSubtract() {
         guard let firstButton = buttons.first else {return}
         let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
@@ -265,24 +270,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         self.valueToSubtract = valueToSubtract
     }
     
-    
-    
-    
-    func syncScrollView() {
-        for view in pageController.view.subviews {
-            if view.isKind(of: UIScrollView.self) {
-                pageScrollView = view as! UIScrollView
-                pageScrollView.delegate = self
-            }
-        }
-    }
-    
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let xFromCenter = view.frame.size.width - scrollView.contentOffset.x
+        let xFromCenter = view.frame.width - scrollView.contentOffset.x
         var width = 0 as CGFloat
         // print(xFromCenter)
-        let border = viewWidth - 1
+        let border = view.frame.width - 1
         
         
         guard currentPageIndex > 0 && currentPageIndex <= buttons.count else {return}
@@ -299,14 +292,14 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
         
         // Going right
-        if xFromCenter <= -viewWidth && indexNotIncremented && currentPageIndex < buttons.count {
+        if xFromCenter <= -view.frame.width && indexNotIncremented && currentPageIndex < buttons.count {
             view.backgroundColor = pages[currentPageIndex].view.backgroundColor
             currentPageIndex += 1
             indexNotIncremented = false
         }
             
         // Going left
-        else if xFromCenter >= viewWidth && indexNotIncremented && currentPageIndex >= 2 {
+        else if xFromCenter >= view.frame.width && indexNotIncremented && currentPageIndex >= 2 {
             view.backgroundColor = pages[currentPageIndex - 2].view.backgroundColor
             currentPageIndex -= 1
             indexNotIncremented = false
@@ -421,25 +414,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         button.addTarget(self, action: #selector(self.switchTabs(_:)), for: .touchUpInside)
     }
     
-    
-    
-    func setPageController() {
-        
-        guard (self.topViewController as? UIPageViewController) != nil else {return}
-        
-        pageController = self.topViewController as! UIPageViewController
-        pageController.delegate = self
-        pageController.dataSource = self
-        
-        viewWidth = view.frame.width
-    }
-    
     func changeButtonColor(_ xFromCenter: CGFloat) {
         // Change color of button before animation finished (i.e. colour changes even when the user is between buttons
-        
-        let viewWidthHalf = viewWidth / 2
-        let border = viewWidth - 1
-        let halfBorder = viewWidthHalf - 1
+
+        let viewWidthHalf = view.frame.width / 2
+        let border = view.frame.width - 1
+        let halfBorder = view.frame.width / 2 - 1
         
         // Going left, next button selected
         if viewWidthHalf ... border ~= xFromCenter && currentPageIndex > 1 {
