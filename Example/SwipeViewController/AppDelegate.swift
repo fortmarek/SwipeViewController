@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application:UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let swipeViewController = ViewController()
-
         let VC1 = TestViewController()
         VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
         VC1.title = "Recent"
@@ -27,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let VC3 = UIViewController()
         VC3.view.backgroundColor = UIColor(red: 0.17, green: 0.70, blue: 0.27, alpha: 1.0)
         VC3.title = "Trending"
-        swipeViewController.pages = [VC1, VC2, VC3]
+        
+        let swipeViewController = ViewController(pages: [VC1, VC2, VC3])
         swipeViewController.startIndex = 0
         swipeViewController.selectionBarWidth = 80
         swipeViewController.selectionBarHeight = 3

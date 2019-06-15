@@ -14,11 +14,7 @@ public enum Side {
 
 open class SwipeViewController: UINavigationController, UIPageViewControllerDelegate, UIScrollViewDelegate {
     
-    public var pages: [UIViewController] = [] {
-        didSet {
-            view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
-        }
-    }
+    private(set) public var pages: [UIViewController] = []
     public var startIndex: Int = 0 {
         didSet {
             guard pages.count > startIndex else { return }
@@ -26,12 +22,37 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             view.backgroundColor = pages[startIndex].view.backgroundColor
         }
     }
-    public var selectionBarHeight: CGFloat = 0
-    public var selectionBarWidth: CGFloat = 0
-    public var selectionBarColor: UIColor = .black
-    public var buttonFont = UIFont.systemFont(ofSize: 18)
-    public var buttonColor: UIColor = .black
-    public var selectedButtonColor: UIColor = .green
+    public var selectionBarHeight: CGFloat = 0 {
+        didSet {
+            selectionBar.frame.size.height = selectionBarHeight
+        }
+    }
+    public var selectionBarWidth: CGFloat = 0 {
+        didSet {
+            selectionBar.frame.size.width = selectionBarWidth
+        }
+    }
+    public var selectionBarColor: UIColor = .black {
+        didSet {
+            selectionBar.backgroundColor = selectionBarColor
+        }
+    }
+    public var buttonFont = UIFont.systemFont(ofSize: 18) {
+        didSet {
+            buttons.forEach { $0.titleLabel?.font = buttonFont }
+        }
+    }
+    public var buttonColor: UIColor = .black {
+        didSet {
+            buttons.enumerated().filter { key, _ in currentPageIndex - 1 != key }.forEach { _, element in element.titleLabel?.textColor = buttonColor }
+        }
+    }
+    public var selectedButtonColor: UIColor = .green {
+        didSet {
+            guard !buttons.isEmpty else { return }
+            buttons[currentPageIndex - 1].titleLabel?.textColor = selectedButtonColor
+        }
+    }
     public var navigationBarColor: UIColor = .white {
         didSet {
             navigationBar.barTintColor = navigationBarColor
@@ -47,6 +68,17 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             pageController.navigationItem.rightBarButtonItem = rightBarButtonItem
         }
     }
+    public var bottomOffset: CGFloat = 0 {
+        didSet {
+            updateSelectionBarFrame()
+        }
+    }
+    public var equalSpaces: Bool = true {
+        didSet {
+            updateButtonLayout()
+        }
+    }
+    public let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
     // SwipeButtons
     var offset: CGFloat = 40
@@ -58,15 +90,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     var titleImages = [SwipeButtonWithImage]()
 
     private weak var navigationView: UIView!
-    open var equalSpaces = true
-    
     
     // Other values (should not be changed)
     var buttons = [UIButton]()
     var barButtonItemWidth: CGFloat = 0
     var navigationBarHeight: CGFloat = 0
     var selectionBar = UIView()
-    private let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     var totalButtonWidth: CGFloat = 0
     var finalPageIndex = -1
     var indexNotIncremented = true
@@ -76,56 +105,48 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
     private var selectionBarOriginX: CGFloat = 0
 
-    public init() {
+    public init(pages: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
+        self.pages = pages
+
         setViewControllers([pageController], animated: false)
         pageController.navigationController?.navigationItem.leftBarButtonItem = leftBarButtonItem
-//        super.init(rootViewController: pageController as UIViewController)
-    }
 
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-//        fatalError("init(coder:) has not been implemented")
-    }
-
-    open override func viewDidLoad() {
-        super.viewDidLoad()
         pageController.delegate = self
         pageController.dataSource = self
-        if let scrollView = pageController.view.subviews.compactMap( { $0 as? UIScrollView }).first {
+        if let scrollView = pageController.view.subviews.compactMap({ $0 as? UIScrollView }).first {
             scrollView.delegate = self
         }
 
         barButtonItemWidth = pageController.navigationController?.navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
 
         navigationBar.isTranslucent = false
-    }
-    
-    open func setSwipeViewController() {
+
         let navigationView = UIView(frame: CGRect(x: 0 , y: 0, width: view.frame.width, height: navigationBar.frame.height))
         navigationView.backgroundColor = navigationBarColor
         pageController.navigationController?.navigationBar.topItem?.titleView = navigationView
         self.navigationView = navigationView
         barButtonItemWidth = navigationBar.topItem?.titleView?.layoutMargins.left ?? 0
 
-        initButtons()
-        initSelectionBar()
-        
-        // Init of initial view controller
-        guard currentPageIndex >= 1 else {return}
-        let initialViewController = pages[currentPageIndex - 1]
-        pageController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
-        
-        // Select button of initial view controller - change to selected image
-        buttons[currentPageIndex - 1].isSelected = true
+        addPages()
+    }
 
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    open func setSwipeViewController() {
         getValueToSubtract()
         buttons.forEach { $0.frame.origin.x -= valueToSubtract }
         selectionBar.frame.origin.x -= valueToSubtract
     }
     
     override open func viewWillAppear(_ animated: Bool) {
-        setSwipeViewController()
+        super.viewWillAppear(animated)
+
+        updateSelectionBarFrame()
+        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
+//        setSwipeViewController()
     }
 
     func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
@@ -144,23 +165,45 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         button.frame = titleLabel.frame
     }
 
-    func initSelectionBar() {
+    func createSelectionBar() {
         let selectionBar = UIView()
+        self.selectionBar = selectionBar
 
         // SelectionBar
-        let originY = navigationView.frame.height - selectionBarHeight - bottomOfset
-        selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: selectionBarWidth, height: selectionBarHeight)
+        updateSelectionBarFrame()
         selectionBar.backgroundColor = selectionBarColor
         navigationView.addSubview(selectionBar)
-        self.selectionBar = selectionBar
     }
 
-    func initButtons() {
-        var buttons = [UIButton]()
-        var totalButtonWidth = 0 as CGFloat
+    private func updateSelectionBarFrame() {
+        let originY = navigationView.frame.height - selectionBarHeight - bottomOfset
+        selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: selectionBarWidth, height: selectionBarHeight)
+        getValueToSubtract()
+        selectionBar.frame.origin.x -= valueToSubtract
+    }
 
-        // Buttons
+    private func addPages() {
+        view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
 
+        createButtons()
+        createSelectionBar()
+
+        // Init of initial view controller
+        guard currentPageIndex >= 1 else {return}
+        let initialViewController = pages[currentPageIndex - 1]
+        pageController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
+
+        // Select button of initial view controller - change to selected image
+        buttons[currentPageIndex - 1].isSelected = true
+
+        updateSelectionBarFrame()
+
+        getValueToSubtract()
+        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
+        selectionBar.frame.origin.x -= valueToSubtract
+    }
+
+    func createButtons() {
         var tag = 0
         for page in pages {
             let button = UIButton()
@@ -195,19 +238,19 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             totalButtonWidth += button.frame.width
 
             buttons.append(button)
+            navigationView.addSubview(button)
         }
+    }
 
-
+    private func updateButtonLayout() {
+        let totalButtonWidth = buttons.reduce(0, { $0 + $1.frame.width })
         var space: CGFloat = 0
         var width: CGFloat = 0
 
         if equalSpaces {
             // Space between buttons
-            let offset: CGFloat = self.offset
             x = (view.frame.width - 2 * offset - totalButtonWidth) / CGFloat(buttons.count + 1)
-        }
-
-        else {
+        } else {
             // Space reserved for one button (with label and spaces around it)
             space = (view.frame.width - 2 * offset) / CGFloat(buttons.count)
         }
@@ -223,16 +266,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             if equalSpaces {
                 originX = x * CGFloat(button.tag) + width + offset - barButtonItemWidth
                 width += buttonWidth
-            }
-
-            else {
+            } else {
                 let buttonSpace = space - buttonWidth
                 originX = buttonSpace / 2 + width + offset - barButtonItemWidth
                 width += buttonWidth + space - buttonWidth
                 spaces.append(buttonSpace)
             }
-
-
 
             if button.tag == currentPageIndex {
                 guard let titleLabel = button.titleLabel else {continue}
@@ -244,18 +283,11 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             addFunction(button)
             navigationView.addSubview(button)
         }
-
-        self.buttons = buttons
     }
 
     open func addViewController(_ viewController: UIViewController) {
         pages.append(viewController)
         view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
-    }
-    
-    open func setButtonsOffset(_ offset: CGFloat, bottomOffset: CGFloat) {
-        self.offset = offset
-        self.bottomOfset = bottomOffset
     }
     
     open func setButtonsWithImages(_ titleImages: Array<SwipeButtonWithImage>) {
@@ -271,7 +303,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         let xFromCenter = view.frame.width - scrollView.contentOffset.x
         var width = 0 as CGFloat
         // print(xFromCenter)
