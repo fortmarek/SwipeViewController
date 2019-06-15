@@ -75,7 +75,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
     public var equalSpaces: Bool = true {
         didSet {
-            updateButtonLayout()
+            updateButtonsLayout()
         }
     }
     public let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -92,16 +92,15 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     private weak var navigationView: UIView!
     
     // Other values (should not be changed)
-    var buttons = [UIButton]()
-    var barButtonItemWidth: CGFloat = 0
-    var navigationBarHeight: CGFloat = 0
-    var selectionBar = UIView()
-    var totalButtonWidth: CGFloat = 0
-    var finalPageIndex = -1
-    var indexNotIncremented = true
-    var pageScrollView = UIScrollView()
-    var animationFinished = true
-    var valueToSubtract: CGFloat = 0
+    private(set) public var buttons: [UIButton] = []
+    private var barButtonItemWidth: CGFloat = 0
+    private var navigationBarHeight: CGFloat = 0
+    private weak var selectionBar: UIView!
+    private var totalButtonWidth: CGFloat = 0
+    private var finalPageIndex = -1
+    private var indexNotIncremented = true
+    private var pageScrollView = UIScrollView()
+    private var animationFinished = true
 
     private var selectionBarOriginX: CGFloat = 0
 
@@ -135,18 +134,14 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         super.init(coder: aDecoder)
     }
     
-    open func setSwipeViewController() {
-        getValueToSubtract()
-        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
-        selectionBar.frame.origin.x -= valueToSubtract
-    }
-    
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+
+        updateButtonsLayout()
         updateSelectionBarFrame()
-        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
-//        setSwipeViewController()
+        let leftSubtract = getLeftSubtract()
+        buttons.forEach { $0.frame.origin.x -= leftSubtract }
     }
 
     func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
@@ -178,8 +173,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     private func updateSelectionBarFrame() {
         let originY = navigationView.frame.height - selectionBarHeight - bottomOfset
         selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: selectionBarWidth, height: selectionBarHeight)
-        getValueToSubtract()
-        selectionBar.frame.origin.x -= valueToSubtract
+        selectionBar.frame.origin.x -= getLeftSubtract()
     }
 
     private func addPages() {
@@ -195,12 +189,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
         // Select button of initial view controller - change to selected image
         buttons[currentPageIndex - 1].isSelected = true
-
-        updateSelectionBarFrame()
-
-        getValueToSubtract()
-        buttons.forEach { $0.frame.origin.x -= valueToSubtract }
-        selectionBar.frame.origin.x -= valueToSubtract
     }
 
     func createButtons() {
@@ -228,9 +216,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 if let size = buttonWithImage.size {
                     button.frame.size = size
                 }
-
             }
-
             // Tag
             tag += 1
             button.tag = tag
@@ -242,7 +228,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
     }
 
-    private func updateButtonLayout() {
+    private func updateButtonsLayout() {
         let totalButtonWidth = buttons.reduce(0, { $0 + $1.frame.width })
         var space: CGFloat = 0
         var width: CGFloat = 0
@@ -256,7 +242,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
 
         for button in buttons {
-
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
 
@@ -280,9 +265,17 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             }
 
             button.frame = CGRect(x: originX, y: originY, width: buttonWidth, height: buttonHeight)
+
             addFunction(button)
-            navigationView.addSubview(button)
         }
+    }
+
+    private func getLeftSubtract() -> CGFloat {
+        guard let firstButton = buttons.first else { return 0 }
+        let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
+        let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
+        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
+        return valueToSubtract
     }
 
     open func addViewController(_ viewController: UIViewController) {
@@ -292,14 +285,6 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     
     open func setButtonsWithImages(_ titleImages: Array<SwipeButtonWithImage>) {
         self.titleImages = titleImages
-    }
-    
-    private func getValueToSubtract() {
-        guard let firstButton = buttons.first else {return}
-        let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
-        let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
-        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
-        self.valueToSubtract = valueToSubtract
     }
     
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
