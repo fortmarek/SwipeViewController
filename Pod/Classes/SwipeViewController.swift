@@ -17,7 +17,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     public var startIndex: Int = 0 {
         didSet {
             guard pages.count > startIndex else { return }
-            currentPageIndex = startIndex + 1
+            currentPageIndex = startIndex
             view.backgroundColor = pages[startIndex].view.backgroundColor
         }
     }
@@ -48,14 +48,14 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
     public var buttonColor: UIColor = .black {
         didSet {
-            buttons.enumerated().filter { key, _ in currentPageIndex - 1 != key }.forEach { _, element in element.titleLabel?.textColor = buttonColor }
+            buttons.enumerated().filter { key, _ in currentPageIndex != key }.forEach { _, element in element.titleLabel?.textColor = buttonColor }
         }
     }
 
     public var selectedButtonColor: UIColor = .green {
         didSet {
             guard !buttons.isEmpty else { return }
-            buttons[currentPageIndex - 1].titleLabel?.textColor = selectedButtonColor
+            buttons[currentPageIndex].titleLabel?.textColor = selectedButtonColor
         }
     }
 
@@ -82,7 +82,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     public var buttonsWithImages: [SwipeButtonWithImage] = []
     public var offset: CGFloat = 40
     public let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    public var currentPageIndex = 1
+    public var currentPageIndex = 0
 
     public private(set) var buttons: [UIButton] = []
     private var barButtonItemWidth: CGFloat = 0
@@ -178,18 +178,18 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
 
     private func addPages() {
-        view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
+        view.backgroundColor = pages[currentPageIndex].view.backgroundColor
 
         createButtons()
         createSelectionBar()
 
         // Init of initial view controller
-        guard currentPageIndex >= 1 else { return }
-        let initialViewController = pages[currentPageIndex - 1]
+        guard currentPageIndex >= 0 else { return }
+        let initialViewController = pages[currentPageIndex]
         pageController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
 
         // Select button of initial view controller - change to selected image
-        buttons[currentPageIndex - 1].isSelected = true
+        buttons[currentPageIndex].isSelected = true
     }
 
     private func createButtons() {
@@ -255,7 +255,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 spaces.append(buttonSpace)
             }
 
-            if button.tag == currentPageIndex {
+            if button.tag == currentPageIndex + 1 {
                 guard let titleLabel = button.titleLabel else { continue }
                 selectionBarOriginX = originX - (selectionBarWidth - buttonWidth) / 2
                 titleLabel.textColor = selectedButtonColor
@@ -280,11 +280,10 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let xFromCenter = view.frame.width - scrollView.contentOffset.x
-        var width = 0 as CGFloat
-        // print(xFromCenter)
+        var width: CGFloat = 0
         let border = view.frame.width - 1
 
-        guard currentPageIndex > 0, currentPageIndex <= buttons.count else { return }
+        guard currentPageIndex >= 0, currentPageIndex < buttons.endIndex else { return }
 
         // Ensuring currentPageIndex is not changed twice
         if -border ... border ~= xFromCenter {
@@ -298,15 +297,15 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
 
         // Going right
-        if xFromCenter <= -view.frame.width, indexNotIncremented, currentPageIndex < buttons.count {
-            view.backgroundColor = pages[currentPageIndex].view.backgroundColor
+        if xFromCenter <= -view.frame.width, indexNotIncremented, currentPageIndex < buttons.endIndex - 1 {
+            view.backgroundColor = pages[currentPageIndex + 1].view.backgroundColor
             currentPageIndex += 1
             indexNotIncremented = false
         }
 
         // Going left
-        else if xFromCenter >= view.frame.width, indexNotIncremented, currentPageIndex >= 2 {
-            view.backgroundColor = pages[currentPageIndex - 2].view.backgroundColor
+        else if xFromCenter >= view.frame.width, indexNotIncremented, currentPageIndex >= 1 {
+            view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
             currentPageIndex -= 1
             indexNotIncremented = false
         }
@@ -331,7 +330,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - leftSubtract
 
             // Get button with current index
-            guard button.tag == currentPageIndex
+            guard button.tag == currentPageIndex + 1
             else { continue }
 
             var nextButton = UIButton()
@@ -366,7 +365,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
     // Triggered when selected button in navigation view is changed
     func scrollToNextViewController(_ index: Int) {
-        let currentViewControllerIndex = currentPageIndex - 1
+        let currentViewControllerIndex = currentPageIndex
 
         // Comparing index (i.e. tab where user is going to) and when compared, we can now know what direction we should go
         // Index is on the right
@@ -390,7 +389,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         let index = sender.tag - 1
 
         // Can't animate twice to the same controller (otherwise weird stuff happens)
-        guard index != finalPageIndex, index != currentPageIndex - 1, animationFinished else { return }
+        guard index != finalPageIndex, index != currentPageIndex, animationFinished else { return }
 
         animationFinished = false
         finalPageIndex = index
@@ -409,9 +408,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         let halfBorder = view.frame.width / 2 - 1
 
         // Going left, next button selected
-        if viewWidthHalf ... border ~= xFromCenter, currentPageIndex > 1 {
-            let button = buttons[currentPageIndex - 2]
-            let previousButton = buttons[currentPageIndex - 1]
+        if viewWidthHalf ... border ~= xFromCenter, currentPageIndex > 0 {
+            let button = buttons[currentPageIndex - 1]
+            let previousButton = buttons[currentPageIndex]
 
             button.titleLabel?.textColor = selectedButtonColor
             previousButton.titleLabel?.textColor = buttonColor
@@ -422,8 +421,8 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
         // Going right, current button selected
         else if 0 ... halfBorder ~= xFromCenter, currentPageIndex > 1 {
-            let button = buttons[currentPageIndex - 1]
-            let previousButton = buttons[currentPageIndex - 2]
+            let button = buttons[currentPageIndex]
+            let previousButton = buttons[currentPageIndex - 1]
 
             button.titleLabel?.textColor = selectedButtonColor
             previousButton.titleLabel?.textColor = buttonColor
@@ -433,9 +432,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
 
         // Going left, current button selected
-        else if -halfBorder ... 0 ~= xFromCenter, currentPageIndex < buttons.count {
-            let previousButton = buttons[currentPageIndex]
-            let button = buttons[currentPageIndex - 1]
+        else if -halfBorder ... 0 ~= xFromCenter, currentPageIndex < buttons.endIndex - 1 {
+            let previousButton = buttons[currentPageIndex + 1]
+            let button = buttons[currentPageIndex]
 
             button.titleLabel?.textColor = selectedButtonColor
             previousButton.titleLabel?.textColor = buttonColor
@@ -445,9 +444,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         }
 
         // Going right, next button selected
-        else if -border ... -viewWidthHalf ~= xFromCenter, currentPageIndex < buttons.count {
-            let button = buttons[currentPageIndex]
-            let previousButton = buttons[currentPageIndex - 1]
+        else if -border ... -viewWidthHalf ~= xFromCenter, currentPageIndex < buttons.endIndex - 1 {
+            let button = buttons[currentPageIndex + 1]
+            let previousButton = buttons[currentPageIndex]
 
             button.titleLabel?.textColor = selectedButtonColor
             previousButton.titleLabel?.textColor = buttonColor

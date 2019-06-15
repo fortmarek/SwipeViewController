@@ -16,7 +16,7 @@
 		82822C28880AC582F9F959C8666291B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8662099E388D7518074510998A283F6A /* Pods-SwipeViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C00ED07A77EBE0C1225C656C822EF3 /* Pods-SwipeViewController_Example-dummy.m */; };
 		BBF8A66066FE994BEE6E3F3B719E98C4 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C3DCDCCCBF47084DE04FAEC531CB3 /* SwipeViewController.swift */; };
-		F8DA208F22B57F0D00EC85AD /* SwipeButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA208E22B57F0D00EC85AD /* SwipeButtonWithImage.swift */; };
+		F8DA209022B5847000EC85AD /* SwipeButtonWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DA208E22B57F0D00EC85AD /* SwipeButtonWithImage.swift */; };
 		FF79EC63304A631BC7AF5E0A958A40CB /* Pods-SwipeViewController_ExampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C33A8BCF6DCAA59E943B73C793DBD3 /* Pods-SwipeViewController_ExampleTests-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -356,6 +356,7 @@
 			files = (
 				575514BF056EDEEAB815CF35DC92D19B /* SwipeViewController-dummy.m in Sources */,
 				BBF8A66066FE994BEE6E3F3B719E98C4 /* SwipeViewController.swift in Sources */,
+				F8DA209022B5847000EC85AD /* SwipeButtonWithImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8DA208F22B57F0D00EC85AD /* SwipeButtonWithImage.swift in Sources */,
 				8662099E388D7518074510998A283F6A /* Pods-SwipeViewController_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
