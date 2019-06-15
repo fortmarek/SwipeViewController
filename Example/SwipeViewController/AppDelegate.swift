@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         swipeViewController.selectedButtonColor = UIColor(red: 0.23, green: 0.55, blue: 0.92, alpha: 1.0)
         swipeViewController.equalSpaces = false
 
+        //Button with image example
+//        let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
+//        swipeViewController.buttonsWithImages = [buttonOne, buttonOne, buttonOne]
+
         self.window?.rootViewController = swipeViewController
         self.window?.makeKeyAndVisible()
         

@@ -68,30 +68,13 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             pageController.navigationItem.rightBarButtonItem = rightBarButtonItem
         }
     }
-    public var bottomOffset: CGFloat = 0 {
-        didSet {
-            updateSelectionBarFrame()
-        }
-    }
-    public var equalSpaces: Bool = true {
-        didSet {
-            updateButtonsLayout()
-        }
-    }
+    public var bottomOffset: CGFloat = 0
+    public var equalSpaces: Bool = true
+    public var buttonsWithImages: [SwipeButtonWithImage] = []
+    public var offset: CGFloat = 40
     public let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    
-    // SwipeButtons
-    var offset: CGFloat = 40
-    var bottomOfset: CGFloat = 0
+    public var currentPageIndex = 1
 
-    open var currentPageIndex = 1 // Besides keeping current page index it also determines what will be the first view
-    var spaces = [CGFloat]()
-    var x: CGFloat = 0
-    var titleImages = [SwipeButtonWithImage]()
-
-    private weak var navigationView: UIView!
-    
-    // Other values (should not be changed)
     private(set) public var buttons: [UIButton] = []
     private var barButtonItemWidth: CGFloat = 0
     private var navigationBarHeight: CGFloat = 0
@@ -101,8 +84,12 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     private var indexNotIncremented = true
     private var pageScrollView = UIScrollView()
     private var animationFinished = true
-
+    private var leftSubtract: CGFloat = 0
+    private var firstWillAppearOccured = false
+    private var spaces: [CGFloat] = []
+    private var x: CGFloat = 0
     private var selectionBarOriginX: CGFloat = 0
+    private weak var navigationView: UIView!
 
     public init(pages: [UIViewController]) {
         super.init(nibName: nil, bundle: nil)
@@ -133,18 +120,24 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+
+    /// Method is called when `viewWillAppear(_:)` is called for the first time
+    func viewWillFirstAppear(_ animated: Bool) {
+        updateButtonsAppearance()
+        updateButtonsLayout()
+        updateSelectionBarFrame()
+    }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-
-        updateButtonsLayout()
-        updateSelectionBarFrame()
-        let leftSubtract = getLeftSubtract()
-        buttons.forEach { $0.frame.origin.x -= leftSubtract }
+        if !firstWillAppearOccured {
+            viewWillFirstAppear(animated)
+            firstWillAppearOccured = true
+        }
     }
 
-    func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
+    private func setTitleLabel(_ page: UIViewController, font: UIFont, color: UIColor, button: UIButton) {
         // Title font and color
         guard let pageTitle = page.title else { return }
         let attributes: [NSAttributedString.Key: Any] = [.font: font]
@@ -160,7 +153,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         button.frame = titleLabel.frame
     }
 
-    func createSelectionBar() {
+    private func createSelectionBar() {
         let selectionBar = UIView()
         self.selectionBar = selectionBar
 
@@ -171,9 +164,9 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
     }
 
     private func updateSelectionBarFrame() {
-        let originY = navigationView.frame.height - selectionBarHeight - bottomOfset
+        let originY = navigationView.frame.height - selectionBarHeight - bottomOffset
         selectionBar.frame = CGRect(x: selectionBarOriginX , y: originY, width: selectionBarWidth, height: selectionBarHeight)
-        selectionBar.frame.origin.x -= getLeftSubtract()
+        selectionBar.frame.origin.x -= leftSubtract
     }
 
     private func addPages() {
@@ -191,20 +184,23 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         buttons[currentPageIndex - 1].isSelected = true
     }
 
-    func createButtons() {
-        var tag = 0
-        for page in pages {
+    private func createButtons() {
+        buttons = (1...pages.count).map {
             let button = UIButton()
+            button.tag = $0
+            navigationView.addSubview(button)
+            return button
+        }
+    }
 
-            if titleImages.isEmpty {
-                setTitleLabel(page, font: buttonFont, color: buttonColor, button: button)
-            }
-
-            else {
-                // UI of button with image
-
+    private func updateButtonsAppearance() {
+        totalButtonWidth = 0
+        buttons.enumerated().forEach { tag, button in
+            if buttonsWithImages.isEmpty {
+                setTitleLabel(pages[tag], font: buttonFont, color: buttonColor, button: button)
+            } else {
                 // Getting buttnWithImage struct from array
-                let buttonWithImage = titleImages[tag]
+                let buttonWithImage = buttonsWithImages[tag]
                 // Normal image
                 button.setImage(buttonWithImage.image, for: UIControl.State())
                 // Selected image
@@ -217,14 +213,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                     button.frame.size = size
                 }
             }
-            // Tag
-            tag += 1
-            button.tag = tag
-
             totalButtonWidth += button.frame.width
-
-            buttons.append(button)
-            navigationView.addSubview(button)
         }
     }
 
@@ -245,7 +234,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
             let buttonHeight = button.frame.height
             let buttonWidth = button.frame.width
 
-            let originY = navigationView.frame.height - selectionBarHeight - bottomOfset - buttonHeight - 3
+            let originY = navigationView.frame.height - selectionBarHeight - bottomOffset - buttonHeight - 3
             var originX: CGFloat = 0
 
             if equalSpaces {
@@ -268,23 +257,17 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
 
             addFunction(button)
         }
+
+        updateLeftSubtract()
+        buttons.forEach { $0.frame.origin.x -= leftSubtract }
     }
 
-    private func getLeftSubtract() -> CGFloat {
-        guard let firstButton = buttons.first else { return 0 }
+    private func updateLeftSubtract() {
+        guard let firstButton = buttons.first else { return }
         let convertedXOrigin = firstButton.convert(firstButton.frame.origin, to: view).x
         let barButtonWidth: CGFloat = equalSpaces ? 0 : barButtonItemWidth
-        let valueToSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
-        return valueToSubtract
-    }
-
-    open func addViewController(_ viewController: UIViewController) {
-        pages.append(viewController)
-        view.backgroundColor = pages[currentPageIndex - 1].view.backgroundColor
-    }
-    
-    open func setButtonsWithImages(_ titleImages: Array<SwipeButtonWithImage>) {
-        self.titleImages = titleImages
+        let leftSubtract: CGFloat = (convertedXOrigin - offset + barButtonWidth) / 2 - x / 2
+        self.leftSubtract = leftSubtract
     }
     
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -292,8 +275,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
         var width = 0 as CGFloat
         // print(xFromCenter)
         let border = view.frame.width - 1
-        
-        
+
         guard currentPageIndex > 0 && currentPageIndex <= buttons.count else {return}
         
         // Ensuring currentPageIndex is not changed twice
@@ -342,7 +324,7 @@ open class SwipeViewController: UINavigationController, UIPageViewControllerDele
                 width += button.frame.width + space
             }
             
-            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - valueToSubtract
+            let selectionBarOriginX = originX - (selectionBarWidth - button.frame.width) / 2 + offset - barButtonItemWidth - leftSubtract
             
             // Get button with current index
             guard button.tag == currentPageIndex

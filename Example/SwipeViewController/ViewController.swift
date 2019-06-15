@@ -14,10 +14,6 @@ class ViewController: SwipeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Button with image example
-        //let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
-        //setButtonsWithImages([buttonOne, buttonOne, buttonOne])
-
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(push))
         barButtonItem.tintColor = .black
         leftBarButtonItem = barButtonItem
