@@ -486,15 +486,3 @@ extension SwipeViewController: UIPageViewControllerDataSource {
         return pages[nextIndex]
     }
 }
-
-public struct SwipeButtonWithImage {
-    var size: CGSize?
-    var image: UIImage?
-    var selectedImage: UIImage?
-
-    public init(image: UIImage?, selectedImage: UIImage?, size: CGSize?) {
-        self.image = image
-        self.selectedImage = selectedImage
-        self.size = size
-    }
-}
