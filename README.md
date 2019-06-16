@@ -14,13 +14,6 @@ SwipeViewController is a modification of Objective-C project RKSwipeBetweenViewC
 ![demo](http://imgur.com/SDIkf4b.gif)
 
 ## Installation
-### For both options
-
-You can init SwipeViewController simply like this:
-```swift 
-let pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
-let navigationController = YourViewControllerName(rootViewController: pageController)
-```
 
 ### CocoaPods
 
@@ -41,48 +34,28 @@ github "fortmarek/SwipeViewController"
 
 ### Manually
 
-Include the Pod/Classes/SwipeViewController.swift and the Pod/Classes/InterfaceController.swift files into your project.
+Include the Pod/Classes/SwipeViewController.swift files into your project.
 
 ## Usage
 
-First make your ViewController a subclass of SwipeViewController 
-
+You can init SwipeViewController simply like this:
 ```swift 
-import SwipeViewController
-
-class ViewController: SwipeViewController {}
-```
-
-All the other setup and customization function have to be in viewDidLoad()
-
-### Page Array
-You first need to set the array of view controllers that you want to display, in order to do that you need to use this function:
-```swift 
-let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
-let page_one = stb.instantiateViewControllerWithIdentifier(“page1”) as UIViewController
-let page_two = stb.instantiateViewControllerWithIdentifier(“page2”) as UIViewController
-let page_three = stb.instantiateViewControllerWithIdentifier(“page3”) as UIViewController
-
-setViewControllerArray([page_one, page_two, page_three])
-```
-Or you can add pages by one and not as a whole array: 
-
-```swift 
-let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
-let page_one = stb.instantiateViewControllerWithIdentifier(“page1”) as UIViewController
-
-addViewController(page_one)
+let myViewControllerOne = UIViewController() 
+let myViewControllerTwo = UIViewController()
+let navigationController = SwipeViewController(pages: [myViewControllerOne, myViewControllerTwo])
 ```
 
 To set the titles of the buttons, you just need to change the title of each page:
 ```swift 
-page_one.title = "Recent"
+myViewControllerOne.title = "Recent"
 ```
+This should be done before passing your view controller into the init method of `SwipeViewController`.
+
 To specify which view controller should be selected first:
 ```swift 
-setFirstViewController(1)
+// Selecting second view controller as the first
+swipeViewController.startIndex = 1
 ```
-It should also be said that the first view controller index starts at zero, just like arrays.
 
 ### NavigationBar
 
@@ -96,56 +69,53 @@ You can also include barButtonItems, simply create UIBarButtonItem as you would 
 
 ```swift 
 let barButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
-setNavigationWithItem(UIColor.whiteColor(), leftItem: barButtonItem, rightItem: nil)
+leftBarButtonItem = barButtonItem
 ```
+
+Note this should be done probably in `viewDidLoad` (definitely before the view appears).
 
 ### SwipeButtons
 
 There are two different modes - either every button has the same space on each side not depending on the label size (good for odd numbers)
 ```swift 
-equalSpaces = true
+swipeViewController.equalSpaces = true
 ```
 
 or the spaces on each differ depending on the label size (good for even numbers, the label is always centered). 
 ```swift 
-equalSpaces = false
+swipeViewController.equalSpaces = false
 ```
 
-You can either customize buttons with this function:
+You can also customize buttons with these properties:
 ```swift 
-setButtons(UIFont.systemFontOfSize(18), color: .black)
-```
-Or if you want to change the color of the buttons depending on which page the user is on:
-
-```swift 
-setButtonsWithSelectedColor(UIFont.systemFontOfSize(18), color: .black, selectedColor: .white)
+buttonFont, buttonColor, selectedButtonColor
 ```
 
 To change the offsets on the side and on the bottom:
 
 ```swift 
-setButtonsOffset(40, bottomOffset: 5)
+swipeViewController.offset = 40 // offset from the side
+swipeViewController.bottomOffset = 5 // offset from the bottom
 ```
 
 Instead of titles as labels you can use images. First init the button using SwipeButtonWithImage struct:
 
 ```swift
 let buttonOne = SwipeButtonWithImage(image: UIImage(named: "Hearts"), selectedImage: UIImage(named: "YellowHearts"), size: CGSize(width: 40, height: 40))
-setButtonsWithImages([buttonOne, buttonTwo, buttonThree])
+swipeViewController.buttonsWithImages = [buttonOne, buttonTwo, buttonThree]
 ```
 
 ### SelectionBar
 
-To customize selection bar, use this function:
+To customize selection bar, you can change these properties:
 
 ```swift 
-setSelectionBar(80, height: 3, color: .black)
+selectionBarHeight, selectionBarWidth, selectionBarColor
 ```
 
 ### Additional customization
 
 If you want to customize it even more, you can go right to the the SwipeViewController class file but be careful.
-
 
 ## Author
 

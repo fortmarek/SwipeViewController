@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "SwipeViewController"
-  s.version          = "1.0"
+  s.version          = "2.0"
   s.summary          = "Subclass of UIPageViewController and UINavigation for easy navigation"
 
 # This description is used to generate tags and improve search results.
@@ -22,13 +22,14 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "fortmarek" => "marekfort@me.com" }
   s.source           = { :git => "https://github.com/fortmarek/SwipeViewController.git", :tag => s.version.to_s }
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  s.social_media_url = 'https://twitter.com/marekfort'
 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files  = "SwipeViewController/**/*"
+  s.exclude_files = "SwipeViewController/*.plist"
   # s.resource_bundles = {
   #  'SwipeViewController' => ['Pod/Assets/*.png']
   # }
