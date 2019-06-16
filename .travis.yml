@@ -13,7 +13,7 @@ after_deploy:
 - pod trunk push --skip-import-validation --skip-tests --allow-warnings
 script:
 - set -o pipefail && xcodebuild test -scheme $FRAMEWORK_NAME -destination 'platform=iOS
-  Simulator,name=iPhone XS,OS=12.1' ONLY_ACTIVE_ARCH=YES | xcpretty
+  Simulator,name=iPhone Xs,OS=12.2' ONLY_ACTIVE_ARCH=YES | xcpretty
 deploy:
   provider: releases
   api_key:
