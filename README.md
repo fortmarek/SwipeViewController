@@ -62,7 +62,7 @@ swipeViewController.startIndex = 1
 To change color of the NavigationBar:
 
 ```swift 
-setNavigationColor(UIColor.blueColor())
+swipeViewControler.navigationBarColor = UIColor.blue
 ```
 
 You can also include barButtonItems, simply create UIBarButtonItem as you would normally do and then use it like this:
