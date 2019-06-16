@@ -78,8 +78,8 @@
 		F8FDADBB22B633A300EF23E3 /* SwipeViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8FDADC222B633A300EF23E3 /* SwipeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewControllerTests.swift; sourceTree = "<group>"; };
 		F8FDADC422B633A300EF23E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8FDADD122B633D700EF23E3 /* SwipeButtonWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeButtonWithImage.swift; path = Pod/Classes/SwipeButtonWithImage.swift; sourceTree = SOURCE_ROOT; };
-		F8FDADD222B633D700EF23E3 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Pod/Classes/SwipeViewController.swift; sourceTree = SOURCE_ROOT; };
+		F8FDADD122B633D700EF23E3 /* SwipeButtonWithImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeButtonWithImage.swift; sourceTree = "<group>"; };
+		F8FDADD222B633D700EF23E3 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		F8FDADD522B6388A00EF23E3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F8FE8622200A5D2F00A9EAA9 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SwipeViewController";
-			path = SwipeViewController;
+			path = SwipeViewController_Example;
 			sourceTree = "<group>";
 		};
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
